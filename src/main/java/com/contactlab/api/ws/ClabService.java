@@ -40,6 +40,8 @@ import com.contactlab.api.ws.domain.DeliveryStatus;
 import com.contactlab.api.ws.domain.LookupPreferences;
 import com.contactlab.api.ws.domain.Message;
 import com.contactlab.api.ws.domain.MessageModels;
+import com.contactlab.api.ws.domain.SendImmediateOptions;
+import com.contactlab.api.ws.domain.SplitTestCampaign;
 import com.contactlab.api.ws.domain.Subscriber;
 import com.contactlab.api.ws.domain.SubscriberAttribute;
 import com.contactlab.api.ws.domain.SubscriberSource;
@@ -59,8 +61,8 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.ObjectFactory.class,
-    com.contactlab.api.ws.domain.ObjectFactory.class
+    com.contactlab.api.ws.domain.ObjectFactory.class,
+    com.contactlab.api.ws.ObjectFactory.class
 })
 public interface ClabService {
 
@@ -1014,6 +1016,29 @@ public interface ClabService {
 
     /**
      * 
+     * @param mail
+     * @param token
+     * @param hours
+     * @param campaignIdentifier
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendSplitTest", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTest")
+    @ResponseWrapper(localName = "sendSplitTestResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestResponse")
+    public Integer sendSplitTest(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "hours", targetNamespace = "")
+        Integer hours,
+        @WebParam(name = "mail", targetNamespace = "")
+        Boolean mail);
+
+    /**
+     * 
      * @param notBefore
      * @param token
      * @param campaignIdentifier
@@ -1116,6 +1141,26 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "campaignIdentifier", targetNamespace = "")
         int campaignIdentifier);
+
+    /**
+     * 
+     * @param filterIdentifier
+     * @param token
+     * @param sourceIdentifier
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "countSubscribersIncludedInFilter", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersIncludedInFilter")
+    @ResponseWrapper(localName = "countSubscribersIncludedInFilterResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersIncludedInFilterResponse")
+    public Integer countSubscribersIncludedInFilter(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "filterIdentifier", targetNamespace = "")
+        int filterIdentifier);
 
     /**
      * 
@@ -1233,26 +1278,6 @@ public interface ClabService {
 
     /**
      * 
-     * @param filterIdentifier
-     * @param token
-     * @param sourceIdentifier
-     * @return
-     *     returns java.lang.Integer
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "countSubscribersIncludedInFilter", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersIncludedInFilter")
-    @ResponseWrapper(localName = "countSubscribersIncludedInFilterResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersIncludedInFilterResponse")
-    public Integer countSubscribersIncludedInFilter(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "filterIdentifier", targetNamespace = "")
-        int filterIdentifier);
-
-    /**
-     * 
      * @param token
      * @param attribute
      * @param lookupPrefs
@@ -1335,6 +1360,40 @@ public interface ClabService {
     public boolean invalidateToken(
         @WebParam(name = "token", targetNamespace = "")
         AuthToken token);
+
+    /**
+     * 
+     * @param token
+     * @param campaignToSendId
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendSplitTestWinner", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestWinner")
+    @ResponseWrapper(localName = "sendSplitTestWinnerResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestWinnerResponse")
+    public Integer sendSplitTestWinner(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignToSendId", targetNamespace = "")
+        Integer campaignToSendId);
+
+    /**
+     * 
+     * @param splitTestCampaign
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SplitTestCampaign
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createSplitTest", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSplitTest")
+    @ResponseWrapper(localName = "createSplitTestResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSplitTestResponse")
+    public SplitTestCampaign createSplitTest(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "splitTestCampaign", targetNamespace = "")
+        SplitTestCampaign splitTestCampaign);
 
     /**
      * 
@@ -1767,6 +1826,171 @@ public interface ClabService {
         boolean includeDefaultAttachments,
         @WebParam(name = "attachments", targetNamespace = "")
         List<Attachment> attachments);
+
+    /**
+     * 
+     * @param campaignId
+     * @param userKey
+     * @param sendImmediateOptions
+     * @param subscriber
+     * @param apiKey
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendImmediateByCampaignIdToSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignIdToSubscriber")
+    @ResponseWrapper(localName = "sendImmediateByCampaignIdToSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignIdToSubscriberResponse")
+    public String sendImmediateByCampaignIdToSubscriber(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "campaignId", targetNamespace = "")
+        int campaignId,
+        @WebParam(name = "subscriber", targetNamespace = "")
+        Subscriber subscriber,
+        @WebParam(name = "sendImmediateOptions", targetNamespace = "")
+        SendImmediateOptions sendImmediateOptions);
+
+    /**
+     * 
+     * @param userKey
+     * @param sendImmediateOptions
+     * @param campaign
+     * @param subscriber
+     * @param apiKey
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendImmediateByCampaignToSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignToSubscriber")
+    @ResponseWrapper(localName = "sendImmediateByCampaignToSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignToSubscriberResponse")
+    public String sendImmediateByCampaignToSubscriber(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "campaign", targetNamespace = "")
+        Campaign campaign,
+        @WebParam(name = "subscriber", targetNamespace = "")
+        Subscriber subscriber,
+        @WebParam(name = "sendImmediateOptions", targetNamespace = "")
+        SendImmediateOptions sendImmediateOptions);
+
+    /**
+     * 
+     * @param userKey
+     * @param sendImmediateOptions
+     * @param subscriberId
+     * @param campaign
+     * @param apiKey
+     * @param sourceId
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendImmediateByCampaignToSubscriberId", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignToSubscriberId")
+    @ResponseWrapper(localName = "sendImmediateByCampaignToSubscriberIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignToSubscriberIdResponse")
+    public String sendImmediateByCampaignToSubscriberId(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "campaign", targetNamespace = "")
+        Campaign campaign,
+        @WebParam(name = "sourceId", targetNamespace = "")
+        int sourceId,
+        @WebParam(name = "subscriberId", targetNamespace = "")
+        int subscriberId,
+        @WebParam(name = "sendImmediateOptions", targetNamespace = "")
+        SendImmediateOptions sendImmediateOptions);
+
+    /**
+     * 
+     * @param campaignId
+     * @param userKey
+     * @param sendImmediateOptions
+     * @param subscriberId
+     * @param apiKey
+     * @param sourceId
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendImmediateByCampaignIdToSubscriberId", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignIdToSubscriberId")
+    @ResponseWrapper(localName = "sendImmediateByCampaignIdToSubscriberIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignIdToSubscriberIdResponse")
+    public String sendImmediateByCampaignIdToSubscriberId(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "campaignId", targetNamespace = "")
+        int campaignId,
+        @WebParam(name = "sourceId", targetNamespace = "")
+        int sourceId,
+        @WebParam(name = "subscriberId", targetNamespace = "")
+        int subscriberId,
+        @WebParam(name = "sendImmediateOptions", targetNamespace = "")
+        SendImmediateOptions sendImmediateOptions);
+
+    /**
+     * 
+     * @param userKey
+     * @param sendImmediateOptions
+     * @param campaignAlias
+     * @param subscriber
+     * @param apiKey
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendImmediateByCampaignAliasToSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignAliasToSubscriber")
+    @ResponseWrapper(localName = "sendImmediateByCampaignAliasToSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignAliasToSubscriberResponse")
+    public String sendImmediateByCampaignAliasToSubscriber(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "campaignAlias", targetNamespace = "")
+        String campaignAlias,
+        @WebParam(name = "subscriber", targetNamespace = "")
+        Subscriber subscriber,
+        @WebParam(name = "sendImmediateOptions", targetNamespace = "")
+        SendImmediateOptions sendImmediateOptions);
+
+    /**
+     * 
+     * @param userKey
+     * @param sendImmediateOptions
+     * @param subscriberId
+     * @param campaignAlias
+     * @param apiKey
+     * @param sourceId
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendImmediateByCampaignAliasToSubscriberId", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignAliasToSubscriberId")
+    @ResponseWrapper(localName = "sendImmediateByCampaignAliasToSubscriberIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendImmediateByCampaignAliasToSubscriberIdResponse")
+    public String sendImmediateByCampaignAliasToSubscriberId(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "campaignAlias", targetNamespace = "")
+        String campaignAlias,
+        @WebParam(name = "sourceId", targetNamespace = "")
+        int sourceId,
+        @WebParam(name = "subscriberId", targetNamespace = "")
+        int subscriberId,
+        @WebParam(name = "sendImmediateOptions", targetNamespace = "")
+        SendImmediateOptions sendImmediateOptions);
 
     /**
      * 

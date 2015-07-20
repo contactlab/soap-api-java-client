@@ -34,6 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="PERIODIC"/>
  *     &lt;enumeration value="SMARTRELAY"/>
  *     &lt;enumeration value="IMMEDIATE"/>
+ *     &lt;enumeration value="SPLIT_TEST"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -48,7 +49,8 @@ public enum CampaignType {
     TRIGGERED,
     PERIODIC,
     SMARTRELAY,
-    IMMEDIATE;
+    IMMEDIATE,
+    SPLIT_TEST;
 
     public String value() {
         return name();

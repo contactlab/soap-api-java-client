@@ -32,8 +32,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="DELIVERY_ROLE_MASTER"/>
  *     &lt;enumeration value="DELIVERY_ROLE_SPLIT_BASE"/>
  *     &lt;enumeration value="DELIVERY_ROLE_SPLIT"/>
- *     &lt;enumeration value="DELIVERY_ROLE_TEST_MASTER"/>
  *     &lt;enumeration value="DELIVERY_ROLE_TEST_SPLIT"/>
+ *     &lt;enumeration value="DELIVERY_ROLE_TEST_MASTER"/>
  *     &lt;enumeration value="DELIVERY_ROLE_TEST_WINNER"/>
  *     &lt;enumeration value="DELIVERY_ROLE_BCC"/>
  *   &lt;/restriction>
@@ -49,8 +49,8 @@ public enum DeliveryRoleType {
     DELIVERY_ROLE_MASTER,
     DELIVERY_ROLE_SPLIT_BASE,
     DELIVERY_ROLE_SPLIT,
-    DELIVERY_ROLE_TEST_MASTER,
     DELIVERY_ROLE_TEST_SPLIT,
+    DELIVERY_ROLE_TEST_MASTER,
     DELIVERY_ROLE_TEST_WINNER,
     DELIVERY_ROLE_BCC;
 

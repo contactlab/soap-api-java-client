@@ -49,6 +49,7 @@ import com.contactlab.api.ws.DeliveryRoleType;
  *         &lt;element name="roleType" type="{http://ws.api.contactlab.com/}deliveryRoleType" minOccurs="0"/>
  *         &lt;element name="removeDuplicates" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="subscribersCount" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="status" type="{domain.ws.api.contactlab.com}deliveryStatus" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -72,7 +73,8 @@ import com.contactlab.api.ws.DeliveryRoleType;
     "parentId",
     "roleType",
     "removeDuplicates",
-    "subscribersCount"
+    "subscribersCount",
+    "status"
 })
 public class Campaign {
 
@@ -98,6 +100,7 @@ public class Campaign {
     @XmlElement(defaultValue = "false")
     protected Boolean removeDuplicates;
     protected Integer subscribersCount;
+    protected DeliveryStatus status;
 
     /**
      * Gets the value of the identifier property.
@@ -417,6 +420,30 @@ public class Campaign {
      */
     public void setSubscribersCount(Integer value) {
         this.subscribersCount = value;
+    }
+
+    /**
+     * Gets the value of the status property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link DeliveryStatus }
+     *     
+     */
+    public DeliveryStatus getStatus() {
+        return status;
+    }
+
+    /**
+     * Sets the value of the status property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DeliveryStatus }
+     *     
+     */
+    public void setStatus(DeliveryStatus value) {
+        this.status = value;
     }
 
 }

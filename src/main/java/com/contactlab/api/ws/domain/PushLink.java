@@ -33,6 +33,7 @@ import com.contactlab.api.ws.TrackableLink;
  *     &lt;extension base="{http://ws.api.contactlab.com/}trackableLink">
  *       &lt;sequence>
  *         &lt;element name="shorten" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="keyName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -43,13 +44,15 @@ import com.contactlab.api.ws.TrackableLink;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PushLink", propOrder = {
-    "shorten"
+    "shorten",
+    "keyName"
 })
 public class PushLink
     extends TrackableLink
 {
 
     protected boolean shorten;
+    protected String keyName;
 
     /**
      * Gets the value of the shorten property.
@@ -65,6 +68,30 @@ public class PushLink
      */
     public void setShorten(boolean value) {
         this.shorten = value;
+    }
+
+    /**
+     * Gets the value of the keyName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getKeyName() {
+        return keyName;
+    }
+
+    /**
+     * Sets the value of the keyName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setKeyName(String value) {
+        this.keyName = value;
     }
 
 }
