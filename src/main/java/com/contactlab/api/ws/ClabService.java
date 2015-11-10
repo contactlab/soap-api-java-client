@@ -61,8 +61,8 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.domain.ObjectFactory.class,
-    com.contactlab.api.ws.ObjectFactory.class
+    com.contactlab.api.ws.ObjectFactory.class,
+    com.contactlab.api.ws.domain.ObjectFactory.class
 })
 public interface ClabService {
 
@@ -1991,6 +1991,26 @@ public interface ClabService {
         int subscriberId,
         @WebParam(name = "sendImmediateOptions", targetNamespace = "")
         SendImmediateOptions sendImmediateOptions);
+
+    /**
+     * 
+     * @param userKey
+     * @param uuid
+     * @param apiKey
+     * @return
+     *     returns java.util.List<com.contactlab.api.ws.DeliveryInformation>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getDeliveryStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryStatus")
+    @ResponseWrapper(localName = "getDeliveryStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryStatusResponse")
+    public List<DeliveryInformation> getDeliveryStatus(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "uuid", targetNamespace = "")
+        String uuid);
 
     /**
      * 
