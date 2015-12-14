@@ -1411,6 +1411,29 @@ public interface ClabService {
 
     /**
      * 
+     * @param recipients
+     * @param token
+     * @param hours
+     * @param campaignIdentifier
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "scheduleCampaignFeedbackReport", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ScheduleCampaignFeedbackReport")
+    @ResponseWrapper(localName = "scheduleCampaignFeedbackReportResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ScheduleCampaignFeedbackReportResponse")
+    public boolean scheduleCampaignFeedbackReport(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "recipients", targetNamespace = "")
+        List<String> recipients,
+        @WebParam(name = "hours", targetNamespace = "")
+        Integer hours);
+
+    /**
+     * 
      * @param filterIdentifier
      * @param token
      */

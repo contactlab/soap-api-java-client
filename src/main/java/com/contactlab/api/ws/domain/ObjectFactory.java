@@ -53,67 +53,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubscriberSourceField }
+     * Create an instance of {@link CampaignFeedback }
      * 
      */
-    public SubscriberSourceField createSubscriberSourceField() {
-        return new SubscriberSourceField();
-    }
-
-    /**
-     * Create an instance of {@link Sender }
-     * 
-     */
-    public Sender createSender() {
-        return new Sender();
-    }
-
-    /**
-     * Create an instance of {@link AuthToken }
-     * 
-     */
-    public AuthToken createAuthToken() {
-        return new AuthToken();
-    }
-
-    /**
-     * Create an instance of {@link TrackedLinks }
-     * 
-     */
-    public TrackedLinks createTrackedLinks() {
-        return new TrackedLinks();
-    }
-
-    /**
-     * Create an instance of {@link MessageModels }
-     * 
-     */
-    public MessageModels createMessageModels() {
-        return new MessageModels();
-    }
-
-    /**
-     * Create an instance of {@link BounceDetail }
-     * 
-     */
-    public BounceDetail createBounceDetail() {
-        return new BounceDetail();
-    }
-
-    /**
-     * Create an instance of {@link SubscriberSourceFilters }
-     * 
-     */
-    public SubscriberSourceFilters createSubscriberSourceFilters() {
-        return new SubscriberSourceFilters();
-    }
-
-    /**
-     * Create an instance of {@link APNsMobileApplicationCertificate }
-     * 
-     */
-    public APNsMobileApplicationCertificate createAPNsMobileApplicationCertificate() {
-        return new APNsMobileApplicationCertificate();
+    public CampaignFeedback createCampaignFeedback() {
+        return new CampaignFeedback();
     }
 
     /**
@@ -125,59 +69,115 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CampaignNotes }
+     * Create an instance of {@link SendImmediateOptions }
      * 
      */
-    public CampaignNotes createCampaignNotes() {
-        return new CampaignNotes();
+    public SendImmediateOptions createSendImmediateOptions() {
+        return new SendImmediateOptions();
     }
 
     /**
-     * Create an instance of {@link CampaignFeedback }
+     * Create an instance of {@link XMLDeliveryInfos }
      * 
      */
-    public CampaignFeedback createCampaignFeedback() {
-        return new CampaignFeedback();
+    public XMLDeliveryInfos createXMLDeliveryInfos() {
+        return new XMLDeliveryInfos();
     }
 
     /**
-     * Create an instance of {@link Campaign }
+     * Create an instance of {@link SplitTestCampaign }
      * 
      */
-    public Campaign createCampaign() {
-        return new Campaign();
+    public SplitTestCampaign createSplitTestCampaign() {
+        return new SplitTestCampaign();
     }
 
     /**
-     * Create an instance of {@link APNsMobileApplicationCertificate.Components.Entry }
+     * Create an instance of {@link APNsMobileApplicationCertificate }
      * 
      */
-    public APNsMobileApplicationCertificate.Components.Entry createAPNsMobileApplicationCertificateComponentsEntry() {
-        return new APNsMobileApplicationCertificate.Components.Entry();
+    public APNsMobileApplicationCertificate createAPNsMobileApplicationCertificate() {
+        return new APNsMobileApplicationCertificate();
     }
 
     /**
-     * Create an instance of {@link GCMsMobileApplicationCertificate.Components }
+     * Create an instance of {@link CampaignLookupPreferences }
      * 
      */
-    public GCMsMobileApplicationCertificate.Components createGCMsMobileApplicationCertificateComponents() {
-        return new GCMsMobileApplicationCertificate.Components();
+    public CampaignLookupPreferences createCampaignLookupPreferences() {
+        return new CampaignLookupPreferences();
     }
 
     /**
-     * Create an instance of {@link FaxMessage }
+     * Create an instance of {@link CommunicationCategory }
      * 
      */
-    public FaxMessage createFaxMessage() {
-        return new FaxMessage();
+    public CommunicationCategory createCommunicationCategory() {
+        return new CommunicationCategory();
     }
 
     /**
-     * Create an instance of {@link PushMessage }
+     * Create an instance of {@link Sender }
      * 
      */
-    public PushMessage createPushMessage() {
-        return new PushMessage();
+    public Sender createSender() {
+        return new Sender();
+    }
+
+    /**
+     * Create an instance of {@link TextMessage }
+     * 
+     */
+    public TextMessage createTextMessage() {
+        return new TextMessage();
+    }
+
+    /**
+     * Create an instance of {@link TrackedLinks }
+     * 
+     */
+    public TrackedLinks createTrackedLinks() {
+        return new TrackedLinks();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberSources }
+     * 
+     */
+    public SubscriberSources createSubscriberSources() {
+        return new SubscriberSources();
+    }
+
+    /**
+     * Create an instance of {@link LookupPreferences }
+     * 
+     */
+    public LookupPreferences createLookupPreferences() {
+        return new LookupPreferences();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberSourceField }
+     * 
+     */
+    public SubscriberSourceField createSubscriberSourceField() {
+        return new SubscriberSourceField();
+    }
+
+    /**
+     * Create an instance of {@link PushLink }
+     * 
+     */
+    public PushLink createPushLink() {
+        return new PushLink();
+    }
+
+    /**
+     * Create an instance of {@link Subscribers }
+     * 
+     */
+    public Subscribers createSubscribers() {
+        return new Subscribers();
     }
 
     /**
@@ -197,46 +197,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GCMsMobileApplicationCertificate.Components.Entry }
-     * 
-     */
-    public GCMsMobileApplicationCertificate.Components.Entry createGCMsMobileApplicationCertificateComponentsEntry() {
-        return new GCMsMobileApplicationCertificate.Components.Entry();
-    }
-
-    /**
-     * Create an instance of {@link XMLDeliveryInfos }
-     * 
-     */
-    public XMLDeliveryInfos createXMLDeliveryInfos() {
-        return new XMLDeliveryInfos();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateOptions }
-     * 
-     */
-    public SendImmediateOptions createSendImmediateOptions() {
-        return new SendImmediateOptions();
-    }
-
-    /**
-     * Create an instance of {@link Recipients }
-     * 
-     */
-    public Recipients createRecipients() {
-        return new Recipients();
-    }
-
-    /**
-     * Create an instance of {@link Campaigns }
-     * 
-     */
-    public Campaigns createCampaigns() {
-        return new Campaigns();
-    }
-
-    /**
      * Create an instance of {@link EmailMessage }
      * 
      */
@@ -245,19 +205,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubscriberAttribute }
+     * Create an instance of {@link GCMsMobileApplicationCertificate.Components }
      * 
      */
-    public SubscriberAttribute createSubscriberAttribute() {
-        return new SubscriberAttribute();
+    public GCMsMobileApplicationCertificate.Components createGCMsMobileApplicationCertificateComponents() {
+        return new GCMsMobileApplicationCertificate.Components();
     }
 
     /**
-     * Create an instance of {@link CampaignLookupPreferences }
+     * Create an instance of {@link FaxMessage }
      * 
      */
-    public CampaignLookupPreferences createCampaignLookupPreferences() {
-        return new CampaignLookupPreferences();
+    public FaxMessage createFaxMessage() {
+        return new FaxMessage();
+    }
+
+    /**
+     * Create an instance of {@link MessageModels }
+     * 
+     */
+    public MessageModels createMessageModels() {
+        return new MessageModels();
+    }
+
+    /**
+     * Create an instance of {@link GCMsMobileApplicationCertificate.Components.Entry }
+     * 
+     */
+    public GCMsMobileApplicationCertificate.Components.Entry createGCMsMobileApplicationCertificateComponentsEntry() {
+        return new GCMsMobileApplicationCertificate.Components.Entry();
+    }
+
+    /**
+     * Create an instance of {@link PushMessage }
+     * 
+     */
+    public PushMessage createPushMessage() {
+        return new PushMessage();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberSource }
+     * 
+     */
+    public SubscriberSource createSubscriberSource() {
+        return new SubscriberSource();
+    }
+
+    /**
+     * Create an instance of {@link Campaign }
+     * 
+     */
+    public Campaign createCampaign() {
+        return new Campaign();
     }
 
     /**
@@ -277,107 +277,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubscriberSource }
+     * Create an instance of {@link Recipients }
      * 
      */
-    public SubscriberSource createSubscriberSource() {
-        return new SubscriberSource();
+    public Recipients createRecipients() {
+        return new Recipients();
     }
 
     /**
-     * Create an instance of {@link Subscribers }
+     * Create an instance of {@link CampaignNotes }
      * 
      */
-    public Subscribers createSubscribers() {
-        return new Subscribers();
-    }
-
-    /**
-     * Create an instance of {@link APNsPushTemplate }
-     * 
-     */
-    public APNsPushTemplate createAPNsPushTemplate() {
-        return new APNsPushTemplate();
-    }
-
-    /**
-     * Create an instance of {@link SubscriberSourceFilter }
-     * 
-     */
-    public SubscriberSourceFilter createSubscriberSourceFilter() {
-        return new SubscriberSourceFilter();
-    }
-
-    /**
-     * Create an instance of {@link TextMessage }
-     * 
-     */
-    public TextMessage createTextMessage() {
-        return new TextMessage();
-    }
-
-    /**
-     * Create an instance of {@link APNsMobileApplicationCertificate.Components }
-     * 
-     */
-    public APNsMobileApplicationCertificate.Components createAPNsMobileApplicationCertificateComponents() {
-        return new APNsMobileApplicationCertificate.Components();
-    }
-
-    /**
-     * Create an instance of {@link CommunicationCategory }
-     * 
-     */
-    public CommunicationCategory createCommunicationCategory() {
-        return new CommunicationCategory();
-    }
-
-    /**
-     * Create an instance of {@link PushLink }
-     * 
-     */
-    public PushLink createPushLink() {
-        return new PushLink();
-    }
-
-    /**
-     * Create an instance of {@link APNsPushTemplate.Variants.Entry }
-     * 
-     */
-    public APNsPushTemplate.Variants.Entry createAPNsPushTemplateVariantsEntry() {
-        return new APNsPushTemplate.Variants.Entry();
-    }
-
-    /**
-     * Create an instance of {@link SubscriberSources }
-     * 
-     */
-    public SubscriberSources createSubscriberSources() {
-        return new SubscriberSources();
-    }
-
-    /**
-     * Create an instance of {@link Attachment }
-     * 
-     */
-    public Attachment createAttachment() {
-        return new Attachment();
-    }
-
-    /**
-     * Create an instance of {@link SplitTestCampaign }
-     * 
-     */
-    public SplitTestCampaign createSplitTestCampaign() {
-        return new SplitTestCampaign();
-    }
-
-    /**
-     * Create an instance of {@link CampaignNote }
-     * 
-     */
-    public CampaignNote createCampaignNote() {
-        return new CampaignNote();
+    public CampaignNotes createCampaignNotes() {
+        return new CampaignNotes();
     }
 
     /**
@@ -389,11 +301,99 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LookupPreferences }
+     * Create an instance of {@link AuthToken }
      * 
      */
-    public LookupPreferences createLookupPreferences() {
-        return new LookupPreferences();
+    public AuthToken createAuthToken() {
+        return new AuthToken();
+    }
+
+    /**
+     * Create an instance of {@link APNsMobileApplicationCertificate.Components.Entry }
+     * 
+     */
+    public APNsMobileApplicationCertificate.Components.Entry createAPNsMobileApplicationCertificateComponentsEntry() {
+        return new APNsMobileApplicationCertificate.Components.Entry();
+    }
+
+    /**
+     * Create an instance of {@link APNsMobileApplicationCertificate.Components }
+     * 
+     */
+    public APNsMobileApplicationCertificate.Components createAPNsMobileApplicationCertificateComponents() {
+        return new APNsMobileApplicationCertificate.Components();
+    }
+
+    /**
+     * Create an instance of {@link APNsPushTemplate.Variants.Entry }
+     * 
+     */
+    public APNsPushTemplate.Variants.Entry createAPNsPushTemplateVariantsEntry() {
+        return new APNsPushTemplate.Variants.Entry();
+    }
+
+    /**
+     * Create an instance of {@link Attachment }
+     * 
+     */
+    public Attachment createAttachment() {
+        return new Attachment();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberSourceFilters }
+     * 
+     */
+    public SubscriberSourceFilters createSubscriberSourceFilters() {
+        return new SubscriberSourceFilters();
+    }
+
+    /**
+     * Create an instance of {@link Campaigns }
+     * 
+     */
+    public Campaigns createCampaigns() {
+        return new Campaigns();
+    }
+
+    /**
+     * Create an instance of {@link CampaignNote }
+     * 
+     */
+    public CampaignNote createCampaignNote() {
+        return new CampaignNote();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberAttribute }
+     * 
+     */
+    public SubscriberAttribute createSubscriberAttribute() {
+        return new SubscriberAttribute();
+    }
+
+    /**
+     * Create an instance of {@link SubscriberSourceFilter }
+     * 
+     */
+    public SubscriberSourceFilter createSubscriberSourceFilter() {
+        return new SubscriberSourceFilter();
+    }
+
+    /**
+     * Create an instance of {@link BounceDetail }
+     * 
+     */
+    public BounceDetail createBounceDetail() {
+        return new BounceDetail();
+    }
+
+    /**
+     * Create an instance of {@link APNsPushTemplate }
+     * 
+     */
+    public APNsPushTemplate createAPNsPushTemplate() {
+        return new APNsPushTemplate();
     }
 
     /**
