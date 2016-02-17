@@ -38,6 +38,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="phoneField" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="faxField" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="pushField" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="fieldType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -53,7 +54,8 @@ import javax.xml.bind.annotation.XmlType;
     "emailField",
     "phoneField",
     "faxField",
-    "pushField"
+    "pushField",
+    "fieldType"
 })
 public class SubscriberSourceField {
 
@@ -69,6 +71,8 @@ public class SubscriberSourceField {
     protected Boolean faxField;
     @XmlElement(defaultValue = "false")
     protected Boolean pushField;
+    @XmlElement(defaultValue = "")
+    protected String fieldType;
 
     /**
      * Gets the value of the name property.
@@ -212,6 +216,30 @@ public class SubscriberSourceField {
      */
     public void setPushField(Boolean value) {
         this.pushField = value;
+    }
+
+    /**
+     * Gets the value of the fieldType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFieldType() {
+        return fieldType;
+    }
+
+    /**
+     * Sets the value of the fieldType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFieldType(String value) {
+        this.fieldType = value;
     }
 
 }

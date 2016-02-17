@@ -61,8 +61,8 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.ObjectFactory.class,
-    com.contactlab.api.ws.domain.ObjectFactory.class
+    com.contactlab.api.ws.domain.ObjectFactory.class,
+    com.contactlab.api.ws.ObjectFactory.class
 })
 public interface ClabService {
 
@@ -419,6 +419,26 @@ public interface ClabService {
         int sourceIdentifier,
         @WebParam(name = "lookupPrefs", targetNamespace = "")
         LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param filterIdentifier
+     * @param token
+     * @param newName
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "renameSubscriberSourceFilter", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RenameSubscriberSourceFilter")
+    @ResponseWrapper(localName = "renameSubscriberSourceFilterResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RenameSubscriberSourceFilterResponse")
+    public boolean renameSubscriberSourceFilter(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "filterIdentifier", targetNamespace = "")
+        int filterIdentifier,
+        @WebParam(name = "newName", targetNamespace = "")
+        String newName);
 
     /**
      * 
@@ -1364,6 +1384,63 @@ public interface ClabService {
     /**
      * 
      * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createSelection", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSelection")
+    @ResponseWrapper(localName = "createSelectionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSelectionResponse")
+    public int createSelection(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token);
+
+    /**
+     * 
+     * @param selectionId
+     * @param token
+     * @param plannedTo
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "startSelection", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.StartSelection")
+    @ResponseWrapper(localName = "startSelectionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.StartSelectionResponse")
+    public int startSelection(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId,
+        @WebParam(name = "plannedTo", targetNamespace = "")
+        XMLGregorianCalendar plannedTo);
+
+    /**
+     * 
+     * @param selectionId
+     * @param token
+     * @param isTest
+     * @param recipientIds
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addSelectionSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSelectionSubscribers")
+    @ResponseWrapper(localName = "addSelectionSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSelectionSubscribersResponse")
+    public int addSelectionSubscribers(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId,
+        @WebParam(name = "isTest", targetNamespace = "")
+        boolean isTest,
+        @WebParam(name = "recipientIds", targetNamespace = "")
+        List<Integer> recipientIds);
+
+    /**
+     * 
+     * @param token
      * @param campaignToSendId
      * @return
      *     returns java.lang.Integer
@@ -2045,5 +2122,90 @@ public interface ClabService {
     @RequestWrapper(localName = "getEmptyPushTemplate", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetEmptyPushTemplate")
     @ResponseWrapper(localName = "getEmptyPushTemplateResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetEmptyPushTemplateResponse")
     public PushTemplateEnvelope getEmptyPushTemplate();
+
+    /**
+     * 
+     * @param selectionId
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "commitSelection", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CommitSelection")
+    @ResponseWrapper(localName = "commitSelectionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CommitSelectionResponse")
+    public int commitSelection(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId);
+
+    /**
+     * 
+     * @param selectionId
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "rollbackSelection", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RollbackSelection")
+    @ResponseWrapper(localName = "rollbackSelectionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RollbackSelectionResponse")
+    public int rollbackSelection(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId);
+
+    /**
+     * 
+     * @param selectionId
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSelectionStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSelectionStatus")
+    @ResponseWrapper(localName = "getSelectionStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSelectionStatusResponse")
+    public int getSelectionStatus(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId);
+
+    /**
+     * 
+     * @param selectionId
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSelectionRealFilterId", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSelectionRealFilterId")
+    @ResponseWrapper(localName = "getSelectionRealFilterIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSelectionRealFilterIdResponse")
+    public int getSelectionRealFilterId(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId);
+
+    /**
+     * 
+     * @param selectionId
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSelectionTestFilterId", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSelectionTestFilterId")
+    @ResponseWrapper(localName = "getSelectionTestFilterIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSelectionTestFilterIdResponse")
+    public int getSelectionTestFilterId(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId);
 
 }

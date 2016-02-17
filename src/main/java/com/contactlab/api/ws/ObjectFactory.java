@@ -41,17 +41,19 @@ public class ObjectFactory {
 
     private final static QName _FindMessagesInfoResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesInfoResponse");
     private final static QName _CancelCampaignResponse_QNAME = new QName("http://ws.api.contactlab.com/", "cancelCampaignResponse");
-    private final static QName _FindFiltersBySubscriberSource_QNAME = new QName("http://ws.api.contactlab.com/", "findFiltersBySubscriberSource");
     private final static QName _SetCampaignRecurrency_QNAME = new QName("http://ws.api.contactlab.com/", "setCampaignRecurrency");
+    private final static QName _FindFiltersBySubscriberSource_QNAME = new QName("http://ws.api.contactlab.com/", "findFiltersBySubscriberSource");
     private final static QName _CreateMessageModelResponse_QNAME = new QName("http://ws.api.contactlab.com/", "createMessageModelResponse");
     private final static QName _SendImmediateMessageSidCidCAResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSidCidCAResponse");
     private final static QName _SendImmediateMessageSidCidCA_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSidCidCA");
     private final static QName _CountSubscribersIncludedInFilter_QNAME = new QName("http://ws.api.contactlab.com/", "countSubscribersIncludedInFilter");
+    private final static QName _GetSelectionRealFilterId_QNAME = new QName("http://ws.api.contactlab.com/", "getSelectionRealFilterId");
     private final static QName _SendImmediateByCampaignToSubscriberResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignToSubscriberResponse");
-    private final static QName _GetTrackedLinksResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getTrackedLinksResponse");
     private final static QName _GetSubscriberDataExchangeStatus_QNAME = new QName("http://ws.api.contactlab.com/", "getSubscriberDataExchangeStatus");
+    private final static QName _GetTrackedLinksResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getTrackedLinksResponse");
     private final static QName _StartSubscriberDataExchangeResponse_QNAME = new QName("http://ws.api.contactlab.com/", "startSubscriberDataExchangeResponse");
     private final static QName _FindCampaignsByModel_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsByModel");
+    private final static QName _RollbackSelectionResponse_QNAME = new QName("http://ws.api.contactlab.com/", "rollbackSelectionResponse");
     private final static QName _SendImmediateMessageSidCAl_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSidCAl");
     private final static QName _FindPeriodicCampaignsResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findPeriodicCampaignsResponse");
     private final static QName _SendImmediateByCampaignToSubscriberId_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignToSubscriberId");
@@ -70,6 +72,7 @@ public class ObjectFactory {
     private final static QName _RequestCampaignFeedbackReport_QNAME = new QName("http://ws.api.contactlab.com/", "requestCampaignFeedbackReport");
     private final static QName _GetAvailableCommunicationCategories_QNAME = new QName("http://ws.api.contactlab.com/", "getAvailableCommunicationCategories");
     private final static QName _GetDeliveryStatusResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getDeliveryStatusResponse");
+    private final static QName _GetSelectionRealFilterIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getSelectionRealFilterIdResponse");
     private final static QName _ScheduleCampaignFeedbackReport_QNAME = new QName("http://ws.api.contactlab.com/", "scheduleCampaignFeedbackReport");
     private final static QName _GetXMLDeliveries_QNAME = new QName("http://ws.api.contactlab.com/", "getXMLDeliveries");
     private final static QName _SendCampaign_QNAME = new QName("http://ws.api.contactlab.com/", "sendCampaign");
@@ -77,6 +80,7 @@ public class ObjectFactory {
     private final static QName _PublishOnWebResponse_QNAME = new QName("http://ws.api.contactlab.com/", "publishOnWebResponse");
     private final static QName _FindMessageModelsResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessageModelsResponse");
     private final static QName _SendImmediateByCampaignToSubscriberIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignToSubscriberIdResponse");
+    private final static QName _RenameSubscriberSourceFilterResponse_QNAME = new QName("http://ws.api.contactlab.com/", "renameSubscriberSourceFilterResponse");
     private final static QName _FindSubscribersIncludedInFilterResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findSubscribersIncludedInFilterResponse");
     private final static QName _GetSubscriberResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getSubscriberResponse");
     private final static QName _AddSubscriberResponse_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscriberResponse");
@@ -88,6 +92,8 @@ public class ObjectFactory {
     private final static QName _FindMessagesInfo_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesInfo");
     private final static QName _SendImmediateMessageSidCid_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSidCid");
     private final static QName _FindArchivedFiltersBySubscriberSource_QNAME = new QName("http://ws.api.contactlab.com/", "findArchivedFiltersBySubscriberSource");
+    private final static QName _StartSelection_QNAME = new QName("http://ws.api.contactlab.com/", "startSelection");
+    private final static QName _StartSelectionResponse_QNAME = new QName("http://ws.api.contactlab.com/", "startSelectionResponse");
     private final static QName _SendImmediateByCampaignAliasToSubscriberId_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignAliasToSubscriberId");
     private final static QName _AddAttachment_QNAME = new QName("http://ws.api.contactlab.com/", "addAttachment");
     private final static QName _GetDeliveryStatus_QNAME = new QName("http://ws.api.contactlab.com/", "getDeliveryStatus");
@@ -104,27 +110,30 @@ public class ObjectFactory {
     private final static QName _GetMobileApplicationByCodeResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getMobileApplicationByCodeResponse");
     private final static QName _RemoveSubscriberResponse_QNAME = new QName("http://ws.api.contactlab.com/", "removeSubscriberResponse");
     private final static QName _CreateMessageModel_QNAME = new QName("http://ws.api.contactlab.com/", "createMessageModel");
+    private final static QName _CreateSelectionResponse_QNAME = new QName("http://ws.api.contactlab.com/", "createSelectionResponse");
     private final static QName _GetXMLDeliveryTransitionsResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getXMLDeliveryTransitionsResponse");
     private final static QName _ReuseSubscriberSourceFilterResponse_QNAME = new QName("http://ws.api.contactlab.com/", "reuseSubscriberSourceFilterResponse");
+    private final static QName _GetSelectionTestFilterId_QNAME = new QName("http://ws.api.contactlab.com/", "getSelectionTestFilterId");
     private final static QName _FindMessageInfoByCampaignId_QNAME = new QName("http://ws.api.contactlab.com/", "findMessageInfoByCampaignId");
     private final static QName _SendImmediateByCampaignAliasToSubscriber_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignAliasToSubscriber");
-    private final static QName _AddSubscriberSourceFilter_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscriberSourceFilter");
     private final static QName _FindFiltersBySubscriberSourceResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findFiltersBySubscriberSourceResponse");
+    private final static QName _AddSubscriberSourceFilter_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscriberSourceFilter");
     private final static QName _AddSubscribersResponse_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscribersResponse");
+    private final static QName _RollbackSelection_QNAME = new QName("http://ws.api.contactlab.com/", "rollbackSelection");
     private final static QName _FindMessageByCampaignIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessageByCampaignIdResponse");
     private final static QName _FindMessagesByChannelResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesByChannelResponse");
     private final static QName _ScheduleCampaignFeedbackReportResponse_QNAME = new QName("http://ws.api.contactlab.com/", "scheduleCampaignFeedbackReportResponse");
     private final static QName _CountSubscribers_QNAME = new QName("http://ws.api.contactlab.com/", "countSubscribers");
-    private final static QName _FindMessagesResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesResponse");
     private final static QName _SendSplitTestResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendSplitTestResponse");
+    private final static QName _FindMessagesResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesResponse");
     private final static QName _FindCampaignsSentBetweenResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsSentBetweenResponse");
     private final static QName _FindArchivedFiltersBySubscriberSourceResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findArchivedFiltersBySubscriberSourceResponse");
     private final static QName _AddCampaignNote_QNAME = new QName("http://ws.api.contactlab.com/", "addCampaignNote");
     private final static QName _FindNotesByCampaignResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findNotesByCampaignResponse");
     private final static QName _FindCampaignsResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsResponse");
     private final static QName _SendImmediateByCampaignIdToSubscriberResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignIdToSubscriberResponse");
-    private final static QName _UpdateSubscriber_QNAME = new QName("http://ws.api.contactlab.com/", "updateSubscriber");
     private final static QName _GetMobileApplicationByCode_QNAME = new QName("http://ws.api.contactlab.com/", "getMobileApplicationByCode");
+    private final static QName _UpdateSubscriber_QNAME = new QName("http://ws.api.contactlab.com/", "updateSubscriber");
     private final static QName _FindMessagesByCampaignNameResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesByCampaignNameResponse");
     private final static QName _SendImmediateMessageSDataCDataCA_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSDataCDataCA");
     private final static QName _GetMessageModelByIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getMessageModelByIdResponse");
@@ -149,21 +158,22 @@ public class ObjectFactory {
     private final static QName _SendSplitTestWinnerResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendSplitTestWinnerResponse");
     private final static QName _SendImmediateMessageSdataCAlCAResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSdataCAlCAResponse");
     private final static QName _AddSubscriberSourceFilterResponse_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscriberSourceFilterResponse");
-    private final static QName _BorrowTokenResponse_QNAME = new QName("http://ws.api.contactlab.com/", "borrowTokenResponse");
     private final static QName _SendImmediateMessageSdataCAl_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSdataCAl");
+    private final static QName _BorrowTokenResponse_QNAME = new QName("http://ws.api.contactlab.com/", "borrowTokenResponse");
     private final static QName _SendImmediateByCampaignAliasToSubscriberIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignAliasToSubscriberIdResponse");
     private final static QName _FindMessagesInfoByCampaignName_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesInfoByCampaignName");
+    private final static QName _CreateSelection_QNAME = new QName("http://ws.api.contactlab.com/", "createSelection");
     private final static QName _UpdateSubscriberResponse_QNAME = new QName("http://ws.api.contactlab.com/", "updateSubscriberResponse");
     private final static QName _GetCampaignDeliveryStatusResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getCampaignDeliveryStatusResponse");
-    private final static QName _AddSubscriberSourceResponse_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscriberSourceResponse");
     private final static QName _FindCampaignsBySubscriberSourceFilter_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsBySubscriberSourceFilter");
+    private final static QName _AddSubscriberSourceResponse_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscriberSourceResponse");
     private final static QName _SendImmediateByCampaignAliasToSubscriberResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignAliasToSubscriberResponse");
     private final static QName _CountSubscribersResponse_QNAME = new QName("http://ws.api.contactlab.com/", "countSubscribersResponse");
     private final static QName _FindTriggerableCampaigns_QNAME = new QName("http://ws.api.contactlab.com/", "findTriggerableCampaigns");
     private final static QName _CreateCampaign_QNAME = new QName("http://ws.api.contactlab.com/", "createCampaign");
     private final static QName _FindMessagesByCampaignName_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesByCampaignName");
-    private final static QName _KeepaliveTokenResponse_QNAME = new QName("http://ws.api.contactlab.com/", "keepaliveTokenResponse");
     private final static QName _PublishOnWeb_QNAME = new QName("http://ws.api.contactlab.com/", "publishOnWeb");
+    private final static QName _KeepaliveTokenResponse_QNAME = new QName("http://ws.api.contactlab.com/", "keepaliveTokenResponse");
     private final static QName _CountSubscribersIncludedInFilterResponse_QNAME = new QName("http://ws.api.contactlab.com/", "countSubscribersIncludedInFilterResponse");
     private final static QName _AddSubscriber_QNAME = new QName("http://ws.api.contactlab.com/", "addSubscriber");
     private final static QName _GetSubscriberSourceResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getSubscriberSourceResponse");
@@ -176,27 +186,29 @@ public class ObjectFactory {
     private final static QName _GetXMLDeliveriesResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getXMLDeliveriesResponse");
     private final static QName _SendImmediateMessageSidCAlResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSidCAlResponse");
     private final static QName _SendImmediateMessageSidCAlCAResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSidCAlCAResponse");
+    private final static QName _CommitSelection_QNAME = new QName("http://ws.api.contactlab.com/", "commitSelection");
     private final static QName _FindMessageModelsBySubscriberSourceResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessageModelsBySubscriberSourceResponse");
     private final static QName _GetCampaignFeedbackResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getCampaignFeedbackResponse");
     private final static QName _SendImmediateMessageSIdCDataResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSIdCDataResponse");
     private final static QName _SendCampaignResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendCampaignResponse");
-    private final static QName _GetCryptoKeyResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getCryptoKeyResponse");
     private final static QName _FindCampaignsSentBetween_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsSentBetween");
+    private final static QName _GetCryptoKeyResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getCryptoKeyResponse");
     private final static QName _FindCampaignsByNameOrSubject_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsByNameOrSubject");
-    private final static QName _GetRequestStatus_QNAME = new QName("http://ws.api.contactlab.com/", "getRequestStatus");
     private final static QName _TriggerDeliveryById_QNAME = new QName("http://ws.api.contactlab.com/", "triggerDeliveryById");
+    private final static QName _GetRequestStatus_QNAME = new QName("http://ws.api.contactlab.com/", "getRequestStatus");
     private final static QName _GetSubscriberDataExchangeStatusResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getSubscriberDataExchangeStatusResponse");
     private final static QName _CloneAndSendCampaign_QNAME = new QName("http://ws.api.contactlab.com/", "cloneAndSendCampaign");
     private final static QName _CloneAndSendCampaignResponse_QNAME = new QName("http://ws.api.contactlab.com/", "cloneAndSendCampaignResponse");
     private final static QName _AddCampaignNoteResponse_QNAME = new QName("http://ws.api.contactlab.com/", "addCampaignNoteResponse");
     private final static QName _GetCampaign_QNAME = new QName("http://ws.api.contactlab.com/", "getCampaign");
     private final static QName _GetSubscriberSourceFilter_QNAME = new QName("http://ws.api.contactlab.com/", "getSubscriberSourceFilter");
-    private final static QName _SendImmediateMessageResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageResponse");
     private final static QName _SendSplitTest_QNAME = new QName("http://ws.api.contactlab.com/", "sendSplitTest");
+    private final static QName _SendImmediateMessageResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageResponse");
     private final static QName _GetMessageModelById_QNAME = new QName("http://ws.api.contactlab.com/", "getMessageModelById");
     private final static QName _GetEmptyPushTemplateResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getEmptyPushTemplateResponse");
-    private final static QName _BorrowToken_QNAME = new QName("http://ws.api.contactlab.com/", "borrowToken");
     private final static QName _TriggerDeliveryByAliasResponse_QNAME = new QName("http://ws.api.contactlab.com/", "triggerDeliveryByAliasResponse");
+    private final static QName _BorrowToken_QNAME = new QName("http://ws.api.contactlab.com/", "borrowToken");
+    private final static QName _GetSelectionTestFilterIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getSelectionTestFilterIdResponse");
     private final static QName _SendImmediateByCampaignIdToSubscriber_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignIdToSubscriber");
     private final static QName _IsSubscriberSourceLocked_QNAME = new QName("http://ws.api.contactlab.com/", "isSubscriberSourceLocked");
     private final static QName _GetSubscriberSourceFilterResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getSubscriberSourceFilterResponse");
@@ -214,6 +226,7 @@ public class ObjectFactory {
     private final static QName _CreateSplitTest_QNAME = new QName("http://ws.api.contactlab.com/", "createSplitTest");
     private final static QName _FindCampaignsByStatus_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsByStatus");
     private final static QName _FindMessagesInfoByCampaignNameResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesInfoByCampaignNameResponse");
+    private final static QName _AddSelectionSubscribers_QNAME = new QName("http://ws.api.contactlab.com/", "addSelectionSubscribers");
     private final static QName _SendImmediateMessageSDataCIdCAResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSDataCIdCAResponse");
     private final static QName _FindSubscribers_QNAME = new QName("http://ws.api.contactlab.com/", "findSubscribers");
     private final static QName _ReuseSubscriberSourceFilter_QNAME = new QName("http://ws.api.contactlab.com/", "reuseSubscriberSourceFilter");
@@ -221,6 +234,8 @@ public class ObjectFactory {
     private final static QName _FindSubscribersIncludedInFilter_QNAME = new QName("http://ws.api.contactlab.com/", "findSubscribersIncludedInFilter");
     private final static QName _FindMessageInfoByCampaignIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findMessageInfoByCampaignIdResponse");
     private final static QName _SendImmediateByCampaignIdToSubscriberIdResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateByCampaignIdToSubscriberIdResponse");
+    private final static QName _AddSelectionSubscribersResponse_QNAME = new QName("http://ws.api.contactlab.com/", "addSelectionSubscribersResponse");
+    private final static QName _GetSelectionStatusResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getSelectionStatusResponse");
     private final static QName _GetArchivedSubscriberSourceFilterResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getArchivedSubscriberSourceFilterResponse");
     private final static QName _SendImmediateMessageSdataCAlResponse_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSdataCAlResponse");
     private final static QName _GetXMLDeliveryTransitions_QNAME = new QName("http://ws.api.contactlab.com/", "getXMLDeliveryTransitions");
@@ -230,7 +245,10 @@ public class ObjectFactory {
     private final static QName _GetAvailableCommunicationCategoriesResponse_QNAME = new QName("http://ws.api.contactlab.com/", "getAvailableCommunicationCategoriesResponse");
     private final static QName _FindCampaignsByModelResponse_QNAME = new QName("http://ws.api.contactlab.com/", "findCampaignsByModelResponse");
     private final static QName _FindMessagesInfoByChannel_QNAME = new QName("http://ws.api.contactlab.com/", "findMessagesInfoByChannel");
+    private final static QName _CommitSelectionResponse_QNAME = new QName("http://ws.api.contactlab.com/", "commitSelectionResponse");
     private final static QName _SendImmediateMessageSDataCIdCA_QNAME = new QName("http://ws.api.contactlab.com/", "sendImmediateMessageSDataCIdCA");
+    private final static QName _RenameSubscriberSourceFilter_QNAME = new QName("http://ws.api.contactlab.com/", "renameSubscriberSourceFilter");
+    private final static QName _GetSelectionStatus_QNAME = new QName("http://ws.api.contactlab.com/", "getSelectionStatus");
     private final static QName _ModifySubscriberSubscriptionStatusByMailqId_QNAME = new QName("http://ws.api.contactlab.com/", "modifySubscriberSubscriptionStatusByMailqId");
     private final static QName _FindNotesByCampaign_QNAME = new QName("http://ws.api.contactlab.com/", "findNotesByCampaign");
 
@@ -242,403 +260,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateSubscriber }
+     * Create an instance of {@link GetSelectionRealFilterIdResponse }
      * 
      */
-    public UpdateSubscriber createUpdateSubscriber() {
-        return new UpdateSubscriber();
+    public GetSelectionRealFilterIdResponse createGetSelectionRealFilterIdResponse() {
+        return new GetSelectionRealFilterIdResponse();
     }
 
     /**
-     * Create an instance of {@link GetCampaign }
+     * Create an instance of {@link AddSelectionSubscribers }
      * 
      */
-    public GetCampaign createGetCampaign() {
-        return new GetCampaign();
-    }
-
-    /**
-     * Create an instance of {@link AddCampaignNote }
-     * 
-     */
-    public AddCampaignNote createAddCampaignNote() {
-        return new AddCampaignNote();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsBySubscriberSourceFilter }
-     * 
-     */
-    public FindCampaignsBySubscriberSourceFilter createFindCampaignsBySubscriberSourceFilter() {
-        return new FindCampaignsBySubscriberSourceFilter();
-    }
-
-    /**
-     * Create an instance of {@link KeepaliveTokenResponse }
-     * 
-     */
-    public KeepaliveTokenResponse createKeepaliveTokenResponse() {
-        return new KeepaliveTokenResponse();
-    }
-
-    /**
-     * Create an instance of {@link CountSubscribersResponse }
-     * 
-     */
-    public CountSubscribersResponse createCountSubscribersResponse() {
-        return new CountSubscribersResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateByCampaignToSubscriberId }
-     * 
-     */
-    public SendImmediateByCampaignToSubscriberId createSendImmediateByCampaignToSubscriberId() {
-        return new SendImmediateByCampaignToSubscriberId();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriberIdResponse }
-     * 
-     */
-    public SendImmediateByCampaignAliasToSubscriberIdResponse createSendImmediateByCampaignAliasToSubscriberIdResponse() {
-        return new SendImmediateByCampaignAliasToSubscriberIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessagesInfoByChannel }
-     * 
-     */
-    public FindMessagesInfoByChannel createFindMessagesInfoByChannel() {
-        return new FindMessagesInfoByChannel();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSIdCDataCA }
-     * 
-     */
-    public SendImmediateMessageSIdCDataCA createSendImmediateMessageSIdCDataCA() {
-        return new SendImmediateMessageSIdCDataCA();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriber }
-     * 
-     */
-    public GetSubscriber createGetSubscriber() {
-        return new GetSubscriber();
-    }
-
-    /**
-     * Create an instance of {@link ModifySubscriberSubscriptionStatusByMailqIdResponse }
-     * 
-     */
-    public ModifySubscriberSubscriptionStatusByMailqIdResponse createModifySubscriberSubscriptionStatusByMailqIdResponse() {
-        return new ModifySubscriberSubscriptionStatusByMailqIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSDataCDataResponse }
-     * 
-     */
-    public SendImmediateMessageSDataCDataResponse createSendImmediateMessageSDataCDataResponse() {
-        return new SendImmediateMessageSDataCDataResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetCampaignResponse }
-     * 
-     */
-    public GetCampaignResponse createGetCampaignResponse() {
-        return new GetCampaignResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessageInfoByCampaignId }
-     * 
-     */
-    public FindMessageInfoByCampaignId createFindMessageInfoByCampaignId() {
-        return new FindMessageInfoByCampaignId();
-    }
-
-    /**
-     * Create an instance of {@link ReuseSubscriberSourceFilter }
-     * 
-     */
-    public ReuseSubscriberSourceFilter createReuseSubscriberSourceFilter() {
-        return new ReuseSubscriberSourceFilter();
-    }
-
-    /**
-     * Create an instance of {@link PublishOnWeb }
-     * 
-     */
-    public PublishOnWeb createPublishOnWeb() {
-        return new PublishOnWeb();
-    }
-
-    /**
-     * Create an instance of {@link FindArchivedFiltersBySubscriberSourceResponse }
-     * 
-     */
-    public FindArchivedFiltersBySubscriberSourceResponse createFindArchivedFiltersBySubscriberSourceResponse() {
-        return new FindArchivedFiltersBySubscriberSourceResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendCampaign }
-     * 
-     */
-    public SendCampaign createSendCampaign() {
-        return new SendCampaign();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessage }
-     * 
-     */
-    public SendImmediateMessage createSendImmediateMessage() {
-        return new SendImmediateMessage();
-    }
-
-    /**
-     * Create an instance of {@link GetMobileApplicationByCode }
-     * 
-     */
-    public GetMobileApplicationByCode createGetMobileApplicationByCode() {
-        return new GetMobileApplicationByCode();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSDataCIdCA }
-     * 
-     */
-    public SendImmediateMessageSDataCIdCA createSendImmediateMessageSDataCIdCA() {
-        return new SendImmediateMessageSDataCIdCA();
-    }
-
-    /**
-     * Create an instance of {@link SendCampaignResponse }
-     * 
-     */
-    public SendCampaignResponse createSendCampaignResponse() {
-        return new SendCampaignResponse();
-    }
-
-    /**
-     * Create an instance of {@link GcMsPushTemplate }
-     * 
-     */
-    public GcMsPushTemplate createGcMsPushTemplate() {
-        return new GcMsPushTemplate();
-    }
-
-    /**
-     * Create an instance of {@link FindMessageModelsBySubscriberSourceResponse }
-     * 
-     */
-    public FindMessageModelsBySubscriberSourceResponse createFindMessageModelsBySubscriberSourceResponse() {
-        return new FindMessageModelsBySubscriberSourceResponse();
-    }
-
-    /**
-     * Create an instance of {@link UploadMediaContent }
-     * 
-     */
-    public UploadMediaContent createUploadMediaContent() {
-        return new UploadMediaContent();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSidCidCAResponse }
-     * 
-     */
-    public SendImmediateMessageSidCidCAResponse createSendImmediateMessageSidCidCAResponse() {
-        return new SendImmediateMessageSidCidCAResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessages }
-     * 
-     */
-    public FindMessages createFindMessages() {
-        return new FindMessages();
-    }
-
-    /**
-     * Create an instance of {@link FindArchivedFiltersBySubscriberSource }
-     * 
-     */
-    public FindArchivedFiltersBySubscriberSource createFindArchivedFiltersBySubscriberSource() {
-        return new FindArchivedFiltersBySubscriberSource();
-    }
-
-    /**
-     * Create an instance of {@link CreateMessageModel }
-     * 
-     */
-    public CreateMessageModel createCreateMessageModel() {
-        return new CreateMessageModel();
-    }
-
-    /**
-     * Create an instance of {@link GetDeliveryStatus }
-     * 
-     */
-    public GetDeliveryStatus createGetDeliveryStatus() {
-        return new GetDeliveryStatus();
-    }
-
-    /**
-     * Create an instance of {@link FindSubscribersIncludedInFilter }
-     * 
-     */
-    public FindSubscribersIncludedInFilter createFindSubscribersIncludedInFilter() {
-        return new FindSubscribersIncludedInFilter();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriberSource }
-     * 
-     */
-    public GetSubscriberSource createGetSubscriberSource() {
-        return new GetSubscriberSource();
-    }
-
-    /**
-     * Create an instance of {@link RequestCampaignFeedbackReport }
-     * 
-     */
-    public RequestCampaignFeedbackReport createRequestCampaignFeedbackReport() {
-        return new RequestCampaignFeedbackReport();
-    }
-
-    /**
-     * Create an instance of {@link AddSubscriberSourceFilterResponse }
-     * 
-     */
-    public AddSubscriberSourceFilterResponse createAddSubscriberSourceFilterResponse() {
-        return new AddSubscriberSourceFilterResponse();
-    }
-
-    /**
-     * Create an instance of {@link PublishOnWebResponse }
-     * 
-     */
-    public PublishOnWebResponse createPublishOnWebResponse() {
-        return new PublishOnWebResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddAttachment }
-     * 
-     */
-    public AddAttachment createAddAttachment() {
-        return new AddAttachment();
-    }
-
-    /**
-     * Create an instance of {@link GetCampaignFeedback }
-     * 
-     */
-    public GetCampaignFeedback createGetCampaignFeedback() {
-        return new GetCampaignFeedback();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsByModelResponse }
-     * 
-     */
-    public FindCampaignsByModelResponse createFindCampaignsByModelResponse() {
-        return new FindCampaignsByModelResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsSentBetweenResponse }
-     * 
-     */
-    public FindCampaignsSentBetweenResponse createFindCampaignsSentBetweenResponse() {
-        return new FindCampaignsSentBetweenResponse();
-    }
-
-    /**
-     * Create an instance of {@link SetCampaignRecurrency }
-     * 
-     */
-    public SetCampaignRecurrency createSetCampaignRecurrency() {
-        return new SetCampaignRecurrency();
-    }
-
-    /**
-     * Create an instance of {@link UnmarshalPushTemplateEnvelopeResponse }
-     * 
-     */
-    public UnmarshalPushTemplateEnvelopeResponse createUnmarshalPushTemplateEnvelopeResponse() {
-        return new UnmarshalPushTemplateEnvelopeResponse();
-    }
-
-    /**
-     * Create an instance of {@link ArchiveSubscriberSourceFilter }
-     * 
-     */
-    public ArchiveSubscriberSourceFilter createArchiveSubscriberSourceFilter() {
-        return new ArchiveSubscriberSourceFilter();
-    }
-
-    /**
-     * Create an instance of {@link AddSubscriberResponse }
-     * 
-     */
-    public AddSubscriberResponse createAddSubscriberResponse() {
-        return new AddSubscriberResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindSubscriberSources }
-     * 
-     */
-    public FindSubscriberSources createFindSubscriberSources() {
-        return new FindSubscriberSources();
-    }
-
-    /**
-     * Create an instance of {@link FindTriggerableCampaigns }
-     * 
-     */
-    public FindTriggerableCampaigns createFindTriggerableCampaigns() {
-        return new FindTriggerableCampaigns();
-    }
-
-    /**
-     * Create an instance of {@link SendSplitTestResponse }
-     * 
-     */
-    public SendSplitTestResponse createSendSplitTestResponse() {
-        return new SendSplitTestResponse();
-    }
-
-    /**
-     * Create an instance of {@link CountSubscribersIncludedInFilterResponse }
-     * 
-     */
-    public CountSubscribersIncludedInFilterResponse createCountSubscribersIncludedInFilterResponse() {
-        return new CountSubscribersIncludedInFilterResponse();
-    }
-
-    /**
-     * Create an instance of {@link ScheduleCampaignFeedbackReport }
-     * 
-     */
-    public ScheduleCampaignFeedbackReport createScheduleCampaignFeedbackReport() {
-        return new ScheduleCampaignFeedbackReport();
-    }
-
-    /**
-     * Create an instance of {@link IsSubscriberSourceLocked }
-     * 
-     */
-    public IsSubscriberSourceLocked createIsSubscriberSourceLocked() {
-        return new IsSubscriberSourceLocked();
+    public AddSelectionSubscribers createAddSelectionSubscribers() {
+        return new AddSelectionSubscribers();
     }
 
     /**
@@ -650,387 +284,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SendImmediateByCampaignIdToSubscriber }
+     * Create an instance of {@link CancelCampaignResponse }
      * 
      */
-    public SendImmediateByCampaignIdToSubscriber createSendImmediateByCampaignIdToSubscriber() {
-        return new SendImmediateByCampaignIdToSubscriber();
-    }
-
-    /**
-     * Create an instance of {@link GetXMLDeliveryTransitionsResponse }
-     * 
-     */
-    public GetXMLDeliveryTransitionsResponse createGetXMLDeliveryTransitionsResponse() {
-        return new GetXMLDeliveryTransitionsResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindFiltersBySubscriberSourceResponse }
-     * 
-     */
-    public FindFiltersBySubscriberSourceResponse createFindFiltersBySubscriberSourceResponse() {
-        return new FindFiltersBySubscriberSourceResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsByNote }
-     * 
-     */
-    public FindCampaignsByNote createFindCampaignsByNote() {
-        return new FindCampaignsByNote();
-    }
-
-    /**
-     * Create an instance of {@link MobileApplication }
-     * 
-     */
-    public MobileApplication createMobileApplication() {
-        return new MobileApplication();
-    }
-
-    /**
-     * Create an instance of {@link FindTriggerableCampaignsResponse }
-     * 
-     */
-    public FindTriggerableCampaignsResponse createFindTriggerableCampaignsResponse() {
-        return new FindTriggerableCampaignsResponse();
-    }
-
-    /**
-     * Create an instance of {@link TriggerDeliveryByIdResponse }
-     * 
-     */
-    public TriggerDeliveryByIdResponse createTriggerDeliveryByIdResponse() {
-        return new TriggerDeliveryByIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link RequestCampaignFeedbackReportResponse }
-     * 
-     */
-    public RequestCampaignFeedbackReportResponse createRequestCampaignFeedbackReportResponse() {
-        return new RequestCampaignFeedbackReportResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSDataCDataCAResponse }
-     * 
-     */
-    public SendImmediateMessageSDataCDataCAResponse createSendImmediateMessageSDataCDataCAResponse() {
-        return new SendImmediateMessageSDataCDataCAResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetEmptyPushTemplateResponse }
-     * 
-     */
-    public GetEmptyPushTemplateResponse createGetEmptyPushTemplateResponse() {
-        return new GetEmptyPushTemplateResponse();
-    }
-
-    /**
-     * Create an instance of {@link IsSubscriberSourceLockedResponse }
-     * 
-     */
-    public IsSubscriberSourceLockedResponse createIsSubscriberSourceLockedResponse() {
-        return new IsSubscriberSourceLockedResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessagesInfoByCampaignNameResponse }
-     * 
-     */
-    public FindMessagesInfoByCampaignNameResponse createFindMessagesInfoByCampaignNameResponse() {
-        return new FindMessagesInfoByCampaignNameResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessagesByChannel }
-     * 
-     */
-    public FindMessagesByChannel createFindMessagesByChannel() {
-        return new FindMessagesByChannel();
-    }
-
-    /**
-     * Create an instance of {@link CreateMessageModelResponse }
-     * 
-     */
-    public CreateMessageModelResponse createCreateMessageModelResponse() {
-        return new CreateMessageModelResponse();
-    }
-
-    /**
-     * Create an instance of {@link TriggerDeliveryByAliasResponse }
-     * 
-     */
-    public TriggerDeliveryByAliasResponse createTriggerDeliveryByAliasResponse() {
-        return new TriggerDeliveryByAliasResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateByCampaignToSubscriberResponse }
-     * 
-     */
-    public SendImmediateByCampaignToSubscriberResponse createSendImmediateByCampaignToSubscriberResponse() {
-        return new SendImmediateByCampaignToSubscriberResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsBySubscriberSourceFilterResponse }
-     * 
-     */
-    public FindCampaignsBySubscriberSourceFilterResponse createFindCampaignsBySubscriberSourceFilterResponse() {
-        return new FindCampaignsBySubscriberSourceFilterResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddAttachmentResponse }
-     * 
-     */
-    public AddAttachmentResponse createAddAttachmentResponse() {
-        return new AddAttachmentResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSidCAlCAResponse }
-     * 
-     */
-    public SendImmediateMessageSidCAlCAResponse createSendImmediateMessageSidCAlCAResponse() {
-        return new SendImmediateMessageSidCAlCAResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSIdCDataResponse }
-     * 
-     */
-    public SendImmediateMessageSIdCDataResponse createSendImmediateMessageSIdCDataResponse() {
-        return new SendImmediateMessageSIdCDataResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetArchivedSubscriberSourceFilter }
-     * 
-     */
-    public GetArchivedSubscriberSourceFilter createGetArchivedSubscriberSourceFilter() {
-        return new GetArchivedSubscriberSourceFilter();
-    }
-
-    /**
-     * Create an instance of {@link GetCryptoKeyResponse }
-     * 
-     */
-    public GetCryptoKeyResponse createGetCryptoKeyResponse() {
-        return new GetCryptoKeyResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessageModelsResponse }
-     * 
-     */
-    public FindMessageModelsResponse createFindMessageModelsResponse() {
-        return new FindMessageModelsResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriberSourceFilter }
-     * 
-     */
-    public GetSubscriberSourceFilter createGetSubscriberSourceFilter() {
-        return new GetSubscriberSourceFilter();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriberDataExchangeStatusResponse }
-     * 
-     */
-    public GetSubscriberDataExchangeStatusResponse createGetSubscriberDataExchangeStatusResponse() {
-        return new GetSubscriberDataExchangeStatusResponse();
-    }
-
-    /**
-     * Create an instance of {@link CreateCampaignResponse }
-     * 
-     */
-    public CreateCampaignResponse createCreateCampaignResponse() {
-        return new CreateCampaignResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindSubscribersIncludedInFilterResponse }
-     * 
-     */
-    public FindSubscribersIncludedInFilterResponse createFindSubscribersIncludedInFilterResponse() {
-        return new FindSubscribersIncludedInFilterResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddSubscriber }
-     * 
-     */
-    public AddSubscriber createAddSubscriber() {
-        return new AddSubscriber();
-    }
-
-    /**
-     * Create an instance of {@link AddSubscribersResponse }
-     * 
-     */
-    public AddSubscribersResponse createAddSubscribersResponse() {
-        return new AddSubscribersResponse();
-    }
-
-    /**
-     * Create an instance of {@link UnmarshalPushTemplateEnvelope }
-     * 
-     */
-    public UnmarshalPushTemplateEnvelope createUnmarshalPushTemplateEnvelope() {
-        return new UnmarshalPushTemplateEnvelope();
-    }
-
-    /**
-     * Create an instance of {@link com.contactlab.api.ws.PushTemplate.CustomData }
-     * 
-     */
-    public com.contactlab.api.ws.PushTemplate.CustomData createPushTemplateCustomData() {
-        return new com.contactlab.api.ws.PushTemplate.CustomData();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriberResponse }
-     * 
-     */
-    public GetSubscriberResponse createGetSubscriberResponse() {
-        return new GetSubscriberResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindPeriodicCampaignsResponse }
-     * 
-     */
-    public FindPeriodicCampaignsResponse createFindPeriodicCampaignsResponse() {
-        return new FindPeriodicCampaignsResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSIdCData }
-     * 
-     */
-    public SendImmediateMessageSIdCData createSendImmediateMessageSIdCData() {
-        return new SendImmediateMessageSIdCData();
-    }
-
-    /**
-     * Create an instance of {@link BorrowTokenResponse }
-     * 
-     */
-    public BorrowTokenResponse createBorrowTokenResponse() {
-        return new BorrowTokenResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriberSourceResponse }
-     * 
-     */
-    public GetSubscriberSourceResponse createGetSubscriberSourceResponse() {
-        return new GetSubscriberSourceResponse();
-    }
-
-    /**
-     * Create an instance of {@link TriggerDeliveryById }
-     * 
-     */
-    public TriggerDeliveryById createTriggerDeliveryById() {
-        return new TriggerDeliveryById();
-    }
-
-    /**
-     * Create an instance of {@link CloneAndSendCampaign }
-     * 
-     */
-    public CloneAndSendCampaign createCloneAndSendCampaign() {
-        return new CloneAndSendCampaign();
-    }
-
-    /**
-     * Create an instance of {@link InvalidateToken }
-     * 
-     */
-    public InvalidateToken createInvalidateToken() {
-        return new InvalidateToken();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsResponse }
-     * 
-     */
-    public FindCampaignsResponse createFindCampaignsResponse() {
-        return new FindCampaignsResponse();
-    }
-
-    /**
-     * Create an instance of {@link CreateSplitTest }
-     * 
-     */
-    public CreateSplitTest createCreateSplitTest() {
-        return new CreateSplitTest();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriberSourceFilterResponse }
-     * 
-     */
-    public GetSubscriberSourceFilterResponse createGetSubscriberSourceFilterResponse() {
-        return new GetSubscriberSourceFilterResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetXMLDeliveriesResponse }
-     * 
-     */
-    public GetXMLDeliveriesResponse createGetXMLDeliveriesResponse() {
-        return new GetXMLDeliveriesResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSdataCAlResponse }
-     * 
-     */
-    public SendImmediateMessageSdataCAlResponse createSendImmediateMessageSdataCAlResponse() {
-        return new SendImmediateMessageSdataCAlResponse();
-    }
-
-    /**
-     * Create an instance of {@link ModifySubscriberSubscriptionStatusResponse }
-     * 
-     */
-    public ModifySubscriberSubscriptionStatusResponse createModifySubscriberSubscriptionStatusResponse() {
-        return new ModifySubscriberSubscriptionStatusResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsByNameOrSubjectResponse }
-     * 
-     */
-    public FindCampaignsByNameOrSubjectResponse createFindCampaignsByNameOrSubjectResponse() {
-        return new FindCampaignsByNameOrSubjectResponse();
-    }
-
-    /**
-     * Create an instance of {@link UploadMediaContentResponse }
-     * 
-     */
-    public UploadMediaContentResponse createUploadMediaContentResponse() {
-        return new UploadMediaContentResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateByCampaignIdToSubscriberResponse }
-     * 
-     */
-    public SendImmediateByCampaignIdToSubscriberResponse createSendImmediateByCampaignIdToSubscriberResponse() {
-        return new SendImmediateByCampaignIdToSubscriberResponse();
+    public CancelCampaignResponse createCancelCampaignResponse() {
+        return new CancelCampaignResponse();
     }
 
     /**
@@ -1042,443 +300,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SendImmediateMessageSDataCData }
+     * Create an instance of {@link ModifySubscriberSubscriptionStatusResponse }
      * 
      */
-    public SendImmediateMessageSDataCData createSendImmediateMessageSDataCData() {
-        return new SendImmediateMessageSDataCData();
+    public ModifySubscriberSubscriptionStatusResponse createModifySubscriberSubscriptionStatusResponse() {
+        return new ModifySubscriberSubscriptionStatusResponse();
     }
 
     /**
-     * Create an instance of {@link CancelCampaign }
+     * Create an instance of {@link SendImmediateMessageSidCAlCAResponse }
      * 
      */
-    public CancelCampaign createCancelCampaign() {
-        return new CancelCampaign();
+    public SendImmediateMessageSidCAlCAResponse createSendImmediateMessageSidCAlCAResponse() {
+        return new SendImmediateMessageSidCAlCAResponse();
     }
 
     /**
-     * Create an instance of {@link FindMessagesInfo }
+     * Create an instance of {@link GetSubscriberDataExchangeStatusResponse }
      * 
      */
-    public FindMessagesInfo createFindMessagesInfo() {
-        return new FindMessagesInfo();
-    }
-
-    /**
-     * Create an instance of {@link ModifySubscriberSubscriptionStatusByMailqId }
-     * 
-     */
-    public ModifySubscriberSubscriptionStatusByMailqId createModifySubscriberSubscriptionStatusByMailqId() {
-        return new ModifySubscriberSubscriptionStatusByMailqId();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateByCampaignIdToSubscriberIdResponse }
-     * 
-     */
-    public SendImmediateByCampaignIdToSubscriberIdResponse createSendImmediateByCampaignIdToSubscriberIdResponse() {
-        return new SendImmediateByCampaignIdToSubscriberIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindNotesByCampaign }
-     * 
-     */
-    public FindNotesByCampaign createFindNotesByCampaign() {
-        return new FindNotesByCampaign();
-    }
-
-    /**
-     * Create an instance of {@link GetAttachmentByCampaignId }
-     * 
-     */
-    public GetAttachmentByCampaignId createGetAttachmentByCampaignId() {
-        return new GetAttachmentByCampaignId();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageResponse }
-     * 
-     */
-    public SendImmediateMessageResponse createSendImmediateMessageResponse() {
-        return new SendImmediateMessageResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetMessageModelByIdResponse }
-     * 
-     */
-    public GetMessageModelByIdResponse createGetMessageModelByIdResponse() {
-        return new GetMessageModelByIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link TrackableLink }
-     * 
-     */
-    public TrackableLink createTrackableLink() {
-        return new TrackableLink();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSIdCDataCAResponse }
-     * 
-     */
-    public SendImmediateMessageSIdCDataCAResponse createSendImmediateMessageSIdCDataCAResponse() {
-        return new SendImmediateMessageSIdCDataCAResponse();
-    }
-
-    /**
-     * Create an instance of {@link GcMsPushTemplate.Variants }
-     * 
-     */
-    public GcMsPushTemplate.Variants createGcMsPushTemplateVariants() {
-        return new GcMsPushTemplate.Variants();
-    }
-
-    /**
-     * Create an instance of {@link CancelCampaignResponse }
-     * 
-     */
-    public CancelCampaignResponse createCancelCampaignResponse() {
-        return new CancelCampaignResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessagesByCampaignName }
-     * 
-     */
-    public FindMessagesByCampaignName createFindMessagesByCampaignName() {
-        return new FindMessagesByCampaignName();
-    }
-
-    /**
-     * Create an instance of {@link FindMessagesInfoByChannelResponse }
-     * 
-     */
-    public FindMessagesInfoByChannelResponse createFindMessagesInfoByChannelResponse() {
-        return new FindMessagesInfoByChannelResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSidCidCA }
-     * 
-     */
-    public SendImmediateMessageSidCidCA createSendImmediateMessageSidCidCA() {
-        return new SendImmediateMessageSidCidCA();
-    }
-
-    /**
-     * Create an instance of {@link GetTrackedLinks }
-     * 
-     */
-    public GetTrackedLinks createGetTrackedLinks() {
-        return new GetTrackedLinks();
-    }
-
-    /**
-     * Create an instance of {@link CreateSplitTestResponse }
-     * 
-     */
-    public CreateSplitTestResponse createCreateSplitTestResponse() {
-        return new CreateSplitTestResponse();
-    }
-
-    /**
-     * Create an instance of {@link KeepaliveToken }
-     * 
-     */
-    public KeepaliveToken createKeepaliveToken() {
-        return new KeepaliveToken();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateByCampaignToSubscriberIdResponse }
-     * 
-     */
-    public SendImmediateByCampaignToSubscriberIdResponse createSendImmediateByCampaignToSubscriberIdResponse() {
-        return new SendImmediateByCampaignToSubscriberIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsSentBetween }
-     * 
-     */
-    public FindCampaignsSentBetween createFindCampaignsSentBetween() {
-        return new FindCampaignsSentBetween();
-    }
-
-    /**
-     * Create an instance of {@link FindMessagesByChannelResponse }
-     * 
-     */
-    public FindMessagesByChannelResponse createFindMessagesByChannelResponse() {
-        return new FindMessagesByChannelResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsByStatusResponse }
-     * 
-     */
-    public FindCampaignsByStatusResponse createFindCampaignsByStatusResponse() {
-        return new FindCampaignsByStatusResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetAvailableCommunicationCategoriesResponse }
-     * 
-     */
-    public GetAvailableCommunicationCategoriesResponse createGetAvailableCommunicationCategoriesResponse() {
-        return new GetAvailableCommunicationCategoriesResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindSubscribers }
-     * 
-     */
-    public FindSubscribers createFindSubscribers() {
-        return new FindSubscribers();
-    }
-
-    /**
-     * Create an instance of {@link AddSubscribers }
-     * 
-     */
-    public AddSubscribers createAddSubscribers() {
-        return new AddSubscribers();
-    }
-
-    /**
-     * Create an instance of {@link CountSubscribersIncludedInFilter }
-     * 
-     */
-    public CountSubscribersIncludedInFilter createCountSubscribersIncludedInFilter() {
-        return new CountSubscribersIncludedInFilter();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSidCid }
-     * 
-     */
-    public SendImmediateMessageSidCid createSendImmediateMessageSidCid() {
-        return new SendImmediateMessageSidCid();
-    }
-
-    /**
-     * Create an instance of {@link BorrowToken }
-     * 
-     */
-    public BorrowToken createBorrowToken() {
-        return new BorrowToken();
-    }
-
-    /**
-     * Create an instance of {@link SendSplitTestWinner }
-     * 
-     */
-    public SendSplitTestWinner createSendSplitTestWinner() {
-        return new SendSplitTestWinner();
-    }
-
-    /**
-     * Create an instance of {@link CreateCampaign }
-     * 
-     */
-    public CreateCampaign createCreateCampaign() {
-        return new CreateCampaign();
-    }
-
-    /**
-     * Create an instance of {@link UpdateSubscriberResponse }
-     * 
-     */
-    public UpdateSubscriberResponse createUpdateSubscriberResponse() {
-        return new UpdateSubscriberResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetCampaignDeliveryStatusResponse }
-     * 
-     */
-    public GetCampaignDeliveryStatusResponse createGetCampaignDeliveryStatusResponse() {
-        return new GetCampaignDeliveryStatusResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetSubscriberDataExchangeStatus }
-     * 
-     */
-    public GetSubscriberDataExchangeStatus createGetSubscriberDataExchangeStatus() {
-        return new GetSubscriberDataExchangeStatus();
-    }
-
-    /**
-     * Create an instance of {@link FindNotesByCampaignResponse }
-     * 
-     */
-    public FindNotesByCampaignResponse createFindNotesByCampaignResponse() {
-        return new FindNotesByCampaignResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetMobileApplicationByCodeResponse }
-     * 
-     */
-    public GetMobileApplicationByCodeResponse createGetMobileApplicationByCodeResponse() {
-        return new GetMobileApplicationByCodeResponse();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateByCampaignIdToSubscriberId }
-     * 
-     */
-    public SendImmediateByCampaignIdToSubscriberId createSendImmediateByCampaignIdToSubscriberId() {
-        return new SendImmediateByCampaignIdToSubscriberId();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSidCidResponse }
-     * 
-     */
-    public SendImmediateMessageSidCidResponse createSendImmediateMessageSidCidResponse() {
-        return new SendImmediateMessageSidCidResponse();
-    }
-
-    /**
-     * Create an instance of {@link GcMsPushTemplate.Variants.Entry }
-     * 
-     */
-    public GcMsPushTemplate.Variants.Entry createGcMsPushTemplateVariantsEntry() {
-        return new GcMsPushTemplate.Variants.Entry();
-    }
-
-    /**
-     * Create an instance of {@link GetDeliveryStatusResponse }
-     * 
-     */
-    public GetDeliveryStatusResponse createGetDeliveryStatusResponse() {
-        return new GetDeliveryStatusResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetArchivedSubscriberSourceFilterResponse }
-     * 
-     */
-    public GetArchivedSubscriberSourceFilterResponse createGetArchivedSubscriberSourceFilterResponse() {
-        return new GetArchivedSubscriberSourceFilterResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddSubscriberSourceFilter }
-     * 
-     */
-    public AddSubscriberSourceFilter createAddSubscriberSourceFilter() {
-        return new AddSubscriberSourceFilter();
-    }
-
-    /**
-     * Create an instance of {@link FindMessagesResponse }
-     * 
-     */
-    public FindMessagesResponse createFindMessagesResponse() {
-        return new FindMessagesResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindMessageModelsBySubscriberSource }
-     * 
-     */
-    public FindMessageModelsBySubscriberSource createFindMessageModelsBySubscriberSource() {
-        return new FindMessageModelsBySubscriberSource();
-    }
-
-    /**
-     * Create an instance of {@link FindMessageByCampaignIdResponse }
-     * 
-     */
-    public FindMessageByCampaignIdResponse createFindMessageByCampaignIdResponse() {
-        return new FindMessageByCampaignIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link RemoveSubscriber }
-     * 
-     */
-    public RemoveSubscriber createRemoveSubscriber() {
-        return new RemoveSubscriber();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaigns }
-     * 
-     */
-    public FindCampaigns createFindCampaigns() {
-        return new FindCampaigns();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSdataCAl }
-     * 
-     */
-    public SendImmediateMessageSdataCAl createSendImmediateMessageSdataCAl() {
-        return new SendImmediateMessageSdataCAl();
-    }
-
-    /**
-     * Create an instance of {@link AddSubscriberSource }
-     * 
-     */
-    public AddSubscriberSource createAddSubscriberSource() {
-        return new AddSubscriberSource();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSDataCDataCA }
-     * 
-     */
-    public SendImmediateMessageSDataCDataCA createSendImmediateMessageSDataCDataCA() {
-        return new SendImmediateMessageSDataCDataCA();
-    }
-
-    /**
-     * Create an instance of {@link CountSubscribers }
-     * 
-     */
-    public CountSubscribers createCountSubscribers() {
-        return new CountSubscribers();
-    }
-
-    /**
-     * Create an instance of {@link SendImmediateMessageSdataCAlCAResponse }
-     * 
-     */
-    public SendImmediateMessageSdataCAlCAResponse createSendImmediateMessageSdataCAlCAResponse() {
-        return new SendImmediateMessageSdataCAlCAResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsByNoteResponse }
-     * 
-     */
-    public FindCampaignsByNoteResponse createFindCampaignsByNoteResponse() {
-        return new FindCampaignsByNoteResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindCampaignsByModel }
-     * 
-     */
-    public FindCampaignsByModel createFindCampaignsByModel() {
-        return new FindCampaignsByModel();
-    }
-
-    /**
-     * Create an instance of {@link GetCampaignFeedbackResponse }
-     * 
-     */
-    public GetCampaignFeedbackResponse createGetCampaignFeedbackResponse() {
-        return new GetCampaignFeedbackResponse();
+    public GetSubscriberDataExchangeStatusResponse createGetSubscriberDataExchangeStatusResponse() {
+        return new GetSubscriberDataExchangeStatusResponse();
     }
 
     /**
@@ -1490,75 +332,131 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetRequestStatusResponse }
+     * Create an instance of {@link FindCampaignsByNameOrSubjectResponse }
      * 
      */
-    public GetRequestStatusResponse createGetRequestStatusResponse() {
-        return new GetRequestStatusResponse();
+    public FindCampaignsByNameOrSubjectResponse createFindCampaignsByNameOrSubjectResponse() {
+        return new FindCampaignsByNameOrSubjectResponse();
     }
 
     /**
-     * Create an instance of {@link GetAttachmentByCampaignIdResponse }
+     * Create an instance of {@link FindMessagesInfo }
      * 
      */
-    public GetAttachmentByCampaignIdResponse createGetAttachmentByCampaignIdResponse() {
-        return new GetAttachmentByCampaignIdResponse();
+    public FindMessagesInfo createFindMessagesInfo() {
+        return new FindMessagesInfo();
     }
 
     /**
-     * Create an instance of {@link ArchiveSubscriberSourceFilterResponse }
+     * Create an instance of {@link ReuseSubscriberSourceFilter }
      * 
      */
-    public ArchiveSubscriberSourceFilterResponse createArchiveSubscriberSourceFilterResponse() {
-        return new ArchiveSubscriberSourceFilterResponse();
+    public ReuseSubscriberSourceFilter createReuseSubscriberSourceFilter() {
+        return new ReuseSubscriberSourceFilter();
     }
 
     /**
-     * Create an instance of {@link GetRequestStatus }
+     * Create an instance of {@link FindMessagesInfoByCampaignNameResponse }
      * 
      */
-    public GetRequestStatus createGetRequestStatus() {
-        return new GetRequestStatus();
+    public FindMessagesInfoByCampaignNameResponse createFindMessagesInfoByCampaignNameResponse() {
+        return new FindMessagesInfoByCampaignNameResponse();
     }
 
     /**
-     * Create an instance of {@link GetCryptoKey }
+     * Create an instance of {@link FindCampaignsByStatusResponse }
      * 
      */
-    public GetCryptoKey createGetCryptoKey() {
-        return new GetCryptoKey();
+    public FindCampaignsByStatusResponse createFindCampaignsByStatusResponse() {
+        return new FindCampaignsByStatusResponse();
     }
 
     /**
-     * Create an instance of {@link AddSubscriberSourceResponse }
+     * Create an instance of {@link AddSubscriberResponse }
      * 
      */
-    public AddSubscriberSourceResponse createAddSubscriberSourceResponse() {
-        return new AddSubscriberSourceResponse();
+    public AddSubscriberResponse createAddSubscriberResponse() {
+        return new AddSubscriberResponse();
     }
 
     /**
-     * Create an instance of {@link FindMessageModels }
+     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriberId }
      * 
      */
-    public FindMessageModels createFindMessageModels() {
-        return new FindMessageModels();
+    public SendImmediateByCampaignAliasToSubscriberId createSendImmediateByCampaignAliasToSubscriberId() {
+        return new SendImmediateByCampaignAliasToSubscriberId();
     }
 
     /**
-     * Create an instance of {@link GetXMLDeliveries }
+     * Create an instance of {@link SendSplitTestWinnerResponse }
      * 
      */
-    public GetXMLDeliveries createGetXMLDeliveries() {
-        return new GetXMLDeliveries();
+    public SendSplitTestWinnerResponse createSendSplitTestWinnerResponse() {
+        return new SendSplitTestWinnerResponse();
     }
 
     /**
-     * Create an instance of {@link SendImmediateMessageSdataCAlCA }
+     * Create an instance of {@link FindMessagesInfoByChannelResponse }
      * 
      */
-    public SendImmediateMessageSdataCAlCA createSendImmediateMessageSdataCAlCA() {
-        return new SendImmediateMessageSdataCAlCA();
+    public FindMessagesInfoByChannelResponse createFindMessagesInfoByChannelResponse() {
+        return new FindMessagesInfoByChannelResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateCampaignResponse }
+     * 
+     */
+    public CreateCampaignResponse createCreateCampaignResponse() {
+        return new CreateCampaignResponse();
+    }
+
+    /**
+     * Create an instance of {@link com.contactlab.api.ws.PushTemplate.CustomData }
+     * 
+     */
+    public com.contactlab.api.ws.PushTemplate.CustomData createPushTemplateCustomData() {
+        return new com.contactlab.api.ws.PushTemplate.CustomData();
+    }
+
+    /**
+     * Create an instance of {@link FindMessagesInfoByChannel }
+     * 
+     */
+    public FindMessagesInfoByChannel createFindMessagesInfoByChannel() {
+        return new FindMessagesInfoByChannel();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSDataCData }
+     * 
+     */
+    public SendImmediateMessageSDataCData createSendImmediateMessageSDataCData() {
+        return new SendImmediateMessageSDataCData();
+    }
+
+    /**
+     * Create an instance of {@link BorrowToken }
+     * 
+     */
+    public BorrowToken createBorrowToken() {
+        return new BorrowToken();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSIdCDataCAResponse }
+     * 
+     */
+    public SendImmediateMessageSIdCDataCAResponse createSendImmediateMessageSIdCDataCAResponse() {
+        return new SendImmediateMessageSIdCDataCAResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCryptoKeyResponse }
+     * 
+     */
+    public GetCryptoKeyResponse createGetCryptoKeyResponse() {
+        return new GetCryptoKeyResponse();
     }
 
     /**
@@ -1570,75 +468,195 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ModifySubscriberSubscriptionStatus }
+     * Create an instance of {@link SendCampaignResponse }
      * 
      */
-    public ModifySubscriberSubscriptionStatus createModifySubscriberSubscriptionStatus() {
-        return new ModifySubscriberSubscriptionStatus();
+    public SendCampaignResponse createSendCampaignResponse() {
+        return new SendCampaignResponse();
     }
 
     /**
-     * Create an instance of {@link GetXMLDeliveryTransitions }
+     * Create an instance of {@link GetCampaignResponse }
      * 
      */
-    public GetXMLDeliveryTransitions createGetXMLDeliveryTransitions() {
-        return new GetXMLDeliveryTransitions();
+    public GetCampaignResponse createGetCampaignResponse() {
+        return new GetCampaignResponse();
     }
 
     /**
-     * Create an instance of {@link ReuseSubscriberSourceFilterResponse }
+     * Create an instance of {@link SendImmediateMessageSidCidCAResponse }
      * 
      */
-    public ReuseSubscriberSourceFilterResponse createReuseSubscriberSourceFilterResponse() {
-        return new ReuseSubscriberSourceFilterResponse();
+    public SendImmediateMessageSidCidCAResponse createSendImmediateMessageSidCidCAResponse() {
+        return new SendImmediateMessageSidCidCAResponse();
     }
 
     /**
-     * Create an instance of {@link CloneAndSendCampaignResponse }
+     * Create an instance of {@link ModifySubscriberSubscriptionStatusByMailqId }
      * 
      */
-    public CloneAndSendCampaignResponse createCloneAndSendCampaignResponse() {
-        return new CloneAndSendCampaignResponse();
+    public ModifySubscriberSubscriptionStatusByMailqId createModifySubscriberSubscriptionStatusByMailqId() {
+        return new ModifySubscriberSubscriptionStatusByMailqId();
     }
 
     /**
-     * Create an instance of {@link StartSubscriberDataExchange }
+     * Create an instance of {@link StartSelectionResponse }
      * 
      */
-    public StartSubscriberDataExchange createStartSubscriberDataExchange() {
-        return new StartSubscriberDataExchange();
+    public StartSelectionResponse createStartSelectionResponse() {
+        return new StartSelectionResponse();
     }
 
     /**
-     * Create an instance of {@link GetAvailableCommunicationCategories }
+     * Create an instance of {@link SetCampaignRecurrencyResponse }
      * 
      */
-    public GetAvailableCommunicationCategories createGetAvailableCommunicationCategories() {
-        return new GetAvailableCommunicationCategories();
+    public SetCampaignRecurrencyResponse createSetCampaignRecurrencyResponse() {
+        return new SetCampaignRecurrencyResponse();
     }
 
     /**
-     * Create an instance of {@link SendImmediateByCampaignToSubscriber }
+     * Create an instance of {@link FindMessageInfoByCampaignId }
      * 
      */
-    public SendImmediateByCampaignToSubscriber createSendImmediateByCampaignToSubscriber() {
-        return new SendImmediateByCampaignToSubscriber();
+    public FindMessageInfoByCampaignId createFindMessageInfoByCampaignId() {
+        return new FindMessageInfoByCampaignId();
     }
 
     /**
-     * Create an instance of {@link com.contactlab.api.ws.PushTemplate.CustomData.Entry }
+     * Create an instance of {@link FindMessagesInfoResponse }
      * 
      */
-    public com.contactlab.api.ws.PushTemplate.CustomData.Entry createPushTemplateCustomDataEntry() {
-        return new com.contactlab.api.ws.PushTemplate.CustomData.Entry();
+    public FindMessagesInfoResponse createFindMessagesInfoResponse() {
+        return new FindMessagesInfoResponse();
     }
 
     /**
-     * Create an instance of {@link DeliveryInformation }
+     * Create an instance of {@link SendImmediateMessageSDataCDataCAResponse }
      * 
      */
-    public DeliveryInformation createDeliveryInformation() {
-        return new DeliveryInformation();
+    public SendImmediateMessageSDataCDataCAResponse createSendImmediateMessageSDataCDataCAResponse() {
+        return new SendImmediateMessageSDataCDataCAResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindMessageByCampaignId }
+     * 
+     */
+    public FindMessageByCampaignId createFindMessageByCampaignId() {
+        return new FindMessageByCampaignId();
+    }
+
+    /**
+     * Create an instance of {@link FindSubscriberSources }
+     * 
+     */
+    public FindSubscriberSources createFindSubscriberSources() {
+        return new FindSubscriberSources();
+    }
+
+    /**
+     * Create an instance of {@link FindArchivedFiltersBySubscriberSource }
+     * 
+     */
+    public FindArchivedFiltersBySubscriberSource createFindArchivedFiltersBySubscriberSource() {
+        return new FindArchivedFiltersBySubscriberSource();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignToSubscriberIdResponse }
+     * 
+     */
+    public SendImmediateByCampaignToSubscriberIdResponse createSendImmediateByCampaignToSubscriberIdResponse() {
+        return new SendImmediateByCampaignToSubscriberIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSidCid }
+     * 
+     */
+    public SendImmediateMessageSidCid createSendImmediateMessageSidCid() {
+        return new SendImmediateMessageSidCid();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsResponse }
+     * 
+     */
+    public FindCampaignsResponse createFindCampaignsResponse() {
+        return new FindCampaignsResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindMessageModelsBySubscriberSource }
+     * 
+     */
+    public FindMessageModelsBySubscriberSource createFindMessageModelsBySubscriberSource() {
+        return new FindMessageModelsBySubscriberSource();
+    }
+
+    /**
+     * Create an instance of {@link CreateMessageModel }
+     * 
+     */
+    public CreateMessageModel createCreateMessageModel() {
+        return new CreateMessageModel();
+    }
+
+    /**
+     * Create an instance of {@link ArchiveSubscriberSourceFilterResponse }
+     * 
+     */
+    public ArchiveSubscriberSourceFilterResponse createArchiveSubscriberSourceFilterResponse() {
+        return new ArchiveSubscriberSourceFilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindFiltersBySubscriberSourceResponse }
+     * 
+     */
+    public FindFiltersBySubscriberSourceResponse createFindFiltersBySubscriberSourceResponse() {
+        return new FindFiltersBySubscriberSourceResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindMessagesByCampaignName }
+     * 
+     */
+    public FindMessagesByCampaignName createFindMessagesByCampaignName() {
+        return new FindMessagesByCampaignName();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriber }
+     * 
+     */
+    public SendImmediateByCampaignAliasToSubscriber createSendImmediateByCampaignAliasToSubscriber() {
+        return new SendImmediateByCampaignAliasToSubscriber();
+    }
+
+    /**
+     * Create an instance of {@link GcMsPushTemplate.Variants.Entry }
+     * 
+     */
+    public GcMsPushTemplate.Variants.Entry createGcMsPushTemplateVariantsEntry() {
+        return new GcMsPushTemplate.Variants.Entry();
+    }
+
+    /**
+     * Create an instance of {@link PublishOnWeb }
+     * 
+     */
+    public PublishOnWeb createPublishOnWeb() {
+        return new PublishOnWeb();
+    }
+
+    /**
+     * Create an instance of {@link MobileApplication }
+     * 
+     */
+    public MobileApplication createMobileApplication() {
+        return new MobileApplication();
     }
 
     /**
@@ -1650,35 +668,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindPeriodicCampaigns }
+     * Create an instance of {@link SendImmediateMessageSDataCDataResponse }
      * 
      */
-    public FindPeriodicCampaigns createFindPeriodicCampaigns() {
-        return new FindPeriodicCampaigns();
+    public SendImmediateMessageSDataCDataResponse createSendImmediateMessageSDataCDataResponse() {
+        return new SendImmediateMessageSDataCDataResponse();
     }
 
     /**
-     * Create an instance of {@link SendSplitTest }
+     * Create an instance of {@link InvalidateToken }
      * 
      */
-    public SendSplitTest createSendSplitTest() {
-        return new SendSplitTest();
-    }
-
-    /**
-     * Create an instance of {@link XmlDeliveryInfo }
-     * 
-     */
-    public XmlDeliveryInfo createXmlDeliveryInfo() {
-        return new XmlDeliveryInfo();
-    }
-
-    /**
-     * Create an instance of {@link FindFiltersBySubscriberSource }
-     * 
-     */
-    public FindFiltersBySubscriberSource createFindFiltersBySubscriberSource() {
-        return new FindFiltersBySubscriberSource();
+    public InvalidateToken createInvalidateToken() {
+        return new InvalidateToken();
     }
 
     /**
@@ -1690,43 +692,123 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link XmlDeliveryTransitionInfo }
+     * Create an instance of {@link TriggerDeliveryByIdResponse }
      * 
      */
-    public XmlDeliveryTransitionInfo createXmlDeliveryTransitionInfo() {
-        return new XmlDeliveryTransitionInfo();
+    public TriggerDeliveryByIdResponse createTriggerDeliveryByIdResponse() {
+        return new TriggerDeliveryByIdResponse();
     }
 
     /**
-     * Create an instance of {@link InvalidateTokenResponse }
+     * Create an instance of {@link SendImmediateMessageSDataCDataCA }
      * 
      */
-    public InvalidateTokenResponse createInvalidateTokenResponse() {
-        return new InvalidateTokenResponse();
+    public SendImmediateMessageSDataCDataCA createSendImmediateMessageSDataCDataCA() {
+        return new SendImmediateMessageSDataCDataCA();
     }
 
     /**
-     * Create an instance of {@link GetTrackedLinksResponse }
+     * Create an instance of {@link FindMessagesByChannel }
      * 
      */
-    public GetTrackedLinksResponse createGetTrackedLinksResponse() {
-        return new GetTrackedLinksResponse();
+    public FindMessagesByChannel createFindMessagesByChannel() {
+        return new FindMessagesByChannel();
     }
 
     /**
-     * Create an instance of {@link StartSubscriberDataExchangeResponse }
+     * Create an instance of {@link ArchiveSubscriberSourceFilter }
      * 
      */
-    public StartSubscriberDataExchangeResponse createStartSubscriberDataExchangeResponse() {
-        return new StartSubscriberDataExchangeResponse();
+    public ArchiveSubscriberSourceFilter createArchiveSubscriberSourceFilter() {
+        return new ArchiveSubscriberSourceFilter();
     }
 
     /**
-     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriberId }
+     * Create an instance of {@link KeepaliveToken }
      * 
      */
-    public SendImmediateByCampaignAliasToSubscriberId createSendImmediateByCampaignAliasToSubscriberId() {
-        return new SendImmediateByCampaignAliasToSubscriberId();
+    public KeepaliveToken createKeepaliveToken() {
+        return new KeepaliveToken();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessage }
+     * 
+     */
+    public SendImmediateMessage createSendImmediateMessage() {
+        return new SendImmediateMessage();
+    }
+
+    /**
+     * Create an instance of {@link GetArchivedSubscriberSourceFilterResponse }
+     * 
+     */
+    public GetArchivedSubscriberSourceFilterResponse createGetArchivedSubscriberSourceFilterResponse() {
+        return new GetArchivedSubscriberSourceFilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindMessagesInfoByCampaignName }
+     * 
+     */
+    public FindMessagesInfoByCampaignName createFindMessagesInfoByCampaignName() {
+        return new FindMessagesInfoByCampaignName();
+    }
+
+    /**
+     * Create an instance of {@link FindMessageModelsBySubscriberSourceResponse }
+     * 
+     */
+    public FindMessageModelsBySubscriberSourceResponse createFindMessageModelsBySubscriberSourceResponse() {
+        return new FindMessageModelsBySubscriberSourceResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSidCidCA }
+     * 
+     */
+    public SendImmediateMessageSidCidCA createSendImmediateMessageSidCidCA() {
+        return new SendImmediateMessageSidCidCA();
+    }
+
+    /**
+     * Create an instance of {@link AddSelectionSubscribersResponse }
+     * 
+     */
+    public AddSelectionSubscribersResponse createAddSelectionSubscribersResponse() {
+        return new AddSelectionSubscribersResponse();
+    }
+
+    /**
+     * Create an instance of {@link IsSubscriberSourceLocked }
+     * 
+     */
+    public IsSubscriberSourceLocked createIsSubscriberSourceLocked() {
+        return new IsSubscriberSourceLocked();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscriberSource }
+     * 
+     */
+    public GetSubscriberSource createGetSubscriberSource() {
+        return new GetSubscriberSource();
+    }
+
+    /**
+     * Create an instance of {@link AddSubscriberSourceResponse }
+     * 
+     */
+    public AddSubscriberSourceResponse createAddSubscriberSourceResponse() {
+        return new AddSubscriberSourceResponse();
+    }
+
+    /**
+     * Create an instance of {@link CommitSelectionResponse }
+     * 
+     */
+    public CommitSelectionResponse createCommitSelectionResponse() {
+        return new CommitSelectionResponse();
     }
 
     /**
@@ -1746,67 +828,299 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindMessagesByCampaignNameResponse }
+     * Create an instance of {@link GetSelectionRealFilterId }
      * 
      */
-    public FindMessagesByCampaignNameResponse createFindMessagesByCampaignNameResponse() {
-        return new FindMessagesByCampaignNameResponse();
+    public GetSelectionRealFilterId createGetSelectionRealFilterId() {
+        return new GetSelectionRealFilterId();
     }
 
     /**
-     * Create an instance of {@link FindMessageByCampaignId }
+     * Create an instance of {@link RemoveSubscriber }
      * 
      */
-    public FindMessageByCampaignId createFindMessageByCampaignId() {
-        return new FindMessageByCampaignId();
+    public RemoveSubscriber createRemoveSubscriber() {
+        return new RemoveSubscriber();
     }
 
     /**
-     * Create an instance of {@link FindMessagesInfoByCampaignName }
+     * Create an instance of {@link UpdateSubscriber }
      * 
      */
-    public FindMessagesInfoByCampaignName createFindMessagesInfoByCampaignName() {
-        return new FindMessagesInfoByCampaignName();
+    public UpdateSubscriber createUpdateSubscriber() {
+        return new UpdateSubscriber();
     }
 
     /**
-     * Create an instance of {@link GetEmptyPushTemplate }
+     * Create an instance of {@link FindArchivedFiltersBySubscriberSourceResponse }
      * 
      */
-    public GetEmptyPushTemplate createGetEmptyPushTemplate() {
-        return new GetEmptyPushTemplate();
+    public FindArchivedFiltersBySubscriberSourceResponse createFindArchivedFiltersBySubscriberSourceResponse() {
+        return new FindArchivedFiltersBySubscriberSourceResponse();
     }
 
     /**
-     * Create an instance of {@link FindCampaignsByStatus }
+     * Create an instance of {@link RenameSubscriberSourceFilterResponse }
      * 
      */
-    public FindCampaignsByStatus createFindCampaignsByStatus() {
-        return new FindCampaignsByStatus();
+    public RenameSubscriberSourceFilterResponse createRenameSubscriberSourceFilterResponse() {
+        return new RenameSubscriberSourceFilterResponse();
     }
 
     /**
-     * Create an instance of {@link SetCampaignRecurrencyResponse }
+     * Create an instance of {@link CountSubscribersResponse }
      * 
      */
-    public SetCampaignRecurrencyResponse createSetCampaignRecurrencyResponse() {
-        return new SetCampaignRecurrencyResponse();
+    public CountSubscribersResponse createCountSubscribersResponse() {
+        return new CountSubscribersResponse();
     }
 
     /**
-     * Create an instance of {@link PushTemplateEnvelope }
+     * Create an instance of {@link FindCampaignsBySubscriberSourceFilterResponse }
      * 
      */
-    public PushTemplateEnvelope createPushTemplateEnvelope() {
-        return new PushTemplateEnvelope();
+    public FindCampaignsBySubscriberSourceFilterResponse createFindCampaignsBySubscriberSourceFilterResponse() {
+        return new FindCampaignsBySubscriberSourceFilterResponse();
     }
 
     /**
-     * Create an instance of {@link FindSubscribersResponse }
+     * Create an instance of {@link SendImmediateByCampaignToSubscriberResponse }
      * 
      */
-    public FindSubscribersResponse createFindSubscribersResponse() {
-        return new FindSubscribersResponse();
+    public SendImmediateByCampaignToSubscriberResponse createSendImmediateByCampaignToSubscriberResponse() {
+        return new SendImmediateByCampaignToSubscriberResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindMessageModels }
+     * 
+     */
+    public FindMessageModels createFindMessageModels() {
+        return new FindMessageModels();
+    }
+
+    /**
+     * Create an instance of {@link FindMessages }
+     * 
+     */
+    public FindMessages createFindMessages() {
+        return new FindMessages();
+    }
+
+    /**
+     * Create an instance of {@link GetCampaignDeliveryStatusResponse }
+     * 
+     */
+    public GetCampaignDeliveryStatusResponse createGetCampaignDeliveryStatusResponse() {
+        return new GetCampaignDeliveryStatusResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetRequestStatus }
+     * 
+     */
+    public GetRequestStatus createGetRequestStatus() {
+        return new GetRequestStatus();
+    }
+
+    /**
+     * Create an instance of {@link RollbackSelectionResponse }
+     * 
+     */
+    public RollbackSelectionResponse createRollbackSelectionResponse() {
+        return new RollbackSelectionResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateSubscriberResponse }
+     * 
+     */
+    public UpdateSubscriberResponse createUpdateSubscriberResponse() {
+        return new UpdateSubscriberResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscriberResponse }
+     * 
+     */
+    public GetSubscriberResponse createGetSubscriberResponse() {
+        return new GetSubscriberResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscriberSourceFilterResponse }
+     * 
+     */
+    public GetSubscriberSourceFilterResponse createGetSubscriberSourceFilterResponse() {
+        return new GetSubscriberSourceFilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link StartSubscriberDataExchange }
+     * 
+     */
+    public StartSubscriberDataExchange createStartSubscriberDataExchange() {
+        return new StartSubscriberDataExchange();
+    }
+
+    /**
+     * Create an instance of {@link FindPeriodicCampaignsResponse }
+     * 
+     */
+    public FindPeriodicCampaignsResponse createFindPeriodicCampaignsResponse() {
+        return new FindPeriodicCampaignsResponse();
+    }
+
+    /**
+     * Create an instance of {@link StartSelection }
+     * 
+     */
+    public StartSelection createStartSelection() {
+        return new StartSelection();
+    }
+
+    /**
+     * Create an instance of {@link CancelCampaign }
+     * 
+     */
+    public CancelCampaign createCancelCampaign() {
+        return new CancelCampaign();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscriber }
+     * 
+     */
+    public GetSubscriber createGetSubscriber() {
+        return new GetSubscriber();
+    }
+
+    /**
+     * Create an instance of {@link FindNotesByCampaign }
+     * 
+     */
+    public FindNotesByCampaign createFindNotesByCampaign() {
+        return new FindNotesByCampaign();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSidCidResponse }
+     * 
+     */
+    public SendImmediateMessageSidCidResponse createSendImmediateMessageSidCidResponse() {
+        return new SendImmediateMessageSidCidResponse();
+    }
+
+    /**
+     * Create an instance of {@link TriggerDeliveryById }
+     * 
+     */
+    public TriggerDeliveryById createTriggerDeliveryById() {
+        return new TriggerDeliveryById();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsByModelResponse }
+     * 
+     */
+    public FindCampaignsByModelResponse createFindCampaignsByModelResponse() {
+        return new FindCampaignsByModelResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddSubscribersResponse }
+     * 
+     */
+    public AddSubscribersResponse createAddSubscribersResponse() {
+        return new AddSubscribersResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetTrackedLinksResponse }
+     * 
+     */
+    public GetTrackedLinksResponse createGetTrackedLinksResponse() {
+        return new GetTrackedLinksResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetArchivedSubscriberSourceFilter }
+     * 
+     */
+    public GetArchivedSubscriberSourceFilter createGetArchivedSubscriberSourceFilter() {
+        return new GetArchivedSubscriberSourceFilter();
+    }
+
+    /**
+     * Create an instance of {@link RequestCampaignFeedbackReport }
+     * 
+     */
+    public RequestCampaignFeedbackReport createRequestCampaignFeedbackReport() {
+        return new RequestCampaignFeedbackReport();
+    }
+
+    /**
+     * Create an instance of {@link GetCampaignFeedbackResponse }
+     * 
+     */
+    public GetCampaignFeedbackResponse createGetCampaignFeedbackResponse() {
+        return new GetCampaignFeedbackResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddSubscriberSourceFilter }
+     * 
+     */
+    public AddSubscriberSourceFilter createAddSubscriberSourceFilter() {
+        return new AddSubscriberSourceFilter();
+    }
+
+    /**
+     * Create an instance of {@link GetXMLDeliveryTransitionsResponse }
+     * 
+     */
+    public GetXMLDeliveryTransitionsResponse createGetXMLDeliveryTransitionsResponse() {
+        return new GetXMLDeliveryTransitionsResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetXMLDeliveries }
+     * 
+     */
+    public GetXMLDeliveries createGetXMLDeliveries() {
+        return new GetXMLDeliveries();
+    }
+
+    /**
+     * Create an instance of {@link StartSubscriberDataExchangeResponse }
+     * 
+     */
+    public StartSubscriberDataExchangeResponse createStartSubscriberDataExchangeResponse() {
+        return new StartSubscriberDataExchangeResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindMessagesResponse }
+     * 
+     */
+    public FindMessagesResponse createFindMessagesResponse() {
+        return new FindMessagesResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSelectionStatusResponse }
+     * 
+     */
+    public GetSelectionStatusResponse createGetSelectionStatusResponse() {
+        return new GetSelectionStatusResponse();
+    }
+
+    /**
+     * Create an instance of {@link CloneAndSendCampaign }
+     * 
+     */
+    public CloneAndSendCampaign createCloneAndSendCampaign() {
+        return new CloneAndSendCampaign();
     }
 
     /**
@@ -1818,51 +1132,243 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriber }
+     * Create an instance of {@link GetCryptoKey }
      * 
      */
-    public SendImmediateByCampaignAliasToSubscriber createSendImmediateByCampaignAliasToSubscriber() {
-        return new SendImmediateByCampaignAliasToSubscriber();
+    public GetCryptoKey createGetCryptoKey() {
+        return new GetCryptoKey();
     }
 
     /**
-     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriberResponse }
+     * Create an instance of {@link TrackableLink }
      * 
      */
-    public SendImmediateByCampaignAliasToSubscriberResponse createSendImmediateByCampaignAliasToSubscriberResponse() {
-        return new SendImmediateByCampaignAliasToSubscriberResponse();
+    public TrackableLink createTrackableLink() {
+        return new TrackableLink();
     }
 
     /**
-     * Create an instance of {@link FindMessagesInfoResponse }
+     * Create an instance of {@link FindMessageByCampaignIdResponse }
      * 
      */
-    public FindMessagesInfoResponse createFindMessagesInfoResponse() {
-        return new FindMessagesInfoResponse();
+    public FindMessageByCampaignIdResponse createFindMessageByCampaignIdResponse() {
+        return new FindMessageByCampaignIdResponse();
     }
 
     /**
-     * Create an instance of {@link SendImmediateMessageSDataCIdCAResponse }
+     * Create an instance of {@link PublishOnWebResponse }
      * 
      */
-    public SendImmediateMessageSDataCIdCAResponse createSendImmediateMessageSDataCIdCAResponse() {
-        return new SendImmediateMessageSDataCIdCAResponse();
+    public PublishOnWebResponse createPublishOnWebResponse() {
+        return new PublishOnWebResponse();
     }
 
     /**
-     * Create an instance of {@link ScheduleCampaignFeedbackReportResponse }
+     * Create an instance of {@link GetAvailableCommunicationCategoriesResponse }
      * 
      */
-    public ScheduleCampaignFeedbackReportResponse createScheduleCampaignFeedbackReportResponse() {
-        return new ScheduleCampaignFeedbackReportResponse();
+    public GetAvailableCommunicationCategoriesResponse createGetAvailableCommunicationCategoriesResponse() {
+        return new GetAvailableCommunicationCategoriesResponse();
     }
 
     /**
-     * Create an instance of {@link AddCampaignNoteResponse }
+     * Create an instance of {@link GcMsPushTemplate }
      * 
      */
-    public AddCampaignNoteResponse createAddCampaignNoteResponse() {
-        return new AddCampaignNoteResponse();
+    public GcMsPushTemplate createGcMsPushTemplate() {
+        return new GcMsPushTemplate();
+    }
+
+    /**
+     * Create an instance of {@link GetXMLDeliveryTransitions }
+     * 
+     */
+    public GetXMLDeliveryTransitions createGetXMLDeliveryTransitions() {
+        return new GetXMLDeliveryTransitions();
+    }
+
+    /**
+     * Create an instance of {@link AddSubscriber }
+     * 
+     */
+    public AddSubscriber createAddSubscriber() {
+        return new AddSubscriber();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriberIdResponse }
+     * 
+     */
+    public SendImmediateByCampaignAliasToSubscriberIdResponse createSendImmediateByCampaignAliasToSubscriberIdResponse() {
+        return new SendImmediateByCampaignAliasToSubscriberIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link TriggerDeliveryByAliasResponse }
+     * 
+     */
+    public TriggerDeliveryByAliasResponse createTriggerDeliveryByAliasResponse() {
+        return new TriggerDeliveryByAliasResponse();
+    }
+
+    /**
+     * Create an instance of {@link CloneAndSendCampaignResponse }
+     * 
+     */
+    public CloneAndSendCampaignResponse createCloneAndSendCampaignResponse() {
+        return new CloneAndSendCampaignResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddAttachmentResponse }
+     * 
+     */
+    public AddAttachmentResponse createAddAttachmentResponse() {
+        return new AddAttachmentResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateSplitTest }
+     * 
+     */
+    public CreateSplitTest createCreateSplitTest() {
+        return new CreateSplitTest();
+    }
+
+    /**
+     * Create an instance of {@link FindSubscribersResponse }
+     * 
+     */
+    public FindSubscribersResponse createFindSubscribersResponse() {
+        return new FindSubscribersResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignToSubscriber }
+     * 
+     */
+    public SendImmediateByCampaignToSubscriber createSendImmediateByCampaignToSubscriber() {
+        return new SendImmediateByCampaignToSubscriber();
+    }
+
+    /**
+     * Create an instance of {@link FindTriggerableCampaigns }
+     * 
+     */
+    public FindTriggerableCampaigns createFindTriggerableCampaigns() {
+        return new FindTriggerableCampaigns();
+    }
+
+    /**
+     * Create an instance of {@link FindSubscribersIncludedInFilter }
+     * 
+     */
+    public FindSubscribersIncludedInFilter createFindSubscribersIncludedInFilter() {
+        return new FindSubscribersIncludedInFilter();
+    }
+
+    /**
+     * Create an instance of {@link AddCampaignNote }
+     * 
+     */
+    public AddCampaignNote createAddCampaignNote() {
+        return new AddCampaignNote();
+    }
+
+    /**
+     * Create an instance of {@link BorrowTokenResponse }
+     * 
+     */
+    public BorrowTokenResponse createBorrowTokenResponse() {
+        return new BorrowTokenResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetTrackedLinks }
+     * 
+     */
+    public GetTrackedLinks createGetTrackedLinks() {
+        return new GetTrackedLinks();
+    }
+
+    /**
+     * Create an instance of {@link RenameSubscriberSourceFilter }
+     * 
+     */
+    public RenameSubscriberSourceFilter createRenameSubscriberSourceFilter() {
+        return new RenameSubscriberSourceFilter();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSIdCDataCA }
+     * 
+     */
+    public SendImmediateMessageSIdCDataCA createSendImmediateMessageSIdCDataCA() {
+        return new SendImmediateMessageSIdCDataCA();
+    }
+
+    /**
+     * Create an instance of {@link GetMobileApplicationByCode }
+     * 
+     */
+    public GetMobileApplicationByCode createGetMobileApplicationByCode() {
+        return new GetMobileApplicationByCode();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignIdToSubscriberId }
+     * 
+     */
+    public SendImmediateByCampaignIdToSubscriberId createSendImmediateByCampaignIdToSubscriberId() {
+        return new SendImmediateByCampaignIdToSubscriberId();
+    }
+
+    /**
+     * Create an instance of {@link ModifySubscriberSubscriptionStatus }
+     * 
+     */
+    public ModifySubscriberSubscriptionStatus createModifySubscriberSubscriptionStatus() {
+        return new ModifySubscriberSubscriptionStatus();
+    }
+
+    /**
+     * Create an instance of {@link SendCampaign }
+     * 
+     */
+    public SendCampaign createSendCampaign() {
+        return new SendCampaign();
+    }
+
+    /**
+     * Create an instance of {@link FindMessageModelsResponse }
+     * 
+     */
+    public FindMessageModelsResponse createFindMessageModelsResponse() {
+        return new FindMessageModelsResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetXMLDeliveriesResponse }
+     * 
+     */
+    public GetXMLDeliveriesResponse createGetXMLDeliveriesResponse() {
+        return new GetXMLDeliveriesResponse();
+    }
+
+    /**
+     * Create an instance of {@link ModifySubscriberSubscriptionStatusByMailqIdResponse }
+     * 
+     */
+    public ModifySubscriberSubscriptionStatusByMailqIdResponse createModifySubscriberSubscriptionStatusByMailqIdResponse() {
+        return new ModifySubscriberSubscriptionStatusByMailqIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscriberSourceResponse }
+     * 
+     */
+    public GetSubscriberSourceResponse createGetSubscriberSourceResponse() {
+        return new GetSubscriberSourceResponse();
     }
 
     /**
@@ -1874,11 +1380,667 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SendSplitTestWinnerResponse }
+     * Create an instance of {@link UploadMediaContent }
      * 
      */
-    public SendSplitTestWinnerResponse createSendSplitTestWinnerResponse() {
-        return new SendSplitTestWinnerResponse();
+    public UploadMediaContent createUploadMediaContent() {
+        return new UploadMediaContent();
+    }
+
+    /**
+     * Create an instance of {@link InvalidateTokenResponse }
+     * 
+     */
+    public InvalidateTokenResponse createInvalidateTokenResponse() {
+        return new InvalidateTokenResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindFiltersBySubscriberSource }
+     * 
+     */
+    public FindFiltersBySubscriberSource createFindFiltersBySubscriberSource() {
+        return new FindFiltersBySubscriberSource();
+    }
+
+    /**
+     * Create an instance of {@link GetRequestStatusResponse }
+     * 
+     */
+    public GetRequestStatusResponse createGetRequestStatusResponse() {
+        return new GetRequestStatusResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetMobileApplicationByCodeResponse }
+     * 
+     */
+    public GetMobileApplicationByCodeResponse createGetMobileApplicationByCodeResponse() {
+        return new GetMobileApplicationByCodeResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSdataCAlCAResponse }
+     * 
+     */
+    public SendImmediateMessageSdataCAlCAResponse createSendImmediateMessageSdataCAlCAResponse() {
+        return new SendImmediateMessageSdataCAlCAResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateSplitTestResponse }
+     * 
+     */
+    public CreateSplitTestResponse createCreateSplitTestResponse() {
+        return new CreateSplitTestResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateMessageModelResponse }
+     * 
+     */
+    public CreateMessageModelResponse createCreateMessageModelResponse() {
+        return new CreateMessageModelResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddSubscribers }
+     * 
+     */
+    public AddSubscribers createAddSubscribers() {
+        return new AddSubscribers();
+    }
+
+    /**
+     * Create an instance of {@link SetCampaignRecurrency }
+     * 
+     */
+    public SetCampaignRecurrency createSetCampaignRecurrency() {
+        return new SetCampaignRecurrency();
+    }
+
+    /**
+     * Create an instance of {@link UnmarshalPushTemplateEnvelope }
+     * 
+     */
+    public UnmarshalPushTemplateEnvelope createUnmarshalPushTemplateEnvelope() {
+        return new UnmarshalPushTemplateEnvelope();
+    }
+
+    /**
+     * Create an instance of {@link AddCampaignNoteResponse }
+     * 
+     */
+    public AddCampaignNoteResponse createAddCampaignNoteResponse() {
+        return new AddCampaignNoteResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetEmptyPushTemplateResponse }
+     * 
+     */
+    public GetEmptyPushTemplateResponse createGetEmptyPushTemplateResponse() {
+        return new GetEmptyPushTemplateResponse();
+    }
+
+    /**
+     * Create an instance of {@link IsSubscriberSourceLockedResponse }
+     * 
+     */
+    public IsSubscriberSourceLockedResponse createIsSubscriberSourceLockedResponse() {
+        return new IsSubscriberSourceLockedResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsByStatus }
+     * 
+     */
+    public FindCampaignsByStatus createFindCampaignsByStatus() {
+        return new FindCampaignsByStatus();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSIdCData }
+     * 
+     */
+    public SendImmediateMessageSIdCData createSendImmediateMessageSIdCData() {
+        return new SendImmediateMessageSIdCData();
+    }
+
+    /**
+     * Create an instance of {@link GetCampaignFeedback }
+     * 
+     */
+    public GetCampaignFeedback createGetCampaignFeedback() {
+        return new GetCampaignFeedback();
+    }
+
+    /**
+     * Create an instance of {@link CreateSelectionResponse }
+     * 
+     */
+    public CreateSelectionResponse createCreateSelectionResponse() {
+        return new CreateSelectionResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendSplitTestWinner }
+     * 
+     */
+    public SendSplitTestWinner createSendSplitTestWinner() {
+        return new SendSplitTestWinner();
+    }
+
+    /**
+     * Create an instance of {@link ReuseSubscriberSourceFilterResponse }
+     * 
+     */
+    public ReuseSubscriberSourceFilterResponse createReuseSubscriberSourceFilterResponse() {
+        return new ReuseSubscriberSourceFilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscriberSourceFilter }
+     * 
+     */
+    public GetSubscriberSourceFilter createGetSubscriberSourceFilter() {
+        return new GetSubscriberSourceFilter();
+    }
+
+    /**
+     * Create an instance of {@link GetAttachmentByCampaignId }
+     * 
+     */
+    public GetAttachmentByCampaignId createGetAttachmentByCampaignId() {
+        return new GetAttachmentByCampaignId();
+    }
+
+    /**
+     * Create an instance of {@link CreateSelection }
+     * 
+     */
+    public CreateSelection createCreateSelection() {
+        return new CreateSelection();
+    }
+
+    /**
+     * Create an instance of {@link FindPeriodicCampaigns }
+     * 
+     */
+    public FindPeriodicCampaigns createFindPeriodicCampaigns() {
+        return new FindPeriodicCampaigns();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsByModel }
+     * 
+     */
+    public FindCampaignsByModel createFindCampaignsByModel() {
+        return new FindCampaignsByModel();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSDataCIdCA }
+     * 
+     */
+    public SendImmediateMessageSDataCIdCA createSendImmediateMessageSDataCIdCA() {
+        return new SendImmediateMessageSDataCIdCA();
+    }
+
+    /**
+     * Create an instance of {@link GetSelectionTestFilterId }
+     * 
+     */
+    public GetSelectionTestFilterId createGetSelectionTestFilterId() {
+        return new GetSelectionTestFilterId();
+    }
+
+    /**
+     * Create an instance of {@link GetAttachmentByCampaignIdResponse }
+     * 
+     */
+    public GetAttachmentByCampaignIdResponse createGetAttachmentByCampaignIdResponse() {
+        return new GetAttachmentByCampaignIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link UploadMediaContentResponse }
+     * 
+     */
+    public UploadMediaContentResponse createUploadMediaContentResponse() {
+        return new UploadMediaContentResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCampaign }
+     * 
+     */
+    public GetCampaign createGetCampaign() {
+        return new GetCampaign();
+    }
+
+    /**
+     * Create an instance of {@link FindNotesByCampaignResponse }
+     * 
+     */
+    public FindNotesByCampaignResponse createFindNotesByCampaignResponse() {
+        return new FindNotesByCampaignResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendSplitTest }
+     * 
+     */
+    public SendSplitTest createSendSplitTest() {
+        return new SendSplitTest();
+    }
+
+    /**
+     * Create an instance of {@link CountSubscribersIncludedInFilterResponse }
+     * 
+     */
+    public CountSubscribersIncludedInFilterResponse createCountSubscribersIncludedInFilterResponse() {
+        return new CountSubscribersIncludedInFilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link RequestCampaignFeedbackReportResponse }
+     * 
+     */
+    public RequestCampaignFeedbackReportResponse createRequestCampaignFeedbackReportResponse() {
+        return new RequestCampaignFeedbackReportResponse();
+    }
+
+    /**
+     * Create an instance of {@link XmlDeliveryInfo }
+     * 
+     */
+    public XmlDeliveryInfo createXmlDeliveryInfo() {
+        return new XmlDeliveryInfo();
+    }
+
+    /**
+     * Create an instance of {@link GetAvailableCommunicationCategories }
+     * 
+     */
+    public GetAvailableCommunicationCategories createGetAvailableCommunicationCategories() {
+        return new GetAvailableCommunicationCategories();
+    }
+
+    /**
+     * Create an instance of {@link FindSubscribersIncludedInFilterResponse }
+     * 
+     */
+    public FindSubscribersIncludedInFilterResponse createFindSubscribersIncludedInFilterResponse() {
+        return new FindSubscribersIncludedInFilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignIdToSubscriberIdResponse }
+     * 
+     */
+    public SendImmediateByCampaignIdToSubscriberIdResponse createSendImmediateByCampaignIdToSubscriberIdResponse() {
+        return new SendImmediateByCampaignIdToSubscriberIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindSubscribers }
+     * 
+     */
+    public FindSubscribers createFindSubscribers() {
+        return new FindSubscribers();
+    }
+
+    /**
+     * Create an instance of {@link FindTriggerableCampaignsResponse }
+     * 
+     */
+    public FindTriggerableCampaignsResponse createFindTriggerableCampaignsResponse() {
+        return new FindTriggerableCampaignsResponse();
+    }
+
+    /**
+     * Create an instance of {@link ScheduleCampaignFeedbackReport }
+     * 
+     */
+    public ScheduleCampaignFeedbackReport createScheduleCampaignFeedbackReport() {
+        return new ScheduleCampaignFeedbackReport();
+    }
+
+    /**
+     * Create an instance of {@link RollbackSelection }
+     * 
+     */
+    public RollbackSelection createRollbackSelection() {
+        return new RollbackSelection();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsByNoteResponse }
+     * 
+     */
+    public FindCampaignsByNoteResponse createFindCampaignsByNoteResponse() {
+        return new FindCampaignsByNoteResponse();
+    }
+
+    /**
+     * Create an instance of {@link UnmarshalPushTemplateEnvelopeResponse }
+     * 
+     */
+    public UnmarshalPushTemplateEnvelopeResponse createUnmarshalPushTemplateEnvelopeResponse() {
+        return new UnmarshalPushTemplateEnvelopeResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscriberDataExchangeStatus }
+     * 
+     */
+    public GetSubscriberDataExchangeStatus createGetSubscriberDataExchangeStatus() {
+        return new GetSubscriberDataExchangeStatus();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSdataCAlResponse }
+     * 
+     */
+    public SendImmediateMessageSdataCAlResponse createSendImmediateMessageSdataCAlResponse() {
+        return new SendImmediateMessageSdataCAlResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSdataCAlCA }
+     * 
+     */
+    public SendImmediateMessageSdataCAlCA createSendImmediateMessageSdataCAlCA() {
+        return new SendImmediateMessageSdataCAlCA();
+    }
+
+    /**
+     * Create an instance of {@link ScheduleCampaignFeedbackReportResponse }
+     * 
+     */
+    public ScheduleCampaignFeedbackReportResponse createScheduleCampaignFeedbackReportResponse() {
+        return new ScheduleCampaignFeedbackReportResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSIdCDataResponse }
+     * 
+     */
+    public SendImmediateMessageSIdCDataResponse createSendImmediateMessageSIdCDataResponse() {
+        return new SendImmediateMessageSIdCDataResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageResponse }
+     * 
+     */
+    public SendImmediateMessageResponse createSendImmediateMessageResponse() {
+        return new SendImmediateMessageResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignAliasToSubscriberResponse }
+     * 
+     */
+    public SendImmediateByCampaignAliasToSubscriberResponse createSendImmediateByCampaignAliasToSubscriberResponse() {
+        return new SendImmediateByCampaignAliasToSubscriberResponse();
+    }
+
+    /**
+     * Create an instance of {@link GcMsPushTemplate.Variants }
+     * 
+     */
+    public GcMsPushTemplate.Variants createGcMsPushTemplateVariants() {
+        return new GcMsPushTemplate.Variants();
+    }
+
+    /**
+     * Create an instance of {@link GetSelectionStatus }
+     * 
+     */
+    public GetSelectionStatus createGetSelectionStatus() {
+        return new GetSelectionStatus();
+    }
+
+    /**
+     * Create an instance of {@link com.contactlab.api.ws.PushTemplate.CustomData.Entry }
+     * 
+     */
+    public com.contactlab.api.ws.PushTemplate.CustomData.Entry createPushTemplateCustomDataEntry() {
+        return new com.contactlab.api.ws.PushTemplate.CustomData.Entry();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSDataCIdCAResponse }
+     * 
+     */
+    public SendImmediateMessageSDataCIdCAResponse createSendImmediateMessageSDataCIdCAResponse() {
+        return new SendImmediateMessageSDataCIdCAResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddAttachment }
+     * 
+     */
+    public AddAttachment createAddAttachment() {
+        return new AddAttachment();
+    }
+
+    /**
+     * Create an instance of {@link CommitSelection }
+     * 
+     */
+    public CommitSelection createCommitSelection() {
+        return new CommitSelection();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsSentBetween }
+     * 
+     */
+    public FindCampaignsSentBetween createFindCampaignsSentBetween() {
+        return new FindCampaignsSentBetween();
+    }
+
+    /**
+     * Create an instance of {@link AddSubscriberSource }
+     * 
+     */
+    public AddSubscriberSource createAddSubscriberSource() {
+        return new AddSubscriberSource();
+    }
+
+    /**
+     * Create an instance of {@link PushTemplateEnvelope }
+     * 
+     */
+    public PushTemplateEnvelope createPushTemplateEnvelope() {
+        return new PushTemplateEnvelope();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsSentBetweenResponse }
+     * 
+     */
+    public FindCampaignsSentBetweenResponse createFindCampaignsSentBetweenResponse() {
+        return new FindCampaignsSentBetweenResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeliveryInformation }
+     * 
+     */
+    public DeliveryInformation createDeliveryInformation() {
+        return new DeliveryInformation();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignIdToSubscriber }
+     * 
+     */
+    public SendImmediateByCampaignIdToSubscriber createSendImmediateByCampaignIdToSubscriber() {
+        return new SendImmediateByCampaignIdToSubscriber();
+    }
+
+    /**
+     * Create an instance of {@link CountSubscribersIncludedInFilter }
+     * 
+     */
+    public CountSubscribersIncludedInFilter createCountSubscribersIncludedInFilter() {
+        return new CountSubscribersIncludedInFilter();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsByNote }
+     * 
+     */
+    public FindCampaignsByNote createFindCampaignsByNote() {
+        return new FindCampaignsByNote();
+    }
+
+    /**
+     * Create an instance of {@link GetMessageModelByIdResponse }
+     * 
+     */
+    public GetMessageModelByIdResponse createGetMessageModelByIdResponse() {
+        return new GetMessageModelByIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link SendSplitTestResponse }
+     * 
+     */
+    public SendSplitTestResponse createSendSplitTestResponse() {
+        return new SendSplitTestResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateCampaign }
+     * 
+     */
+    public CreateCampaign createCreateCampaign() {
+        return new CreateCampaign();
+    }
+
+    /**
+     * Create an instance of {@link FindMessagesByChannelResponse }
+     * 
+     */
+    public FindMessagesByChannelResponse createFindMessagesByChannelResponse() {
+        return new FindMessagesByChannelResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaigns }
+     * 
+     */
+    public FindCampaigns createFindCampaigns() {
+        return new FindCampaigns();
+    }
+
+    /**
+     * Create an instance of {@link FindCampaignsBySubscriberSourceFilter }
+     * 
+     */
+    public FindCampaignsBySubscriberSourceFilter createFindCampaignsBySubscriberSourceFilter() {
+        return new FindCampaignsBySubscriberSourceFilter();
+    }
+
+    /**
+     * Create an instance of {@link CountSubscribers }
+     * 
+     */
+    public CountSubscribers createCountSubscribers() {
+        return new CountSubscribers();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignToSubscriberId }
+     * 
+     */
+    public SendImmediateByCampaignToSubscriberId createSendImmediateByCampaignToSubscriberId() {
+        return new SendImmediateByCampaignToSubscriberId();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateByCampaignIdToSubscriberResponse }
+     * 
+     */
+    public SendImmediateByCampaignIdToSubscriberResponse createSendImmediateByCampaignIdToSubscriberResponse() {
+        return new SendImmediateByCampaignIdToSubscriberResponse();
+    }
+
+    /**
+     * Create an instance of {@link KeepaliveTokenResponse }
+     * 
+     */
+    public KeepaliveTokenResponse createKeepaliveTokenResponse() {
+        return new KeepaliveTokenResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetDeliveryStatus }
+     * 
+     */
+    public GetDeliveryStatus createGetDeliveryStatus() {
+        return new GetDeliveryStatus();
+    }
+
+    /**
+     * Create an instance of {@link AddSubscriberSourceFilterResponse }
+     * 
+     */
+    public AddSubscriberSourceFilterResponse createAddSubscriberSourceFilterResponse() {
+        return new AddSubscriberSourceFilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetEmptyPushTemplate }
+     * 
+     */
+    public GetEmptyPushTemplate createGetEmptyPushTemplate() {
+        return new GetEmptyPushTemplate();
+    }
+
+    /**
+     * Create an instance of {@link SendImmediateMessageSdataCAl }
+     * 
+     */
+    public SendImmediateMessageSdataCAl createSendImmediateMessageSdataCAl() {
+        return new SendImmediateMessageSdataCAl();
+    }
+
+    /**
+     * Create an instance of {@link XmlDeliveryTransitionInfo }
+     * 
+     */
+    public XmlDeliveryTransitionInfo createXmlDeliveryTransitionInfo() {
+        return new XmlDeliveryTransitionInfo();
+    }
+
+    /**
+     * Create an instance of {@link FindMessagesByCampaignNameResponse }
+     * 
+     */
+    public FindMessagesByCampaignNameResponse createFindMessagesByCampaignNameResponse() {
+        return new FindMessagesByCampaignNameResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetDeliveryStatusResponse }
+     * 
+     */
+    public GetDeliveryStatusResponse createGetDeliveryStatusResponse() {
+        return new GetDeliveryStatusResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSelectionTestFilterIdResponse }
+     * 
+     */
+    public GetSelectionTestFilterIdResponse createGetSelectionTestFilterIdResponse() {
+        return new GetSelectionTestFilterIdResponse();
     }
 
     /**
@@ -1900,21 +2062,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindFiltersBySubscriberSource }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findFiltersBySubscriberSource")
-    public JAXBElement<FindFiltersBySubscriberSource> createFindFiltersBySubscriberSource(FindFiltersBySubscriberSource value) {
-        return new JAXBElement<FindFiltersBySubscriberSource>(_FindFiltersBySubscriberSource_QNAME, FindFiltersBySubscriberSource.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SetCampaignRecurrency }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "setCampaignRecurrency")
     public JAXBElement<SetCampaignRecurrency> createSetCampaignRecurrency(SetCampaignRecurrency value) {
         return new JAXBElement<SetCampaignRecurrency>(_SetCampaignRecurrency_QNAME, SetCampaignRecurrency.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindFiltersBySubscriberSource }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findFiltersBySubscriberSource")
+    public JAXBElement<FindFiltersBySubscriberSource> createFindFiltersBySubscriberSource(FindFiltersBySubscriberSource value) {
+        return new JAXBElement<FindFiltersBySubscriberSource>(_FindFiltersBySubscriberSource_QNAME, FindFiltersBySubscriberSource.class, null, value);
     }
 
     /**
@@ -1954,6 +2116,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSelectionRealFilterId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getSelectionRealFilterId")
+    public JAXBElement<GetSelectionRealFilterId> createGetSelectionRealFilterId(GetSelectionRealFilterId value) {
+        return new JAXBElement<GetSelectionRealFilterId>(_GetSelectionRealFilterId_QNAME, GetSelectionRealFilterId.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SendImmediateByCampaignToSubscriberResponse }{@code >}}
      * 
      */
@@ -1963,21 +2134,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetTrackedLinksResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getTrackedLinksResponse")
-    public JAXBElement<GetTrackedLinksResponse> createGetTrackedLinksResponse(GetTrackedLinksResponse value) {
-        return new JAXBElement<GetTrackedLinksResponse>(_GetTrackedLinksResponse_QNAME, GetTrackedLinksResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetSubscriberDataExchangeStatus }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getSubscriberDataExchangeStatus")
     public JAXBElement<GetSubscriberDataExchangeStatus> createGetSubscriberDataExchangeStatus(GetSubscriberDataExchangeStatus value) {
         return new JAXBElement<GetSubscriberDataExchangeStatus>(_GetSubscriberDataExchangeStatus_QNAME, GetSubscriberDataExchangeStatus.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetTrackedLinksResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getTrackedLinksResponse")
+    public JAXBElement<GetTrackedLinksResponse> createGetTrackedLinksResponse(GetTrackedLinksResponse value) {
+        return new JAXBElement<GetTrackedLinksResponse>(_GetTrackedLinksResponse_QNAME, GetTrackedLinksResponse.class, null, value);
     }
 
     /**
@@ -1996,6 +2167,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findCampaignsByModel")
     public JAXBElement<FindCampaignsByModel> createFindCampaignsByModel(FindCampaignsByModel value) {
         return new JAXBElement<FindCampaignsByModel>(_FindCampaignsByModel_QNAME, FindCampaignsByModel.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RollbackSelectionResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "rollbackSelectionResponse")
+    public JAXBElement<RollbackSelectionResponse> createRollbackSelectionResponse(RollbackSelectionResponse value) {
+        return new JAXBElement<RollbackSelectionResponse>(_RollbackSelectionResponse_QNAME, RollbackSelectionResponse.class, null, value);
     }
 
     /**
@@ -2161,6 +2341,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSelectionRealFilterIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getSelectionRealFilterIdResponse")
+    public JAXBElement<GetSelectionRealFilterIdResponse> createGetSelectionRealFilterIdResponse(GetSelectionRealFilterIdResponse value) {
+        return new JAXBElement<GetSelectionRealFilterIdResponse>(_GetSelectionRealFilterIdResponse_QNAME, GetSelectionRealFilterIdResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ScheduleCampaignFeedbackReport }{@code >}}
      * 
      */
@@ -2221,6 +2410,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendImmediateByCampaignToSubscriberIdResponse")
     public JAXBElement<SendImmediateByCampaignToSubscriberIdResponse> createSendImmediateByCampaignToSubscriberIdResponse(SendImmediateByCampaignToSubscriberIdResponse value) {
         return new JAXBElement<SendImmediateByCampaignToSubscriberIdResponse>(_SendImmediateByCampaignToSubscriberIdResponse_QNAME, SendImmediateByCampaignToSubscriberIdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RenameSubscriberSourceFilterResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "renameSubscriberSourceFilterResponse")
+    public JAXBElement<RenameSubscriberSourceFilterResponse> createRenameSubscriberSourceFilterResponse(RenameSubscriberSourceFilterResponse value) {
+        return new JAXBElement<RenameSubscriberSourceFilterResponse>(_RenameSubscriberSourceFilterResponse_QNAME, RenameSubscriberSourceFilterResponse.class, null, value);
     }
 
     /**
@@ -2320,6 +2518,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findArchivedFiltersBySubscriberSource")
     public JAXBElement<FindArchivedFiltersBySubscriberSource> createFindArchivedFiltersBySubscriberSource(FindArchivedFiltersBySubscriberSource value) {
         return new JAXBElement<FindArchivedFiltersBySubscriberSource>(_FindArchivedFiltersBySubscriberSource_QNAME, FindArchivedFiltersBySubscriberSource.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StartSelection }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "startSelection")
+    public JAXBElement<StartSelection> createStartSelection(StartSelection value) {
+        return new JAXBElement<StartSelection>(_StartSelection_QNAME, StartSelection.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StartSelectionResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "startSelectionResponse")
+    public JAXBElement<StartSelectionResponse> createStartSelectionResponse(StartSelectionResponse value) {
+        return new JAXBElement<StartSelectionResponse>(_StartSelectionResponse_QNAME, StartSelectionResponse.class, null, value);
     }
 
     /**
@@ -2467,6 +2683,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateSelectionResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "createSelectionResponse")
+    public JAXBElement<CreateSelectionResponse> createCreateSelectionResponse(CreateSelectionResponse value) {
+        return new JAXBElement<CreateSelectionResponse>(_CreateSelectionResponse_QNAME, CreateSelectionResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetXMLDeliveryTransitionsResponse }{@code >}}
      * 
      */
@@ -2482,6 +2707,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "reuseSubscriberSourceFilterResponse")
     public JAXBElement<ReuseSubscriberSourceFilterResponse> createReuseSubscriberSourceFilterResponse(ReuseSubscriberSourceFilterResponse value) {
         return new JAXBElement<ReuseSubscriberSourceFilterResponse>(_ReuseSubscriberSourceFilterResponse_QNAME, ReuseSubscriberSourceFilterResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSelectionTestFilterId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getSelectionTestFilterId")
+    public JAXBElement<GetSelectionTestFilterId> createGetSelectionTestFilterId(GetSelectionTestFilterId value) {
+        return new JAXBElement<GetSelectionTestFilterId>(_GetSelectionTestFilterId_QNAME, GetSelectionTestFilterId.class, null, value);
     }
 
     /**
@@ -2503,15 +2737,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddSubscriberSourceFilter }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "addSubscriberSourceFilter")
-    public JAXBElement<AddSubscriberSourceFilter> createAddSubscriberSourceFilter(AddSubscriberSourceFilter value) {
-        return new JAXBElement<AddSubscriberSourceFilter>(_AddSubscriberSourceFilter_QNAME, AddSubscriberSourceFilter.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link FindFiltersBySubscriberSourceResponse }{@code >}}
      * 
      */
@@ -2521,12 +2746,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddSubscriberSourceFilter }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "addSubscriberSourceFilter")
+    public JAXBElement<AddSubscriberSourceFilter> createAddSubscriberSourceFilter(AddSubscriberSourceFilter value) {
+        return new JAXBElement<AddSubscriberSourceFilter>(_AddSubscriberSourceFilter_QNAME, AddSubscriberSourceFilter.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AddSubscribersResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "addSubscribersResponse")
     public JAXBElement<AddSubscribersResponse> createAddSubscribersResponse(AddSubscribersResponse value) {
         return new JAXBElement<AddSubscribersResponse>(_AddSubscribersResponse_QNAME, AddSubscribersResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RollbackSelection }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "rollbackSelection")
+    public JAXBElement<RollbackSelection> createRollbackSelection(RollbackSelection value) {
+        return new JAXBElement<RollbackSelection>(_RollbackSelection_QNAME, RollbackSelection.class, null, value);
     }
 
     /**
@@ -2566,21 +2809,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindMessagesResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findMessagesResponse")
-    public JAXBElement<FindMessagesResponse> createFindMessagesResponse(FindMessagesResponse value) {
-        return new JAXBElement<FindMessagesResponse>(_FindMessagesResponse_QNAME, FindMessagesResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SendSplitTestResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendSplitTestResponse")
     public JAXBElement<SendSplitTestResponse> createSendSplitTestResponse(SendSplitTestResponse value) {
         return new JAXBElement<SendSplitTestResponse>(_SendSplitTestResponse_QNAME, SendSplitTestResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindMessagesResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findMessagesResponse")
+    public JAXBElement<FindMessagesResponse> createFindMessagesResponse(FindMessagesResponse value) {
+        return new JAXBElement<FindMessagesResponse>(_FindMessagesResponse_QNAME, FindMessagesResponse.class, null, value);
     }
 
     /**
@@ -2638,21 +2881,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateSubscriber }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "updateSubscriber")
-    public JAXBElement<UpdateSubscriber> createUpdateSubscriber(UpdateSubscriber value) {
-        return new JAXBElement<UpdateSubscriber>(_UpdateSubscriber_QNAME, UpdateSubscriber.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetMobileApplicationByCode }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getMobileApplicationByCode")
     public JAXBElement<GetMobileApplicationByCode> createGetMobileApplicationByCode(GetMobileApplicationByCode value) {
         return new JAXBElement<GetMobileApplicationByCode>(_GetMobileApplicationByCode_QNAME, GetMobileApplicationByCode.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateSubscriber }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "updateSubscriber")
+    public JAXBElement<UpdateSubscriber> createUpdateSubscriber(UpdateSubscriber value) {
+        return new JAXBElement<UpdateSubscriber>(_UpdateSubscriber_QNAME, UpdateSubscriber.class, null, value);
     }
 
     /**
@@ -2872,21 +3115,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BorrowTokenResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "borrowTokenResponse")
-    public JAXBElement<BorrowTokenResponse> createBorrowTokenResponse(BorrowTokenResponse value) {
-        return new JAXBElement<BorrowTokenResponse>(_BorrowTokenResponse_QNAME, BorrowTokenResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SendImmediateMessageSdataCAl }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendImmediateMessageSdataCAl")
     public JAXBElement<SendImmediateMessageSdataCAl> createSendImmediateMessageSdataCAl(SendImmediateMessageSdataCAl value) {
         return new JAXBElement<SendImmediateMessageSdataCAl>(_SendImmediateMessageSdataCAl_QNAME, SendImmediateMessageSdataCAl.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BorrowTokenResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "borrowTokenResponse")
+    public JAXBElement<BorrowTokenResponse> createBorrowTokenResponse(BorrowTokenResponse value) {
+        return new JAXBElement<BorrowTokenResponse>(_BorrowTokenResponse_QNAME, BorrowTokenResponse.class, null, value);
     }
 
     /**
@@ -2908,6 +3151,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateSelection }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "createSelection")
+    public JAXBElement<CreateSelection> createCreateSelection(CreateSelection value) {
+        return new JAXBElement<CreateSelection>(_CreateSelection_QNAME, CreateSelection.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdateSubscriberResponse }{@code >}}
      * 
      */
@@ -2926,21 +3178,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddSubscriberSourceResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "addSubscriberSourceResponse")
-    public JAXBElement<AddSubscriberSourceResponse> createAddSubscriberSourceResponse(AddSubscriberSourceResponse value) {
-        return new JAXBElement<AddSubscriberSourceResponse>(_AddSubscriberSourceResponse_QNAME, AddSubscriberSourceResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link FindCampaignsBySubscriberSourceFilter }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findCampaignsBySubscriberSourceFilter")
     public JAXBElement<FindCampaignsBySubscriberSourceFilter> createFindCampaignsBySubscriberSourceFilter(FindCampaignsBySubscriberSourceFilter value) {
         return new JAXBElement<FindCampaignsBySubscriberSourceFilter>(_FindCampaignsBySubscriberSourceFilter_QNAME, FindCampaignsBySubscriberSourceFilter.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddSubscriberSourceResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "addSubscriberSourceResponse")
+    public JAXBElement<AddSubscriberSourceResponse> createAddSubscriberSourceResponse(AddSubscriberSourceResponse value) {
+        return new JAXBElement<AddSubscriberSourceResponse>(_AddSubscriberSourceResponse_QNAME, AddSubscriberSourceResponse.class, null, value);
     }
 
     /**
@@ -2989,21 +3241,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link KeepaliveTokenResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "keepaliveTokenResponse")
-    public JAXBElement<KeepaliveTokenResponse> createKeepaliveTokenResponse(KeepaliveTokenResponse value) {
-        return new JAXBElement<KeepaliveTokenResponse>(_KeepaliveTokenResponse_QNAME, KeepaliveTokenResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PublishOnWeb }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "publishOnWeb")
     public JAXBElement<PublishOnWeb> createPublishOnWeb(PublishOnWeb value) {
         return new JAXBElement<PublishOnWeb>(_PublishOnWeb_QNAME, PublishOnWeb.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link KeepaliveTokenResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "keepaliveTokenResponse")
+    public JAXBElement<KeepaliveTokenResponse> createKeepaliveTokenResponse(KeepaliveTokenResponse value) {
+        return new JAXBElement<KeepaliveTokenResponse>(_KeepaliveTokenResponse_QNAME, KeepaliveTokenResponse.class, null, value);
     }
 
     /**
@@ -3115,6 +3367,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CommitSelection }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "commitSelection")
+    public JAXBElement<CommitSelection> createCommitSelection(CommitSelection value) {
+        return new JAXBElement<CommitSelection>(_CommitSelection_QNAME, CommitSelection.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link FindMessageModelsBySubscriberSourceResponse }{@code >}}
      * 
      */
@@ -3151,21 +3412,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCryptoKeyResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getCryptoKeyResponse")
-    public JAXBElement<GetCryptoKeyResponse> createGetCryptoKeyResponse(GetCryptoKeyResponse value) {
-        return new JAXBElement<GetCryptoKeyResponse>(_GetCryptoKeyResponse_QNAME, GetCryptoKeyResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link FindCampaignsSentBetween }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "findCampaignsSentBetween")
     public JAXBElement<FindCampaignsSentBetween> createFindCampaignsSentBetween(FindCampaignsSentBetween value) {
         return new JAXBElement<FindCampaignsSentBetween>(_FindCampaignsSentBetween_QNAME, FindCampaignsSentBetween.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCryptoKeyResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getCryptoKeyResponse")
+    public JAXBElement<GetCryptoKeyResponse> createGetCryptoKeyResponse(GetCryptoKeyResponse value) {
+        return new JAXBElement<GetCryptoKeyResponse>(_GetCryptoKeyResponse_QNAME, GetCryptoKeyResponse.class, null, value);
     }
 
     /**
@@ -3178,21 +3439,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetRequestStatus }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getRequestStatus")
-    public JAXBElement<GetRequestStatus> createGetRequestStatus(GetRequestStatus value) {
-        return new JAXBElement<GetRequestStatus>(_GetRequestStatus_QNAME, GetRequestStatus.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TriggerDeliveryById }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "triggerDeliveryById")
     public JAXBElement<TriggerDeliveryById> createTriggerDeliveryById(TriggerDeliveryById value) {
         return new JAXBElement<TriggerDeliveryById>(_TriggerDeliveryById_QNAME, TriggerDeliveryById.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetRequestStatus }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getRequestStatus")
+    public JAXBElement<GetRequestStatus> createGetRequestStatus(GetRequestStatus value) {
+        return new JAXBElement<GetRequestStatus>(_GetRequestStatus_QNAME, GetRequestStatus.class, null, value);
     }
 
     /**
@@ -3250,21 +3511,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SendImmediateMessageResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendImmediateMessageResponse")
-    public JAXBElement<SendImmediateMessageResponse> createSendImmediateMessageResponse(SendImmediateMessageResponse value) {
-        return new JAXBElement<SendImmediateMessageResponse>(_SendImmediateMessageResponse_QNAME, SendImmediateMessageResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SendSplitTest }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendSplitTest")
     public JAXBElement<SendSplitTest> createSendSplitTest(SendSplitTest value) {
         return new JAXBElement<SendSplitTest>(_SendSplitTest_QNAME, SendSplitTest.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SendImmediateMessageResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendImmediateMessageResponse")
+    public JAXBElement<SendImmediateMessageResponse> createSendImmediateMessageResponse(SendImmediateMessageResponse value) {
+        return new JAXBElement<SendImmediateMessageResponse>(_SendImmediateMessageResponse_QNAME, SendImmediateMessageResponse.class, null, value);
     }
 
     /**
@@ -3286,6 +3547,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TriggerDeliveryByAliasResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "triggerDeliveryByAliasResponse")
+    public JAXBElement<TriggerDeliveryByAliasResponse> createTriggerDeliveryByAliasResponse(TriggerDeliveryByAliasResponse value) {
+        return new JAXBElement<TriggerDeliveryByAliasResponse>(_TriggerDeliveryByAliasResponse_QNAME, TriggerDeliveryByAliasResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BorrowToken }{@code >}}
      * 
      */
@@ -3295,12 +3565,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TriggerDeliveryByAliasResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSelectionTestFilterIdResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "triggerDeliveryByAliasResponse")
-    public JAXBElement<TriggerDeliveryByAliasResponse> createTriggerDeliveryByAliasResponse(TriggerDeliveryByAliasResponse value) {
-        return new JAXBElement<TriggerDeliveryByAliasResponse>(_TriggerDeliveryByAliasResponse_QNAME, TriggerDeliveryByAliasResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getSelectionTestFilterIdResponse")
+    public JAXBElement<GetSelectionTestFilterIdResponse> createGetSelectionTestFilterIdResponse(GetSelectionTestFilterIdResponse value) {
+        return new JAXBElement<GetSelectionTestFilterIdResponse>(_GetSelectionTestFilterIdResponse_QNAME, GetSelectionTestFilterIdResponse.class, null, value);
     }
 
     /**
@@ -3457,6 +3727,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddSelectionSubscribers }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "addSelectionSubscribers")
+    public JAXBElement<AddSelectionSubscribers> createAddSelectionSubscribers(AddSelectionSubscribers value) {
+        return new JAXBElement<AddSelectionSubscribers>(_AddSelectionSubscribers_QNAME, AddSelectionSubscribers.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SendImmediateMessageSDataCIdCAResponse }{@code >}}
      * 
      */
@@ -3517,6 +3796,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendImmediateByCampaignIdToSubscriberIdResponse")
     public JAXBElement<SendImmediateByCampaignIdToSubscriberIdResponse> createSendImmediateByCampaignIdToSubscriberIdResponse(SendImmediateByCampaignIdToSubscriberIdResponse value) {
         return new JAXBElement<SendImmediateByCampaignIdToSubscriberIdResponse>(_SendImmediateByCampaignIdToSubscriberIdResponse_QNAME, SendImmediateByCampaignIdToSubscriberIdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddSelectionSubscribersResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "addSelectionSubscribersResponse")
+    public JAXBElement<AddSelectionSubscribersResponse> createAddSelectionSubscribersResponse(AddSelectionSubscribersResponse value) {
+        return new JAXBElement<AddSelectionSubscribersResponse>(_AddSelectionSubscribersResponse_QNAME, AddSelectionSubscribersResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSelectionStatusResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getSelectionStatusResponse")
+    public JAXBElement<GetSelectionStatusResponse> createGetSelectionStatusResponse(GetSelectionStatusResponse value) {
+        return new JAXBElement<GetSelectionStatusResponse>(_GetSelectionStatusResponse_QNAME, GetSelectionStatusResponse.class, null, value);
     }
 
     /**
@@ -3601,12 +3898,39 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CommitSelectionResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "commitSelectionResponse")
+    public JAXBElement<CommitSelectionResponse> createCommitSelectionResponse(CommitSelectionResponse value) {
+        return new JAXBElement<CommitSelectionResponse>(_CommitSelectionResponse_QNAME, CommitSelectionResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SendImmediateMessageSDataCIdCA }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "sendImmediateMessageSDataCIdCA")
     public JAXBElement<SendImmediateMessageSDataCIdCA> createSendImmediateMessageSDataCIdCA(SendImmediateMessageSDataCIdCA value) {
         return new JAXBElement<SendImmediateMessageSDataCIdCA>(_SendImmediateMessageSDataCIdCA_QNAME, SendImmediateMessageSDataCIdCA.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RenameSubscriberSourceFilter }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "renameSubscriberSourceFilter")
+    public JAXBElement<RenameSubscriberSourceFilter> createRenameSubscriberSourceFilter(RenameSubscriberSourceFilter value) {
+        return new JAXBElement<RenameSubscriberSourceFilter>(_RenameSubscriberSourceFilter_QNAME, RenameSubscriberSourceFilter.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSelectionStatus }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.api.contactlab.com/", name = "getSelectionStatus")
+    public JAXBElement<GetSelectionStatus> createGetSelectionStatus(GetSelectionStatus value) {
+        return new JAXBElement<GetSelectionStatus>(_GetSelectionStatus_QNAME, GetSelectionStatus.class, null, value);
     }
 
     /**
