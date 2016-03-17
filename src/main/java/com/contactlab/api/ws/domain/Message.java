@@ -65,6 +65,7 @@ import javax.xml.bind.annotation.XmlType;
     "communicationCategoryIdentifier"
 })
 @XmlSeeAlso({
+    PushNotificationMessage.class,
     TextMessage.class,
     EmailMessage.class,
     FaxMessage.class,
