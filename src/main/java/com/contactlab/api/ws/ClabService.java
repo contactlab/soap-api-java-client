@@ -40,10 +40,12 @@ import com.contactlab.api.ws.domain.DeliveryStatus;
 import com.contactlab.api.ws.domain.LookupPreferences;
 import com.contactlab.api.ws.domain.Message;
 import com.contactlab.api.ws.domain.MessageModels;
+import com.contactlab.api.ws.domain.Pagination;
 import com.contactlab.api.ws.domain.SendImmediateOptions;
 import com.contactlab.api.ws.domain.SplitTestCampaign;
 import com.contactlab.api.ws.domain.Subscriber;
 import com.contactlab.api.ws.domain.SubscriberAttribute;
+import com.contactlab.api.ws.domain.SubscriberAttributeFilter;
 import com.contactlab.api.ws.domain.SubscriberSource;
 import com.contactlab.api.ws.domain.SubscriberSourceFilter;
 import com.contactlab.api.ws.domain.SubscriberSourceFilters;
@@ -134,6 +136,38 @@ public interface ClabService {
 
     /**
      * 
+     * @param selectedAttribute
+     * @param useBaseFilter
+     * @param filterId
+     * @param token
+     * @param whereAttribute
+     * @param pagination
+     * @param sourceIdentifier
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscribers
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscribersBy", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersBy")
+    @ResponseWrapper(localName = "findSubscribersByResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersByResponse")
+    public Subscribers findSubscribersBy(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "filterId", targetNamespace = "")
+        Integer filterId,
+        @WebParam(name = "useBaseFilter", targetNamespace = "")
+        boolean useBaseFilter,
+        @WebParam(name = "selectedAttribute", targetNamespace = "")
+        List<String> selectedAttribute,
+        @WebParam(name = "whereAttribute", targetNamespace = "")
+        List<SubscriberAttributeFilter> whereAttribute,
+        @WebParam(name = "pagination", targetNamespace = "")
+        Pagination pagination);
+
+    /**
+     * 
      * @param token
      * @param subscriber
      * @param sourceIdentifier
@@ -171,6 +205,35 @@ public interface ClabService {
         int subscriberIdentifier,
         @WebParam(name = "isSubscribed", targetNamespace = "")
         boolean isSubscribed);
+
+    /**
+     * 
+     * @param fieldsOnDistinct
+     * @param useBaseFilter
+     * @param filterId
+     * @param token
+     * @param whereAttribute
+     * @param sourceIdentifier
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "countSubscribersBy", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersBy")
+    @ResponseWrapper(localName = "countSubscribersByResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersByResponse")
+    public int countSubscribersBy(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "filterId", targetNamespace = "")
+        Integer filterId,
+        @WebParam(name = "whereAttribute", targetNamespace = "")
+        List<SubscriberAttributeFilter> whereAttribute,
+        @WebParam(name = "fieldsOnDistinct", targetNamespace = "")
+        List<String> fieldsOnDistinct,
+        @WebParam(name = "useBaseFilter", targetNamespace = "")
+        boolean useBaseFilter);
 
     /**
      * 
@@ -1282,29 +1345,6 @@ public interface ClabService {
     /**
      * 
      * @param token
-     * @param attribute
-     * @param lookupPrefs
-     * @param sourceIdentifier
-     * @return
-     *     returns com.contactlab.api.ws.domain.Subscribers
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribers")
-    @ResponseWrapper(localName = "findSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersResponse")
-    public Subscribers findSubscribers(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "attribute", targetNamespace = "")
-        SubscriberAttribute attribute,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param token
      * @param recipient
      * @return
      *     returns java.lang.String
@@ -1702,6 +1742,29 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param token
+     * @param attribute
+     * @param lookupPrefs
+     * @param sourceIdentifier
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscribers
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribers")
+    @ResponseWrapper(localName = "findSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersResponse")
+    public Subscribers findSubscribers(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "attribute", targetNamespace = "")
+        SubscriberAttribute attribute,
         @WebParam(name = "lookupPrefs", targetNamespace = "")
         LookupPreferences lookupPrefs);
 
