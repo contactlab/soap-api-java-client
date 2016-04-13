@@ -40,6 +40,8 @@ import com.contactlab.api.ws.domain.DeliveryStatus;
 import com.contactlab.api.ws.domain.LookupPreferences;
 import com.contactlab.api.ws.domain.Message;
 import com.contactlab.api.ws.domain.MessageModels;
+import com.contactlab.api.ws.domain.PageBuilderPages;
+import com.contactlab.api.ws.domain.PageBuilderTemplates;
 import com.contactlab.api.ws.domain.Pagination;
 import com.contactlab.api.ws.domain.SendImmediateOptions;
 import com.contactlab.api.ws.domain.SplitTestCampaign;
@@ -63,8 +65,8 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.ObjectFactory.class,
-    com.contactlab.api.ws.domain.ObjectFactory.class
+    com.contactlab.api.ws.domain.ObjectFactory.class,
+    com.contactlab.api.ws.ObjectFactory.class
 })
 public interface ClabService {
 
@@ -1345,6 +1347,29 @@ public interface ClabService {
     /**
      * 
      * @param token
+     * @param attribute
+     * @param lookupPrefs
+     * @param sourceIdentifier
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscribers
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribers")
+    @ResponseWrapper(localName = "findSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersResponse")
+    public Subscribers findSubscribers(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "attribute", targetNamespace = "")
+        SubscriberAttribute attribute,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param token
      * @param recipient
      * @return
      *     returns java.lang.String
@@ -1742,29 +1767,6 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param token
-     * @param attribute
-     * @param lookupPrefs
-     * @param sourceIdentifier
-     * @return
-     *     returns com.contactlab.api.ws.domain.Subscribers
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribers")
-    @ResponseWrapper(localName = "findSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersResponse")
-    public Subscribers findSubscribers(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "attribute", targetNamespace = "")
-        SubscriberAttribute attribute,
         @WebParam(name = "lookupPrefs", targetNamespace = "")
         LookupPreferences lookupPrefs);
 
@@ -2270,5 +2272,71 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "selectionId", targetNamespace = "")
         int selectionId);
+
+    /**
+     * 
+     * @param userKey
+     * @param pagination
+     * @param apiKey
+     * @return
+     *     returns com.contactlab.api.ws.domain.PageBuilderTemplates
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findPageBuilderTemplates", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindPageBuilderTemplates")
+    @ResponseWrapper(localName = "findPageBuilderTemplatesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindPageBuilderTemplatesResponse")
+    public PageBuilderTemplates findPageBuilderTemplates(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "pagination", targetNamespace = "")
+        Pagination pagination);
+
+    /**
+     * 
+     * @param templateId
+     * @param userKey
+     * @param pagination
+     * @param apiKey
+     * @return
+     *     returns com.contactlab.api.ws.domain.PageBuilderPages
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findPageBuilderPages", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindPageBuilderPages")
+    @ResponseWrapper(localName = "findPageBuilderPagesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindPageBuilderPagesResponse")
+    public PageBuilderPages findPageBuilderPages(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "templateId", targetNamespace = "")
+        int templateId,
+        @WebParam(name = "pagination", targetNamespace = "")
+        Pagination pagination);
+
+    /**
+     * 
+     * @param templateId
+     * @param userKey
+     * @param pageId
+     * @param apiKey
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getPageBuilderPageContent", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetPageBuilderPageContent")
+    @ResponseWrapper(localName = "getPageBuilderPageContentResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetPageBuilderPageContentResponse")
+    public String getPageBuilderPageContent(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "templateId", targetNamespace = "")
+        int templateId,
+        @WebParam(name = "pageId", targetNamespace = "")
+        int pageId);
 
 }

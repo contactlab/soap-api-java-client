@@ -54,8 +54,10 @@ import javax.xml.bind.annotation.XmlType;
     SubscriberSourceFilters.class,
     CampaignNotes.class,
     Subscribers.class,
+    PageBuilderTemplates.class,
     SubscriberSources.class,
     MessageModels.class,
+    PageBuilderPages.class,
     TrackedLinks.class
 })
 public abstract class SlicedDataSet {
