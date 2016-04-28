@@ -53,6 +53,8 @@ import com.contactlab.api.ws.domain.SubscriberSourceFilter;
 import com.contactlab.api.ws.domain.SubscriberSourceFilters;
 import com.contactlab.api.ws.domain.SubscriberSources;
 import com.contactlab.api.ws.domain.Subscribers;
+import com.contactlab.api.ws.domain.SubscriptionAttributes;
+import com.contactlab.api.ws.domain.Subscriptions;
 import com.contactlab.api.ws.domain.TrackedLink;
 import com.contactlab.api.ws.domain.XMLDeliveryInfos;
 
@@ -939,6 +941,46 @@ public interface ClabService {
 
     /**
      * 
+     * @param token
+     * @param attributes
+     * @param pagination
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscriptions
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscriptionsBy", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriptionsBy")
+    @ResponseWrapper(localName = "findSubscriptionsByResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriptionsByResponse")
+    public Subscriptions findSubscriptionsBy(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "attributes", targetNamespace = "")
+        SubscriptionAttributes attributes,
+        @WebParam(name = "pagination", targetNamespace = "")
+        Pagination pagination);
+
+    /**
+     * 
+     * @param token
+     * @param language
+     * @param subscriptionId
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUnsubscribeLink", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetUnsubscribeLink")
+    @ResponseWrapper(localName = "getUnsubscribeLinkResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetUnsubscribeLinkResponse")
+    public String getUnsubscribeLink(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "subscriptionId", targetNamespace = "")
+        Integer subscriptionId,
+        @WebParam(name = "language", targetNamespace = "")
+        String language);
+
+    /**
+     * 
      * @param dataExchangeConfigIdentifier
      * @param token
      */
@@ -1383,6 +1425,26 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "recipient", targetNamespace = "")
         String recipient);
+
+    /**
+     * 
+     * @param userKey
+     * @param uuid
+     * @param apiKey
+     * @return
+     *     returns java.util.List<java.lang.Long>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getDeliveryMailQ", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQ")
+    @ResponseWrapper(localName = "getDeliveryMailQResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQResponse")
+    public List<Long> getDeliveryMailQ(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "uuid", targetNamespace = "")
+        String uuid);
 
     /**
      * 

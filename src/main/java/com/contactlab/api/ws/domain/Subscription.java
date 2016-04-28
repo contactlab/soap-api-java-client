@@ -18,23 +18,22 @@ package com.contactlab.api.ws.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SlicedDataSet complex type.
+ * <p>Java class for Subscription complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SlicedDataSet">
+ * &lt;complexType name="Subscription">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="currentPageNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         &lt;element name="maxPageNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="registrationField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -44,76 +43,87 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SlicedDataSet", propOrder = {
-    "currentPageNumber",
-    "maxPageNumber"
+@XmlType(name = "Subscription", propOrder = {
+    "id",
+    "name",
+    "registrationField"
 })
-@XmlSeeAlso({
-    Campaigns.class,
-    XMLDeliveryInfos.class,
-    SubscriberSourceFilters.class,
-    CampaignNotes.class,
-    Subscriptions.class,
-    Subscribers.class,
-    PageBuilderTemplates.class,
-    SubscriberSources.class,
-    MessageModels.class,
-    PageBuilderPages.class,
-    TrackedLinks.class
-})
-public abstract class SlicedDataSet {
+public class Subscription {
 
-    @XmlElement(defaultValue = "1")
-    protected Integer currentPageNumber;
-    @XmlElement(defaultValue = "0")
-    protected Integer maxPageNumber;
+    protected Integer id;
+    protected String name;
+    protected String registrationField;
 
     /**
-     * Gets the value of the currentPageNumber property.
+     * Gets the value of the id property.
      * 
      * @return
      *     possible object is
      *     {@link Integer }
      *     
      */
-    public Integer getCurrentPageNumber() {
-        return currentPageNumber;
+    public Integer getId() {
+        return id;
     }
 
     /**
-     * Sets the value of the currentPageNumber property.
+     * Sets the value of the id property.
      * 
      * @param value
      *     allowed object is
      *     {@link Integer }
      *     
      */
-    public void setCurrentPageNumber(Integer value) {
-        this.currentPageNumber = value;
+    public void setId(Integer value) {
+        this.id = value;
     }
 
     /**
-     * Gets the value of the maxPageNumber property.
+     * Gets the value of the name property.
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
-    public Integer getMaxPageNumber() {
-        return maxPageNumber;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the maxPageNumber property.
+     * Sets the value of the name property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
-    public void setMaxPageNumber(Integer value) {
-        this.maxPageNumber = value;
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    /**
+     * Gets the value of the registrationField property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRegistrationField() {
+        return registrationField;
+    }
+
+    /**
+     * Sets the value of the registrationField property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRegistrationField(String value) {
+        this.registrationField = value;
     }
 
 }
