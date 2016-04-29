@@ -47,6 +47,16 @@ limitations under the License.
 
     <profiles>
         <profile>
+            <id>java8+</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+                <jdk>[1.8,)</jdk>
+            </activation>
+            <properties>
+                <additionalparam>-Xdoclint:none</additionalparam>
+            </properties>
+        </profile>
+        <profile>
             <id>next</id>
             <properties>
                 <wsdl.url>https://soap.contactlab.it/soap/services?wsdl</wsdl.url>
