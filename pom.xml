@@ -35,6 +35,7 @@ limitations under the License.
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <wsdl.url>https://soap.contactlab.it/soap/services?wsdl</wsdl.url>
     </properties>
 
     <licenses>
@@ -47,13 +48,14 @@ limitations under the License.
 
     <profiles>
         <profile>
-            <id>next</id>
-            <properties>
-                <wsdl.url>https://soap.contactlab.it/soap/services?wsdl</wsdl.url>
-            </properties>
+            <id>java8+</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
+                <jdk>[1.8,)</jdk>
             </activation>
+            <properties>
+                <additionalparam>-Xdoclint:none</additionalparam>
+            </properties>
         </profile>
     </profiles>
 
