@@ -29,6 +29,7 @@ import com.contactlab.api.ws.domain.ActivityStatus;
 import com.contactlab.api.ws.domain.Attachment;
 import com.contactlab.api.ws.domain.AuthToken;
 import com.contactlab.api.ws.domain.Campaign;
+import com.contactlab.api.ws.domain.CampaignAttributes;
 import com.contactlab.api.ws.domain.CampaignFeedback;
 import com.contactlab.api.ws.domain.CampaignLookupPreferences;
 import com.contactlab.api.ws.domain.CampaignNote;
@@ -489,6 +490,32 @@ public interface ClabService {
         int filterIdentifier,
         @WebParam(name = "newName", targetNamespace = "")
         String newName);
+
+    /**
+     * 
+     * @param selectedAttributes
+     * @param campaignAttributes
+     * @param token
+     * @param pagination
+     * @param channel
+     * @return
+     *     returns com.contactlab.api.ws.domain.Campaigns
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findCampaignsBy", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindCampaignsBy")
+    @ResponseWrapper(localName = "findCampaignsByResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindCampaignsByResponse")
+    public Campaigns findCampaignsBy(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "channel", targetNamespace = "")
+        Channel channel,
+        @WebParam(name = "campaignAttributes", targetNamespace = "")
+        CampaignAttributes campaignAttributes,
+        @WebParam(name = "selectedAttributes", targetNamespace = "")
+        List<String> selectedAttributes,
+        @WebParam(name = "pagination", targetNamespace = "")
+        Pagination pagination);
 
     /**
      * 
