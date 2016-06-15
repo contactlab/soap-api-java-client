@@ -49,17 +49,17 @@ import javax.xml.bind.annotation.XmlType;
     "maxPageNumber"
 })
 @XmlSeeAlso({
+    SubscriberSources.class,
     Campaigns.class,
+    TrackedLinks.class,
     XMLDeliveryInfos.class,
     SubscriberSourceFilters.class,
-    CampaignNotes.class,
     Subscriptions.class,
-    Subscribers.class,
-    PageBuilderTemplates.class,
-    SubscriberSources.class,
-    MessageModels.class,
+    CampaignNotes.class,
     PageBuilderPages.class,
-    TrackedLinks.class
+    PageBuilderTemplates.class,
+    MessageModels.class,
+    Subscribers.class
 })
 public abstract class SlicedDataSet {
 

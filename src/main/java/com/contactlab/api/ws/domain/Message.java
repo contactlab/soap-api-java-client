@@ -65,11 +65,11 @@ import javax.xml.bind.annotation.XmlType;
     "communicationCategoryIdentifier"
 })
 @XmlSeeAlso({
+    PushMessage.class,
+    EmailMessage.class,
     PushNotificationMessage.class,
     TextMessage.class,
-    EmailMessage.class,
-    FaxMessage.class,
-    PushMessage.class
+    FaxMessage.class
 })
 public abstract class Message {
 

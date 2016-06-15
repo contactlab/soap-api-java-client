@@ -50,6 +50,7 @@ import com.contactlab.api.ws.domain.Subscriber;
 import com.contactlab.api.ws.domain.SubscriberAttribute;
 import com.contactlab.api.ws.domain.SubscriberAttributeFilter;
 import com.contactlab.api.ws.domain.SubscriberSource;
+import com.contactlab.api.ws.domain.SubscriberSourceDescription;
 import com.contactlab.api.ws.domain.SubscriberSourceFilter;
 import com.contactlab.api.ws.domain.SubscriberSourceFilters;
 import com.contactlab.api.ws.domain.SubscriberSources;
@@ -68,16 +69,33 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.domain.ObjectFactory.class,
-    com.contactlab.api.ws.ObjectFactory.class
+    com.contactlab.api.ws.ObjectFactory.class,
+    com.contactlab.api.ws.domain.ObjectFactory.class
 })
 public interface ClabService {
 
 
     /**
      * 
+     * @param sourceIdentifier
      * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SubscriberSourceDescription
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSubscriberSourceDescription", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceDescription")
+    @ResponseWrapper(localName = "getSubscriberSourceDescriptionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceDescriptionResponse")
+    public SubscriberSourceDescription getSubscriberSourceDescription(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier);
+
+    /**
+     * 
      * @param subscriberSourceId
+     * @param token
      * @return
      *     returns boolean
      */
@@ -107,8 +125,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.DeliveryStatus
      */
@@ -124,8 +142,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param sourceIdentifier
+     * @param token
      * @return
      *     returns java.lang.Integer
      */
@@ -141,13 +159,13 @@ public interface ClabService {
 
     /**
      * 
-     * @param selectedAttribute
-     * @param useBaseFilter
      * @param filterId
-     * @param token
+     * @param useBaseFilter
      * @param whereAttribute
-     * @param pagination
      * @param sourceIdentifier
+     * @param pagination
+     * @param selectedAttribute
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Subscribers
      */
@@ -173,9 +191,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param subscriber
      * @param sourceIdentifier
+     * @param subscriber
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Subscriber
      */
@@ -193,10 +211,10 @@ public interface ClabService {
 
     /**
      * 
+     * @param isSubscribed
+     * @param webFormCode
      * @param subscriberIdentifier
      * @param token
-     * @param webFormCode
-     * @param isSubscribed
      */
     @WebMethod
     @RequestWrapper(localName = "modifySubscriberSubscriptionStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ModifySubscriberSubscriptionStatus")
@@ -213,12 +231,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param fieldsOnDistinct
-     * @param useBaseFilter
      * @param filterId
-     * @param token
      * @param whereAttribute
+     * @param useBaseFilter
+     * @param fieldsOnDistinct
      * @param sourceIdentifier
+     * @param token
      * @return
      *     returns int
      */
@@ -242,12 +260,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param content
-     * @param token
-     * @param overwrite
      * @param fileName
      * @param testCampaignIdentifier
      * @param campaignIdentifier
+     * @param overwrite
+     * @param content
+     * @param token
      * @return
      *     returns java.lang.String
      */
@@ -305,8 +323,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -322,8 +340,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -339,9 +357,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param lookupPrefs
      * @param campaignName
      * @param token
-     * @param lookupPrefs
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -359,9 +377,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param lookupPrefs
      * @param campaignName
      * @param token
-     * @param lookupPrefs
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -379,9 +397,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -399,9 +417,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -436,8 +454,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param filter
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.SubscriberSourceFilter
      */
@@ -453,9 +471,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param lookupPrefs
      * @param sourceIdentifier
+     * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.SubscriberSourceFilters
      */
@@ -473,9 +491,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param newName
      * @param filterIdentifier
      * @param token
-     * @param newName
      * @return
      *     returns boolean
      */
@@ -493,11 +511,11 @@ public interface ClabService {
 
     /**
      * 
-     * @param selectedAttributes
      * @param campaignAttributes
-     * @param token
      * @param pagination
+     * @param selectedAttributes
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -520,9 +538,9 @@ public interface ClabService {
     /**
      * 
      * @param nameOrSubject
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -542,10 +560,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param status
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
+     * @param status
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -565,11 +583,11 @@ public interface ClabService {
 
     /**
      * 
+     * @param lookupPrefs
+     * @param channel
      * @param periodStart
      * @param token
      * @param periodEnd
-     * @param lookupPrefs
-     * @param channel
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -591,10 +609,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
+     * @param note
      * @param lookupPrefs
      * @param channel
-     * @param note
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -614,10 +632,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
+     * @param modelIdentifier
      * @param lookupPrefs
      * @param channel
-     * @param modelIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -637,9 +655,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -657,9 +675,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -677,10 +695,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberSourceFilterId
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param subscriberSourceFilterId
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -700,9 +718,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param sourceIdentifier
      * @param subscriberIdentifier
      * @param token
-     * @param sourceIdentifier
      * @return
      *     returns com.contactlab.api.ws.domain.Subscriber
      */
@@ -720,9 +738,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param subscriber
      * @param sourceIdentifier
+     * @param subscriber
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Subscriber
      */
@@ -740,9 +758,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param subscribers
      * @param sourceIdentifier
+     * @param subscribers
+     * @param token
      * @return
      *     returns int
      */
@@ -760,9 +778,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param recipientIdentifier
      * @param sourceIdentifier
+     * @param recipientIdentifier
+     * @param token
      * @return
      *     returns boolean
      */
@@ -780,10 +798,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param filterIdentifier
-     * @param token
-     * @param lookupPrefs
      * @param sourceIdentifier
+     * @param filterIdentifier
+     * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Subscribers
      */
@@ -803,9 +821,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param campaignIdentifier
      * @param note
+     * @param campaignIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.CampaignNote
      */
@@ -823,8 +841,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.CampaignNotes
      */
@@ -840,9 +858,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param attachments
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Attachment
      */
@@ -860,8 +878,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.CampaignFeedback
      */
@@ -877,8 +895,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      */
     @WebMethod
     @RequestWrapper(localName = "requestCampaignFeedbackReport", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RequestCampaignFeedbackReport")
@@ -891,11 +909,11 @@ public interface ClabService {
 
     /**
      * 
+     * @param reference
+     * @param fileName
+     * @param overwrite
      * @param content
      * @param token
-     * @param overwrite
-     * @param fileName
-     * @param reference
      * @return
      *     returns java.lang.String
      */
@@ -917,8 +935,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaign
      */
@@ -934,8 +952,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param sourceIdentifier
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.SubscriberSource
      */
@@ -951,8 +969,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.SubscriberSources
      */
@@ -968,9 +986,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param attributes
      * @param pagination
+     * @param attributes
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Subscriptions
      */
@@ -988,9 +1006,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param language
      * @param subscriptionId
+     * @param token
      * @return
      *     returns java.lang.String
      */
@@ -1039,10 +1057,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param enable
-     * @param periodicity
      * @param campaignIdentifier
+     * @param periodicity
+     * @param token
      * @return
      *     returns int
      */
@@ -1096,9 +1114,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -1116,9 +1134,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param lookupPrefs
      * @param sourceId
+     * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.MessageModels
      */
@@ -1136,8 +1154,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns java.lang.Integer
      */
@@ -1153,10 +1171,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param mail
-     * @param token
      * @param hours
+     * @param mail
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns java.lang.Integer
      */
@@ -1176,9 +1194,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param campaignIdentifier
      * @param notBefore
      * @param token
-     * @param campaignIdentifier
      * @return
      *     returns java.lang.Integer
      */
@@ -1213,8 +1231,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaign
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaign
      */
@@ -1231,8 +1249,8 @@ public interface ClabService {
     /**
      * 
      * @param xmlDeliveryStatus
-     * @param token
      * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.XMLDeliveryInfos
      */
@@ -1267,8 +1285,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      */
     @WebMethod
     @RequestWrapper(localName = "cancelCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CancelCampaign")
@@ -1281,9 +1299,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param sourceIdentifier
      * @param filterIdentifier
      * @param token
-     * @param sourceIdentifier
      * @return
      *     returns java.lang.Integer
      */
@@ -1301,9 +1319,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param lookupPrefs
      * @param channel
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Campaigns
      */
@@ -1321,8 +1339,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns java.util.List<com.contactlab.api.ws.domain.Attachment>
      */
@@ -1339,8 +1357,8 @@ public interface ClabService {
     /**
      * 
      * @param campaignId
-     * @param token
      * @param categoryId
+     * @param token
      * @return
      *     returns java.util.List<com.contactlab.api.ws.domain.TrackedLink>
      */
@@ -1358,9 +1376,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param campaignIdentifier
      * @param subscriberIdentifier
      * @param token
-     * @param campaignIdentifier
      * @return
      *     returns java.lang.Integer
      */
@@ -1398,8 +1416,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param subscriberSource
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.SubscriberSource
      */
@@ -1415,10 +1433,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param attribute
-     * @param lookupPrefs
      * @param sourceIdentifier
+     * @param lookupPrefs
+     * @param attribute
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.Subscribers
      */
@@ -1438,8 +1456,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param recipient
+     * @param token
      * @return
      *     returns java.lang.String
      */
@@ -1455,9 +1473,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param uuid
      * @param apiKey
+     * @param uuid
+     * @param userKey
      * @return
      *     returns java.util.List<java.lang.Long>
      */
@@ -1475,8 +1493,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
      * @param apiKey
+     * @param userKey
      * @return
      *     returns com.contactlab.api.ws.domain.AuthToken
      */
@@ -1534,9 +1552,9 @@ public interface ClabService {
 
     /**
      * 
+     * @param plannedTo
      * @param selectionId
      * @param token
-     * @param plannedTo
      * @return
      *     returns int
      */
@@ -1554,10 +1572,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param selectionId
-     * @param token
-     * @param isTest
      * @param recipientIds
+     * @param selectionId
+     * @param isTest
+     * @param token
      * @return
      *     returns int
      */
@@ -1594,10 +1612,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
      * @param userData
-     * @param campaign
      * @param apiKey
+     * @param campaign
+     * @param userKey
      * @return
      *     returns long
      */
@@ -1617,11 +1635,11 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberIdentifier
-     * @param userKey
-     * @param campaign
      * @param sourceIdentifier
      * @param apiKey
+     * @param campaign
+     * @param userKey
+     * @param subscriberIdentifier
      * @return
      *     returns long
      */
@@ -1643,12 +1661,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param attachments
      * @param userData
-     * @param campaign
-     * @param includeDefaultAttachments
+     * @param attachments
      * @param apiKey
+     * @param includeDefaultAttachments
+     * @param campaign
+     * @param userKey
      * @return
      *     returns long
      */
@@ -1672,13 +1690,13 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberIdentifier
-     * @param userKey
-     * @param attachments
-     * @param campaign
-     * @param includeDefaultAttachments
      * @param sourceIdentifier
+     * @param attachments
      * @param apiKey
+     * @param includeDefaultAttachments
+     * @param campaign
+     * @param userKey
+     * @param subscriberIdentifier
      * @return
      *     returns long
      */
@@ -1704,11 +1722,11 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param sendImmediateOptions
-     * @param campaign
      * @param subscriber
      * @param apiKey
+     * @param campaign
+     * @param sendImmediateOptions
+     * @param userKey
      * @return
      *     returns java.lang.String
      */
@@ -1730,12 +1748,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param sendImmediateOptions
-     * @param subscriberId
-     * @param campaign
-     * @param apiKey
      * @param sourceId
+     * @param apiKey
+     * @param campaign
+     * @param subscriberId
+     * @param sendImmediateOptions
+     * @param userKey
      * @return
      *     returns java.lang.String
      */
@@ -1759,8 +1777,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param campaignToSendId
+     * @param token
      * @return
      *     returns java.lang.Integer
      */
@@ -1790,10 +1808,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param recipients
-     * @param token
      * @param hours
+     * @param recipients
      * @param campaignIdentifier
+     * @param token
      * @return
      *     returns boolean
      */
@@ -1841,9 +1859,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
-     * @param lookupPrefs
      * @param sourceIdentifier
+     * @param lookupPrefs
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.domain.SubscriberSourceFilters
      */
@@ -1878,11 +1896,11 @@ public interface ClabService {
 
     /**
      * 
+     * @param mailqId
+     * @param isSubscribed
+     * @param webFormCode
      * @param subscriberIdentifier
      * @param token
-     * @param mailqId
-     * @param webFormCode
-     * @param isSubscribed
      */
     @WebMethod
     @RequestWrapper(localName = "modifySubscriberSubscriptionStatusByMailqId", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ModifySubscriberSubscriptionStatusByMailqId")
@@ -1901,10 +1919,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
      * @param userData
-     * @param campaignIdentifier
      * @param apiKey
+     * @param campaignIdentifier
+     * @param userKey
      * @return
      *     returns long
      */
@@ -1924,11 +1942,11 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberIdentifier
-     * @param userKey
-     * @param campaignIdentifier
      * @param sourceIdentifier
      * @param apiKey
+     * @param campaignIdentifier
+     * @param userKey
+     * @param subscriberIdentifier
      * @return
      *     returns long
      */
@@ -1950,10 +1968,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
      * @param campaignAlias
      * @param userData
      * @param apiKey
+     * @param userKey
      * @return
      *     returns long
      */
@@ -1973,11 +1991,11 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberIdentifier
-     * @param userKey
      * @param campaignAlias
      * @param sourceIdentifier
      * @param apiKey
+     * @param userKey
+     * @param subscriberIdentifier
      * @return
      *     returns long
      */
@@ -1999,12 +2017,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param attachments
      * @param userData
-     * @param campaignIdentifier
-     * @param includeDefaultAttachments
+     * @param attachments
      * @param apiKey
+     * @param includeDefaultAttachments
+     * @param campaignIdentifier
+     * @param userKey
      * @return
      *     returns long
      */
@@ -2028,13 +2046,13 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberIdentifier
-     * @param userKey
-     * @param attachments
-     * @param campaignIdentifier
-     * @param includeDefaultAttachments
      * @param sourceIdentifier
+     * @param attachments
      * @param apiKey
+     * @param includeDefaultAttachments
+     * @param campaignIdentifier
+     * @param userKey
+     * @param subscriberIdentifier
      * @return
      *     returns long
      */
@@ -2060,12 +2078,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param attachments
      * @param campaignAlias
      * @param userData
-     * @param includeDefaultAttachments
+     * @param attachments
      * @param apiKey
+     * @param includeDefaultAttachments
+     * @param userKey
      * @return
      *     returns long
      */
@@ -2089,13 +2107,13 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberIdentifier
-     * @param userKey
-     * @param attachments
      * @param campaignAlias
-     * @param includeDefaultAttachments
      * @param sourceIdentifier
+     * @param attachments
      * @param apiKey
+     * @param includeDefaultAttachments
+     * @param userKey
+     * @param subscriberIdentifier
      * @return
      *     returns long
      */
@@ -2121,11 +2139,11 @@ public interface ClabService {
 
     /**
      * 
-     * @param campaignId
-     * @param userKey
-     * @param sendImmediateOptions
      * @param subscriber
      * @param apiKey
+     * @param campaignId
+     * @param sendImmediateOptions
+     * @param userKey
      * @return
      *     returns java.lang.String
      */
@@ -2147,12 +2165,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param campaignId
-     * @param userKey
-     * @param sendImmediateOptions
-     * @param subscriberId
-     * @param apiKey
      * @param sourceId
+     * @param apiKey
+     * @param campaignId
+     * @param subscriberId
+     * @param sendImmediateOptions
+     * @param userKey
      * @return
      *     returns java.lang.String
      */
@@ -2176,11 +2194,11 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param sendImmediateOptions
      * @param campaignAlias
      * @param subscriber
      * @param apiKey
+     * @param sendImmediateOptions
+     * @param userKey
      * @return
      *     returns java.lang.String
      */
@@ -2202,12 +2220,12 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param sendImmediateOptions
-     * @param subscriberId
+     * @param sourceId
      * @param campaignAlias
      * @param apiKey
-     * @param sourceId
+     * @param subscriberId
+     * @param sendImmediateOptions
+     * @param userKey
      * @return
      *     returns java.lang.String
      */
@@ -2231,9 +2249,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
-     * @param uuid
      * @param apiKey
+     * @param uuid
+     * @param userKey
      * @return
      *     returns java.util.List<com.contactlab.api.ws.DeliveryInformation>
      */
@@ -2262,8 +2280,8 @@ public interface ClabService {
 
     /**
      * 
-     * @param token
      * @param code
+     * @param token
      * @return
      *     returns com.contactlab.api.ws.MobileApplication
      */
@@ -2364,9 +2382,9 @@ public interface ClabService {
 
     /**
      * 
-     * @param userKey
      * @param pagination
      * @param apiKey
+     * @param userKey
      * @return
      *     returns com.contactlab.api.ws.domain.PageBuilderTemplates
      */
@@ -2384,10 +2402,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param templateId
-     * @param userKey
      * @param pagination
      * @param apiKey
+     * @param templateId
+     * @param userKey
      * @return
      *     returns com.contactlab.api.ws.domain.PageBuilderPages
      */
@@ -2407,10 +2425,10 @@ public interface ClabService {
 
     /**
      * 
-     * @param templateId
-     * @param userKey
-     * @param pageId
      * @param apiKey
+     * @param templateId
+     * @param pageId
+     * @param userKey
      * @return
      *     returns java.lang.String
      */
