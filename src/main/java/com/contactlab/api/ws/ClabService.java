@@ -1552,6 +1552,23 @@ public interface ClabService {
 
     /**
      * 
+     * @param subscriberSourceId
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createSelectionBySubscriberSourceId", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSelectionBySubscriberSourceId")
+    @ResponseWrapper(localName = "createSelectionBySubscriberSourceIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSelectionBySubscriberSourceIdResponse")
+    public int createSelectionBySubscriberSourceId(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "subscriberSourceId", targetNamespace = "")
+        int subscriberSourceId);
+
+    /**
+     * 
      * @param plannedTo
      * @param selectionId
      * @param token
