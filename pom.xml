@@ -26,7 +26,7 @@ limitations under the License.
     <version>2.13</version>
     <name>ContactLab SOAP API Java Client</name>
     <description>The Java Client for ContactLab SOAP API</description>
-    <url>http://github.com/contactlab/soap-api-java-client.git</url>
+    <url>http://github.com/agnul/soap-api-java-client.git</url>
 
     <organization>
         <name>ContactLab</name>
@@ -37,6 +37,11 @@ limitations under the License.
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <wsdl.url>https://soap.contactlab.it/soap/services?wsdl</wsdl.url>
     </properties>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:agnul/soap-api-java-client.git</developerConnection>
+        <tag>maven-central</tag>
+    </scm>
 
     <licenses>
         <license>
@@ -56,6 +61,41 @@ limitations under the License.
             <properties>
                 <additionalparam>-Xdoclint:none</additionalparam>
             </properties>
+        </profile>
+        <profile>
+             <id>release</id>
+             <distributionManagement>
+                  <snapshotRepository>
+                       <id>test-snapshot</id>
+                       <url>http://repository.tomatowin.local/nexus/content/repositories/test-snapshot</url>
+                  </snapshotRepository>
+                  <repository>
+                       <id>test-release</id>
+                       <url>http://repository.tomatowin.local/nexus/content/repositories/test-release</url>
+                  </repository>
+             </distributionManagement>
+             <build>
+                  <plugins>
+                       <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-gpg-plugin</artifactId>
+                            <version>1.6</version>
+                            <executions>
+                                 <execution>
+                                      <id>sign-artifacts</id>
+                                      <phase>verify</phase>
+                                      <goals>
+                                           <goal>sign</goal>
+                                      </goals>
+                                      <configuration>
+                                           <keyname>${gpg.keyname}</keyname>
+                                           <passphraseServerId>gpg.${gpg.keyname}</passphraseServerId>
+                                      </configuration>
+                                 </execution>
+                            </executions>
+                       </plugin>
+                  </plugins>
+             </build>
         </profile>
     </profiles>
 
@@ -98,7 +138,6 @@ limitations under the License.
                         </goals>
                         <!-- the following configuration will invoke wsimport once for each wsdl document -->
                         <configuration>
-                            <sourceDestDir>${project.basedir}/src/main/java</sourceDestDir>
                             <wsdlUrls>
                                 <wsdlUrl>${wsdl.url}</wsdlUrl>
                             </wsdlUrls>
@@ -184,6 +223,14 @@ limitations under the License.
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-release-plugin</artifactId>
+                 <version>2.5.3</version>
+                 <configuration>
+                      <releaseProfiles>release</releaseProfiles>
+                 </configuration>
             </plugin>
         </plugins>
 
