@@ -39,7 +39,7 @@ limitations under the License.
     </properties>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:agnul/soap-api-java-client.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:contactlab/soap-api-java-client.git</developerConnection>
         <tag>maven-central</tag>
     </scm>
 
