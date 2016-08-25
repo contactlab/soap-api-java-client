@@ -66,12 +66,12 @@ limitations under the License.
              <id>release</id>
              <distributionManagement>
                   <snapshotRepository>
-                       <id>test-snapshot</id>
-                       <url>http://repository.tomatowin.local/nexus/content/repositories/test-snapshot</url>
+                       <id>ossrh</id>
+                       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
                   </snapshotRepository>
                   <repository>
-                       <id>test-release</id>
-                       <url>http://repository.tomatowin.local/nexus/content/repositories/test-release</url>
+                       <id>ossrh</id>
+                       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
                   </repository>
              </distributionManagement>
              <build>
