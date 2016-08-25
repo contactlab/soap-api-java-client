@@ -48,8 +48,10 @@ limitations under the License.
     </properties>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:contactlab/soap-api-java-client.git</developerConnection>
+        <connection>scm:git:git://github.com/contactlab/soap-api-java-client.git</connection>
+        <developerConnection>scm:git:ssh://github.com:contactlab/soap-api-java-client.git</developerConnection>
         <tag>maven-central</tag>
+        <url>http://github.com/contactlab/soap-api-java-client</url>
     </scm>
 
     <licenses>
