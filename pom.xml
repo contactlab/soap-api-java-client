@@ -33,6 +33,15 @@ limitations under the License.
         <url>http://www.contactlab.com</url>
     </organization>
 
+    <developers>
+        <developer>
+            <name>Contactlab Dev</name>
+            <email>maven-central@contactlab.com</email>
+            <organization>Contactlab S.p.A.</organization>
+            <organizationUrl>https://github.com/contactlab</organizationUrl>
+        </developer>
+    </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <wsdl.url>https://soap.contactlab.it/soap/services?wsdl</wsdl.url>
