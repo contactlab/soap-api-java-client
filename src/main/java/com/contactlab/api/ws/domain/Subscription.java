@@ -34,6 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="registrationField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="webformCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -46,13 +47,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Subscription", propOrder = {
     "id",
     "name",
-    "registrationField"
+    "registrationField",
+    "webformCode"
 })
 public class Subscription {
 
     protected Integer id;
     protected String name;
     protected String registrationField;
+    protected String webformCode;
 
     /**
      * Gets the value of the id property.
@@ -124,6 +127,30 @@ public class Subscription {
      */
     public void setRegistrationField(String value) {
         this.registrationField = value;
+    }
+
+    /**
+     * Gets the value of the webformCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getWebformCode() {
+        return webformCode;
+    }
+
+    /**
+     * Sets the value of the webformCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setWebformCode(String value) {
+        this.webformCode = value;
     }
 
 }

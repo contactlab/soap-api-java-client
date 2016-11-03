@@ -32,6 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="modelId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="subscriberSourceId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -42,11 +43,13 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SubscriptionAttributes", propOrder = {
-    "modelId"
+    "modelId",
+    "subscriberSourceId"
 })
 public class SubscriptionAttributes {
 
     protected Integer modelId;
+    protected Integer subscriberSourceId;
 
     /**
      * Gets the value of the modelId property.
@@ -70,6 +73,30 @@ public class SubscriptionAttributes {
      */
     public void setModelId(Integer value) {
         this.modelId = value;
+    }
+
+    /**
+     * Gets the value of the subscriberSourceId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getSubscriberSourceId() {
+        return subscriberSourceId;
+    }
+
+    /**
+     * Sets the value of the subscriberSourceId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setSubscriberSourceId(Integer value) {
+        this.subscriberSourceId = value;
     }
 
 }

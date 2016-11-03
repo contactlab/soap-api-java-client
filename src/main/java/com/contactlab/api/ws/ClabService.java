@@ -37,6 +37,7 @@ import com.contactlab.api.ws.domain.CampaignNotes;
 import com.contactlab.api.ws.domain.Campaigns;
 import com.contactlab.api.ws.domain.Channel;
 import com.contactlab.api.ws.domain.CommunicationCategory;
+import com.contactlab.api.ws.domain.DeliveryFeedback;
 import com.contactlab.api.ws.domain.DeliveryStatus;
 import com.contactlab.api.ws.domain.LookupPreferences;
 import com.contactlab.api.ws.domain.Message;
@@ -69,8 +70,8 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.ObjectFactory.class,
-    com.contactlab.api.ws.domain.ObjectFactory.class
+    com.contactlab.api.ws.domain.ObjectFactory.class,
+    com.contactlab.api.ws.ObjectFactory.class
 })
 public interface ClabService {
 
@@ -1484,6 +1485,26 @@ public interface ClabService {
     @RequestWrapper(localName = "getDeliveryMailQ", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQ")
     @ResponseWrapper(localName = "getDeliveryMailQResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQResponse")
     public List<Long> getDeliveryMailQ(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "uuid", targetNamespace = "")
+        String uuid);
+
+    /**
+     * 
+     * @param apiKey
+     * @param uuid
+     * @param userKey
+     * @return
+     *     returns java.util.List<com.contactlab.api.ws.domain.DeliveryFeedback>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getDeliveryFeedback", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryFeedback")
+    @ResponseWrapper(localName = "getDeliveryFeedbackResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryFeedbackResponse")
+    public List<DeliveryFeedback> getDeliveryFeedback(
         @WebParam(name = "apiKey", targetNamespace = "")
         String apiKey,
         @WebParam(name = "userKey", targetNamespace = "")
