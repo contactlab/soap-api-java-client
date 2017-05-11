@@ -38,6 +38,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="bccRecipients" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="includeDefaultAttachments" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="customAttachments" type="{domain.ws.api.contactlab.com}Attachment" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="useUserPk" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -51,7 +52,8 @@ import javax.xml.bind.annotation.XmlType;
     "ccRecipients",
     "bccRecipients",
     "includeDefaultAttachments",
-    "customAttachments"
+    "customAttachments",
+    "useUserPk"
 })
 public class SendImmediateOptions {
 
@@ -60,6 +62,8 @@ public class SendImmediateOptions {
     @XmlElement(defaultValue = "true")
     protected boolean includeDefaultAttachments;
     protected List<Attachment> customAttachments;
+    @XmlElement(defaultValue = "false")
+    protected Boolean useUserPk;
 
     /**
      * Gets the value of the ccRecipients property.
@@ -162,6 +166,30 @@ public class SendImmediateOptions {
             customAttachments = new ArrayList<Attachment>();
         }
         return this.customAttachments;
+    }
+
+    /**
+     * Gets the value of the useUserPk property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isUseUserPk() {
+        return useUserPk;
+    }
+
+    /**
+     * Sets the value of the useUserPk property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setUseUserPk(Boolean value) {
+        this.useUserPk = value;
     }
 
 }
