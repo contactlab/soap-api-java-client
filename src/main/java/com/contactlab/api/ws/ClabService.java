@@ -71,8 +71,8 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.domain.ObjectFactory.class,
-    com.contactlab.api.ws.ObjectFactory.class
+    com.contactlab.api.ws.ObjectFactory.class,
+    com.contactlab.api.ws.domain.ObjectFactory.class
 })
 public interface ClabService {
 

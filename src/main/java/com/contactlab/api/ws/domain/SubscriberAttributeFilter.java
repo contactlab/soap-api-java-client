@@ -35,6 +35,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="attributeName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="attributeValue" type="{http://www.w3.org/2001/XMLSchema}anyType"/>
  *         &lt;element name="lookupMatchingMode" type="{domain.ws.api.contactlab.com}LookupMatchingMode"/>
+ *         &lt;element name="attributeValues" type="{domain.ws.api.contactlab.com}ListAttributeValues" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,7 +48,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "SubscriberAttributeFilter", propOrder = {
     "attributeName",
     "attributeValue",
-    "lookupMatchingMode"
+    "lookupMatchingMode",
+    "attributeValues"
 })
 public class SubscriberAttributeFilter {
 
@@ -57,6 +59,8 @@ public class SubscriberAttributeFilter {
     protected Object attributeValue;
     @XmlElement(required = true, defaultValue = "EQUALS")
     protected LookupMatchingMode lookupMatchingMode;
+    @XmlElement(defaultValue = "")
+    protected ListAttributeValues attributeValues;
 
     /**
      * Gets the value of the attributeName property.
@@ -128,6 +132,30 @@ public class SubscriberAttributeFilter {
      */
     public void setLookupMatchingMode(LookupMatchingMode value) {
         this.lookupMatchingMode = value;
+    }
+
+    /**
+     * Gets the value of the attributeValues property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ListAttributeValues }
+     *     
+     */
+    public ListAttributeValues getAttributeValues() {
+        return attributeValues;
+    }
+
+    /**
+     * Sets the value of the attributeValues property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ListAttributeValues }
+     *     
+     */
+    public void setAttributeValues(ListAttributeValues value) {
+        this.attributeValues = value;
     }
 
 }

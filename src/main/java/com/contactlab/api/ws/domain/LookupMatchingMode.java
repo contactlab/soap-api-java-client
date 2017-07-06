@@ -30,6 +30,16 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *     &lt;enumeration value="EQUALS"/>
  *     &lt;enumeration value="LIKE"/>
+ *     &lt;enumeration value="IS_NULL"/>
+ *     &lt;enumeration value="IS_NOT_NULL"/>
+ *     &lt;enumeration value="GREATER"/>
+ *     &lt;enumeration value="GREATER_EQUALS"/>
+ *     &lt;enumeration value="LESS"/>
+ *     &lt;enumeration value="LESS_EQUALS"/>
+ *     &lt;enumeration value="NOT_LIKE"/>
+ *     &lt;enumeration value="IN"/>
+ *     &lt;enumeration value="NOT_IN"/>
+ *     &lt;enumeration value="DIFFERENT"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -40,7 +50,17 @@ import javax.xml.bind.annotation.XmlType;
 public enum LookupMatchingMode {
 
     EQUALS,
-    LIKE;
+    LIKE,
+    IS_NULL,
+    IS_NOT_NULL,
+    GREATER,
+    GREATER_EQUALS,
+    LESS,
+    LESS_EQUALS,
+    NOT_LIKE,
+    IN,
+    NOT_IN,
+    DIFFERENT;
 
     public String value() {
         return name();
