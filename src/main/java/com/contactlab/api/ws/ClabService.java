@@ -79,88 +79,6 @@ public interface ClabService {
 
     /**
      * 
-     * @param sourceIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.SubscriberSourceDescription
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getSubscriberSourceDescription", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceDescription")
-    @ResponseWrapper(localName = "getSubscriberSourceDescriptionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceDescriptionResponse")
-    public SubscriberSourceDescription getSubscriberSourceDescription(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier);
-
-    /**
-     * 
-     * @param subscriberSourceId
-     * @param token
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "isSubscriberSourceLocked", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.IsSubscriberSourceLocked")
-    @ResponseWrapper(localName = "isSubscriberSourceLockedResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.IsSubscriberSourceLockedResponse")
-    public boolean isSubscriberSourceLocked(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "subscriberSourceId", targetNamespace = "")
-        int subscriberSourceId);
-
-    /**
-     * 
-     * @param token
-     * @return
-     *     returns java.util.List<com.contactlab.api.ws.domain.CommunicationCategory>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAvailableCommunicationCategories", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetAvailableCommunicationCategories")
-    @ResponseWrapper(localName = "getAvailableCommunicationCategoriesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetAvailableCommunicationCategoriesResponse")
-    public List<CommunicationCategory> getAvailableCommunicationCategories(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.DeliveryStatus
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCampaignDeliveryStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignDeliveryStatus")
-    @ResponseWrapper(localName = "getCampaignDeliveryStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignDeliveryStatusResponse")
-    public DeliveryStatus getCampaignDeliveryStatus(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier);
-
-    /**
-     * 
-     * @param sourceIdentifier
-     * @param token
-     * @return
-     *     returns java.lang.Integer
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "countSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribers")
-    @ResponseWrapper(localName = "countSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersResponse")
-    public Integer countSubscribers(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier);
-
-    /**
-     * 
      * @param filterId
      * @param useBaseFilter
      * @param whereAttribute
@@ -194,42 +112,19 @@ public interface ClabService {
     /**
      * 
      * @param sourceIdentifier
-     * @param subscriber
      * @param token
      * @return
-     *     returns com.contactlab.api.ws.domain.Subscriber
+     *     returns java.lang.Integer
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "updateSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UpdateSubscriber")
-    @ResponseWrapper(localName = "updateSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UpdateSubscriberResponse")
-    public Subscriber updateSubscriber(
+    @RequestWrapper(localName = "countSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribers")
+    @ResponseWrapper(localName = "countSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CountSubscribersResponse")
+    public Integer countSubscribers(
         @WebParam(name = "token", targetNamespace = "")
         AuthToken token,
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "subscriber", targetNamespace = "")
-        Subscriber subscriber);
-
-    /**
-     * 
-     * @param isSubscribed
-     * @param webFormCode
-     * @param subscriberIdentifier
-     * @param token
-     */
-    @WebMethod
-    @RequestWrapper(localName = "modifySubscriberSubscriptionStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ModifySubscriberSubscriptionStatus")
-    @ResponseWrapper(localName = "modifySubscriberSubscriptionStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ModifySubscriberSubscriptionStatusResponse")
-    public void modifySubscriberSubscriptionStatus(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "webFormCode", targetNamespace = "")
-        String webFormCode,
-        @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier,
-        @WebParam(name = "isSubscribed", targetNamespace = "")
-        boolean isSubscribed);
+        int sourceIdentifier);
 
     /**
      * 
@@ -288,6 +183,71 @@ public interface ClabService {
         byte[] content,
         @WebParam(name = "overwrite", targetNamespace = "")
         boolean overwrite);
+
+    /**
+     * 
+     * @param token
+     * @return
+     *     returns java.util.List<com.contactlab.api.ws.domain.CommunicationCategory>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAvailableCommunicationCategories", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetAvailableCommunicationCategories")
+    @ResponseWrapper(localName = "getAvailableCommunicationCategoriesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetAvailableCommunicationCategoriesResponse")
+    public List<CommunicationCategory> getAvailableCommunicationCategories(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.DeliveryStatus
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCampaignDeliveryStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignDeliveryStatus")
+    @ResponseWrapper(localName = "getCampaignDeliveryStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignDeliveryStatusResponse")
+    public DeliveryStatus getCampaignDeliveryStatus(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SubscriberSourceDescription
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSubscriberSourceDescription", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceDescription")
+    @ResponseWrapper(localName = "getSubscriberSourceDescriptionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceDescriptionResponse")
+    public SubscriberSourceDescription getSubscriberSourceDescription(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier);
+
+    /**
+     * 
+     * @param subscriberSourceId
+     * @param token
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "isSubscriberSourceLocked", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.IsSubscriberSourceLocked")
+    @ResponseWrapper(localName = "isSubscriberSourceLockedResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.IsSubscriberSourceLockedResponse")
+    public boolean isSubscriberSourceLocked(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "subscriberSourceId", targetNamespace = "")
+        int subscriberSourceId);
 
     /**
      * 
@@ -439,6 +399,177 @@ public interface ClabService {
 
     /**
      * 
+     * @param sourceIdentifier
+     * @param subscriber
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscriber
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updateSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UpdateSubscriber")
+    @ResponseWrapper(localName = "updateSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UpdateSubscriberResponse")
+    public Subscriber updateSubscriber(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "subscriber", targetNamespace = "")
+        Subscriber subscriber);
+
+    /**
+     * 
+     * @param isSubscribed
+     * @param webFormCode
+     * @param subscriberIdentifier
+     * @param token
+     */
+    @WebMethod
+    @RequestWrapper(localName = "modifySubscriberSubscriptionStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ModifySubscriberSubscriptionStatus")
+    @ResponseWrapper(localName = "modifySubscriberSubscriptionStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.ModifySubscriberSubscriptionStatusResponse")
+    public void modifySubscriberSubscriptionStatus(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "webFormCode", targetNamespace = "")
+        String webFormCode,
+        @WebParam(name = "subscriberIdentifier", targetNamespace = "")
+        int subscriberIdentifier,
+        @WebParam(name = "isSubscribed", targetNamespace = "")
+        boolean isSubscribed);
+
+    /**
+     * 
+     * @param note
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.CampaignNote
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addCampaignNote", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddCampaignNote")
+    @ResponseWrapper(localName = "addCampaignNoteResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddCampaignNoteResponse")
+    public CampaignNote addCampaignNote(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "note", targetNamespace = "")
+        CampaignNote note);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.CampaignNotes
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findNotesByCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindNotesByCampaign")
+    @ResponseWrapper(localName = "findNotesByCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindNotesByCampaignResponse")
+    public CampaignNotes findNotesByCampaign(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier);
+
+    /**
+     * 
+     * @param attachments
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Attachment
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addAttachment", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddAttachment")
+    @ResponseWrapper(localName = "addAttachmentResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddAttachmentResponse")
+    public Attachment addAttachment(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "attachments", targetNamespace = "")
+        Attachment attachments);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.CampaignFeedback
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCampaignFeedback", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignFeedback")
+    @ResponseWrapper(localName = "getCampaignFeedbackResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignFeedbackResponse")
+    public CampaignFeedback getCampaignFeedback(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param token
+     */
+    @WebMethod
+    @RequestWrapper(localName = "requestCampaignFeedbackReport", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RequestCampaignFeedbackReport")
+    @ResponseWrapper(localName = "requestCampaignFeedbackReportResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RequestCampaignFeedbackReportResponse")
+    public void requestCampaignFeedbackReport(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier);
+
+    /**
+     * 
+     * @param reference
+     * @param fileName
+     * @param overwrite
+     * @param content
+     * @param token
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "uploadMediaContent", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UploadMediaContent")
+    @ResponseWrapper(localName = "uploadMediaContentResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UploadMediaContentResponse")
+    public String uploadMediaContent(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "reference", targetNamespace = "")
+        String reference,
+        @WebParam(name = "fileName", targetNamespace = "")
+        String fileName,
+        @WebParam(name = "content", targetNamespace = "")
+        byte[] content,
+        @WebParam(name = "overwrite", targetNamespace = "")
+        boolean overwrite);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Campaign
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaign")
+    @ResponseWrapper(localName = "getCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignResponse")
+    public Campaign getCampaign(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier);
+
+    /**
+     * 
      * @param filterIdentifier
      * @param token
      * @return
@@ -510,6 +641,425 @@ public interface ClabService {
         int filterIdentifier,
         @WebParam(name = "newName", targetNamespace = "")
         String newName);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SubscriberSource
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSubscriberSource", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSource")
+    @ResponseWrapper(localName = "getSubscriberSourceResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceResponse")
+    public SubscriberSource getSubscriberSource(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier);
+
+    /**
+     * 
+     * @param lookupPrefs
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SubscriberSources
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscriberSources", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriberSources")
+    @ResponseWrapper(localName = "findSubscriberSourcesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriberSourcesResponse")
+    public SubscriberSources findSubscriberSources(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param modelId
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Message
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMessageModelById", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetMessageModelById")
+    @ResponseWrapper(localName = "getMessageModelByIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetMessageModelByIdResponse")
+    public Message getMessageModelById(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "modelId", targetNamespace = "")
+        int modelId);
+
+    /**
+     * 
+     * @param model
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Message
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createMessageModel", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateMessageModel")
+    @ResponseWrapper(localName = "createMessageModelResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateMessageModelResponse")
+    public Message createMessageModel(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "model", targetNamespace = "")
+        Message model);
+
+    /**
+     * 
+     * @param lookupPrefs
+     * @param channel
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.MessageModels
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findMessageModels", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModels")
+    @ResponseWrapper(localName = "findMessageModelsResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModelsResponse")
+    public MessageModels findMessageModels(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "channel", targetNamespace = "")
+        Channel channel,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param sourceId
+     * @param lookupPrefs
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.MessageModels
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findMessageModelsBySubscriberSource", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModelsBySubscriberSource")
+    @ResponseWrapper(localName = "findMessageModelsBySubscriberSourceResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModelsBySubscriberSourceResponse")
+    public MessageModels findMessageModelsBySubscriberSource(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceId", targetNamespace = "")
+        int sourceId,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param pagination
+     * @param attributes
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscriptions
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscriptionsBy", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriptionsBy")
+    @ResponseWrapper(localName = "findSubscriptionsByResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriptionsByResponse")
+    public Subscriptions findSubscriptionsBy(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "attributes", targetNamespace = "")
+        SubscriptionAttributes attributes,
+        @WebParam(name = "pagination", targetNamespace = "")
+        Pagination pagination);
+
+    /**
+     * 
+     * @param language
+     * @param subscriptionId
+     * @param token
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUnsubscribeLink", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetUnsubscribeLink")
+    @ResponseWrapper(localName = "getUnsubscribeLinkResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetUnsubscribeLinkResponse")
+    public String getUnsubscribeLink(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "subscriptionId", targetNamespace = "")
+        Integer subscriptionId,
+        @WebParam(name = "language", targetNamespace = "")
+        String language);
+
+    /**
+     * 
+     * @param enable
+     * @param campaignIdentifier
+     * @param periodicity
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "setCampaignRecurrency", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SetCampaignRecurrency")
+    @ResponseWrapper(localName = "setCampaignRecurrencyResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SetCampaignRecurrencyResponse")
+    public int setCampaignRecurrency(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "periodicity", targetNamespace = "")
+        String periodicity,
+        @WebParam(name = "enable", targetNamespace = "")
+        boolean enable);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendCampaign")
+    @ResponseWrapper(localName = "sendCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendCampaignResponse")
+    public Integer sendCampaign(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier);
+
+    /**
+     * 
+     * @param hours
+     * @param mail
+     * @param campaignIdentifier
+     * @param token
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendSplitTest", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTest")
+    @ResponseWrapper(localName = "sendSplitTestResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestResponse")
+    public Integer sendSplitTest(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "hours", targetNamespace = "")
+        Integer hours,
+        @WebParam(name = "mail", targetNamespace = "")
+        Boolean mail);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param notBefore
+     * @param token
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "cloneAndSendCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CloneAndSendCampaign")
+    @ResponseWrapper(localName = "cloneAndSendCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CloneAndSendCampaignResponse")
+    public Integer cloneAndSendCampaign(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "notBefore", targetNamespace = "")
+        XMLGregorianCalendar notBefore);
+
+    /**
+     * 
+     * @param requestIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.ActivityStatus
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getRequestStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetRequestStatus")
+    @ResponseWrapper(localName = "getRequestStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetRequestStatusResponse")
+    public ActivityStatus getRequestStatus(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "requestIdentifier", targetNamespace = "")
+        int requestIdentifier);
+
+    /**
+     * 
+     * @param campaign
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Campaign
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateCampaign")
+    @ResponseWrapper(localName = "createCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateCampaignResponse")
+    public Campaign createCampaign(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaign", targetNamespace = "")
+        Campaign campaign);
+
+    /**
+     * 
+     * @param xmlDeliveryStatus
+     * @param lookupPrefs
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.XMLDeliveryInfos
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getXMLDeliveries", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveries")
+    @ResponseWrapper(localName = "getXMLDeliveriesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveriesResponse")
+    public XMLDeliveryInfos getXMLDeliveries(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "xmlDeliveryStatus", targetNamespace = "")
+        XmlDeliveryStatusType xmlDeliveryStatus,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param token
+     * @param xmlDeliveryId
+     * @return
+     *     returns java.util.List<com.contactlab.api.ws.XmlDeliveryTransitionInfo>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getXMLDeliveryTransitions", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveryTransitions")
+    @ResponseWrapper(localName = "getXMLDeliveryTransitionsResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveryTransitionsResponse")
+    public List<XmlDeliveryTransitionInfo> getXMLDeliveryTransitions(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "xmlDeliveryId", targetNamespace = "")
+        int xmlDeliveryId);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param token
+     */
+    @WebMethod
+    @RequestWrapper(localName = "cancelCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CancelCampaign")
+    @ResponseWrapper(localName = "cancelCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CancelCampaignResponse")
+    public void cancelCampaign(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param subscriberIdentifier
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscriber
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriber")
+    @ResponseWrapper(localName = "getSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberResponse")
+    public Subscriber getSubscriber(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "subscriberIdentifier", targetNamespace = "")
+        int subscriberIdentifier);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param subscriber
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscriber
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriber")
+    @ResponseWrapper(localName = "addSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriberResponse")
+    public Subscriber addSubscriber(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "subscriber", targetNamespace = "")
+        Subscriber subscriber);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param subscribers
+     * @param token
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscribers")
+    @ResponseWrapper(localName = "addSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscribersResponse")
+    public int addSubscribers(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "subscribers", targetNamespace = "")
+        Subscribers subscribers);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param recipientIdentifier
+     * @param token
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "removeSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSubscriber")
+    @ResponseWrapper(localName = "removeSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSubscriberResponse")
+    public boolean removeSubscriber(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "recipientIdentifier", targetNamespace = "")
+        int recipientIdentifier);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param filterIdentifier
+     * @param lookupPrefs
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscribers
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscribersIncludedInFilter", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersIncludedInFilter")
+    @ResponseWrapper(localName = "findSubscribersIncludedInFilterResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersIncludedInFilterResponse")
+    public Subscribers findSubscribersIncludedInFilter(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "filterIdentifier", targetNamespace = "")
+        int filterIdentifier,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
 
     /**
      * 
@@ -720,314 +1270,6 @@ public interface ClabService {
 
     /**
      * 
-     * @param sourceIdentifier
-     * @param subscriberIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Subscriber
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriber")
-    @ResponseWrapper(localName = "getSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberResponse")
-    public Subscriber getSubscriber(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier);
-
-    /**
-     * 
-     * @param sourceIdentifier
-     * @param subscriber
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Subscriber
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriber")
-    @ResponseWrapper(localName = "addSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriberResponse")
-    public Subscriber addSubscriber(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "subscriber", targetNamespace = "")
-        Subscriber subscriber);
-
-    /**
-     * 
-     * @param sourceIdentifier
-     * @param subscribers
-     * @param token
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscribers")
-    @ResponseWrapper(localName = "addSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscribersResponse")
-    public int addSubscribers(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "subscribers", targetNamespace = "")
-        Subscribers subscribers);
-
-    /**
-     * 
-     * @param sourceIdentifier
-     * @param recipientIdentifier
-     * @param token
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "removeSubscriber", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSubscriber")
-    @ResponseWrapper(localName = "removeSubscriberResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSubscriberResponse")
-    public boolean removeSubscriber(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "recipientIdentifier", targetNamespace = "")
-        int recipientIdentifier);
-
-    /**
-     * 
-     * @param sourceIdentifier
-     * @param filterIdentifier
-     * @param lookupPrefs
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Subscribers
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findSubscribersIncludedInFilter", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersIncludedInFilter")
-    @ResponseWrapper(localName = "findSubscribersIncludedInFilterResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersIncludedInFilterResponse")
-    public Subscribers findSubscribersIncludedInFilter(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "filterIdentifier", targetNamespace = "")
-        int filterIdentifier,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param note
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.CampaignNote
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addCampaignNote", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddCampaignNote")
-    @ResponseWrapper(localName = "addCampaignNoteResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddCampaignNoteResponse")
-    public CampaignNote addCampaignNote(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier,
-        @WebParam(name = "note", targetNamespace = "")
-        CampaignNote note);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.CampaignNotes
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findNotesByCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindNotesByCampaign")
-    @ResponseWrapper(localName = "findNotesByCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindNotesByCampaignResponse")
-    public CampaignNotes findNotesByCampaign(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier);
-
-    /**
-     * 
-     * @param attachments
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Attachment
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addAttachment", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddAttachment")
-    @ResponseWrapper(localName = "addAttachmentResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddAttachmentResponse")
-    public Attachment addAttachment(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier,
-        @WebParam(name = "attachments", targetNamespace = "")
-        Attachment attachments);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.CampaignFeedback
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCampaignFeedback", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignFeedback")
-    @ResponseWrapper(localName = "getCampaignFeedbackResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignFeedbackResponse")
-    public CampaignFeedback getCampaignFeedback(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param token
-     */
-    @WebMethod
-    @RequestWrapper(localName = "requestCampaignFeedbackReport", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RequestCampaignFeedbackReport")
-    @ResponseWrapper(localName = "requestCampaignFeedbackReportResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RequestCampaignFeedbackReportResponse")
-    public void requestCampaignFeedbackReport(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier);
-
-    /**
-     * 
-     * @param reference
-     * @param fileName
-     * @param overwrite
-     * @param content
-     * @param token
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "uploadMediaContent", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UploadMediaContent")
-    @ResponseWrapper(localName = "uploadMediaContentResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UploadMediaContentResponse")
-    public String uploadMediaContent(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "reference", targetNamespace = "")
-        String reference,
-        @WebParam(name = "fileName", targetNamespace = "")
-        String fileName,
-        @WebParam(name = "content", targetNamespace = "")
-        byte[] content,
-        @WebParam(name = "overwrite", targetNamespace = "")
-        boolean overwrite);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Campaign
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaign")
-    @ResponseWrapper(localName = "getCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCampaignResponse")
-    public Campaign getCampaign(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier);
-
-    /**
-     * 
-     * @param sourceIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.SubscriberSource
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getSubscriberSource", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSource")
-    @ResponseWrapper(localName = "getSubscriberSourceResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetSubscriberSourceResponse")
-    public SubscriberSource getSubscriberSource(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier);
-
-    /**
-     * 
-     * @param lookupPrefs
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.SubscriberSources
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findSubscriberSources", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriberSources")
-    @ResponseWrapper(localName = "findSubscriberSourcesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriberSourcesResponse")
-    public SubscriberSources findSubscriberSources(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param pagination
-     * @param attributes
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Subscriptions
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findSubscriptionsBy", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriptionsBy")
-    @ResponseWrapper(localName = "findSubscriptionsByResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscriptionsByResponse")
-    public Subscriptions findSubscriptionsBy(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "attributes", targetNamespace = "")
-        SubscriptionAttributes attributes,
-        @WebParam(name = "pagination", targetNamespace = "")
-        Pagination pagination);
-
-    /**
-     * 
-     * @param language
-     * @param subscriptionId
-     * @param token
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getUnsubscribeLink", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetUnsubscribeLink")
-    @ResponseWrapper(localName = "getUnsubscribeLinkResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetUnsubscribeLinkResponse")
-    public String getUnsubscribeLink(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "subscriptionId", targetNamespace = "")
-        Integer subscriptionId,
-        @WebParam(name = "language", targetNamespace = "")
-        String language);
-
-    /**
-     * 
      * @param dataExchangeConfigIdentifier
      * @param token
      */
@@ -1076,248 +1318,6 @@ public interface ClabService {
 
     /**
      * 
-     * @param enable
-     * @param campaignIdentifier
-     * @param periodicity
-     * @param token
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "setCampaignRecurrency", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SetCampaignRecurrency")
-    @ResponseWrapper(localName = "setCampaignRecurrencyResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SetCampaignRecurrencyResponse")
-    public int setCampaignRecurrency(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier,
-        @WebParam(name = "periodicity", targetNamespace = "")
-        String periodicity,
-        @WebParam(name = "enable", targetNamespace = "")
-        boolean enable);
-
-    /**
-     * 
-     * @param modelId
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Message
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getMessageModelById", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetMessageModelById")
-    @ResponseWrapper(localName = "getMessageModelByIdResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetMessageModelByIdResponse")
-    public Message getMessageModelById(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "modelId", targetNamespace = "")
-        int modelId);
-
-    /**
-     * 
-     * @param model
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Message
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "createMessageModel", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateMessageModel")
-    @ResponseWrapper(localName = "createMessageModelResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateMessageModelResponse")
-    public Message createMessageModel(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "model", targetNamespace = "")
-        Message model);
-
-    /**
-     * 
-     * @param lookupPrefs
-     * @param channel
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.MessageModels
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findMessageModels", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModels")
-    @ResponseWrapper(localName = "findMessageModelsResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModelsResponse")
-    public MessageModels findMessageModels(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "channel", targetNamespace = "")
-        Channel channel,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param sourceId
-     * @param lookupPrefs
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.MessageModels
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findMessageModelsBySubscriberSource", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModelsBySubscriberSource")
-    @ResponseWrapper(localName = "findMessageModelsBySubscriberSourceResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindMessageModelsBySubscriberSourceResponse")
-    public MessageModels findMessageModelsBySubscriberSource(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceId", targetNamespace = "")
-        int sourceId,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns java.lang.Integer
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "sendCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendCampaign")
-    @ResponseWrapper(localName = "sendCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendCampaignResponse")
-    public Integer sendCampaign(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier);
-
-    /**
-     * 
-     * @param hours
-     * @param mail
-     * @param campaignIdentifier
-     * @param token
-     * @return
-     *     returns java.lang.Integer
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "sendSplitTest", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTest")
-    @ResponseWrapper(localName = "sendSplitTestResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestResponse")
-    public Integer sendSplitTest(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier,
-        @WebParam(name = "hours", targetNamespace = "")
-        Integer hours,
-        @WebParam(name = "mail", targetNamespace = "")
-        Boolean mail);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param notBefore
-     * @param token
-     * @return
-     *     returns java.lang.Integer
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "cloneAndSendCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CloneAndSendCampaign")
-    @ResponseWrapper(localName = "cloneAndSendCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CloneAndSendCampaignResponse")
-    public Integer cloneAndSendCampaign(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier,
-        @WebParam(name = "notBefore", targetNamespace = "")
-        XMLGregorianCalendar notBefore);
-
-    /**
-     * 
-     * @param requestIdentifier
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.ActivityStatus
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getRequestStatus", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetRequestStatus")
-    @ResponseWrapper(localName = "getRequestStatusResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetRequestStatusResponse")
-    public ActivityStatus getRequestStatus(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "requestIdentifier", targetNamespace = "")
-        int requestIdentifier);
-
-    /**
-     * 
-     * @param campaign
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Campaign
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "createCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateCampaign")
-    @ResponseWrapper(localName = "createCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateCampaignResponse")
-    public Campaign createCampaign(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaign", targetNamespace = "")
-        Campaign campaign);
-
-    /**
-     * 
-     * @param xmlDeliveryStatus
-     * @param lookupPrefs
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.XMLDeliveryInfos
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getXMLDeliveries", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveries")
-    @ResponseWrapper(localName = "getXMLDeliveriesResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveriesResponse")
-    public XMLDeliveryInfos getXMLDeliveries(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "xmlDeliveryStatus", targetNamespace = "")
-        XmlDeliveryStatusType xmlDeliveryStatus,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param token
-     * @param xmlDeliveryId
-     * @return
-     *     returns java.util.List<com.contactlab.api.ws.XmlDeliveryTransitionInfo>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getXMLDeliveryTransitions", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveryTransitions")
-    @ResponseWrapper(localName = "getXMLDeliveryTransitionsResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetXMLDeliveryTransitionsResponse")
-    public List<XmlDeliveryTransitionInfo> getXMLDeliveryTransitions(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "xmlDeliveryId", targetNamespace = "")
-        int xmlDeliveryId);
-
-    /**
-     * 
-     * @param campaignIdentifier
-     * @param token
-     */
-    @WebMethod
-    @RequestWrapper(localName = "cancelCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CancelCampaign")
-    @ResponseWrapper(localName = "cancelCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CancelCampaignResponse")
-    public void cancelCampaign(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignIdentifier", targetNamespace = "")
-        int campaignIdentifier);
-
-    /**
-     * 
      * @param sourceIdentifier
      * @param filterIdentifier
      * @param token
@@ -1335,6 +1335,85 @@ public interface ClabService {
         int sourceIdentifier,
         @WebParam(name = "filterIdentifier", targetNamespace = "")
         int filterIdentifier);
+
+    /**
+     * 
+     * @param apiKey
+     * @param userKey
+     * @return
+     *     returns com.contactlab.api.ws.domain.AuthToken
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "borrowToken", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.BorrowToken")
+    @ResponseWrapper(localName = "borrowTokenResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.BorrowTokenResponse")
+    public AuthToken borrowToken(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey);
+
+    /**
+     * 
+     * @param token
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "keepaliveToken", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.KeepaliveToken")
+    @ResponseWrapper(localName = "keepaliveTokenResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.KeepaliveTokenResponse")
+    public boolean keepaliveToken(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token);
+
+    /**
+     * 
+     * @param token
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "invalidateToken", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.InvalidateToken")
+    @ResponseWrapper(localName = "invalidateTokenResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.InvalidateTokenResponse")
+    public boolean invalidateToken(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token);
+
+    /**
+     * 
+     * @param campaignToSendId
+     * @param token
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sendSplitTestWinner", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestWinner")
+    @ResponseWrapper(localName = "sendSplitTestWinnerResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestWinnerResponse")
+    public Integer sendSplitTestWinner(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignToSendId", targetNamespace = "")
+        Integer campaignToSendId);
+
+    /**
+     * 
+     * @param splitTestCampaign
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SplitTestCampaign
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createSplitTest", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSplitTest")
+    @ResponseWrapper(localName = "createSplitTestResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSplitTestResponse")
+    public SplitTestCampaign createSplitTest(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "splitTestCampaign", targetNamespace = "")
+        SplitTestCampaign splitTestCampaign);
 
     /**
      * 
@@ -1435,148 +1514,6 @@ public interface ClabService {
 
     /**
      * 
-     * @param subscriberSource
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.SubscriberSource
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addSubscriberSource", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriberSource")
-    @ResponseWrapper(localName = "addSubscriberSourceResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriberSourceResponse")
-    public SubscriberSource addSubscriberSource(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "subscriberSource", targetNamespace = "")
-        SubscriberSource subscriberSource);
-
-    /**
-     * 
-     * @param sourceIdentifier
-     * @param lookupPrefs
-     * @param attribute
-     * @param token
-     * @return
-     *     returns com.contactlab.api.ws.domain.Subscribers
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribers")
-    @ResponseWrapper(localName = "findSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersResponse")
-    public Subscribers findSubscribers(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "sourceIdentifier", targetNamespace = "")
-        int sourceIdentifier,
-        @WebParam(name = "attribute", targetNamespace = "")
-        SubscriberAttribute attribute,
-        @WebParam(name = "lookupPrefs", targetNamespace = "")
-        LookupPreferences lookupPrefs);
-
-    /**
-     * 
-     * @param recipient
-     * @param token
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCryptoKey", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCryptoKey")
-    @ResponseWrapper(localName = "getCryptoKeyResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCryptoKeyResponse")
-    public String getCryptoKey(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "recipient", targetNamespace = "")
-        String recipient);
-
-    /**
-     * 
-     * @param apiKey
-     * @param uuid
-     * @param userKey
-     * @return
-     *     returns java.util.List<java.lang.Long>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getDeliveryMailQ", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQ")
-    @ResponseWrapper(localName = "getDeliveryMailQResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQResponse")
-    public List<Long> getDeliveryMailQ(
-        @WebParam(name = "apiKey", targetNamespace = "")
-        String apiKey,
-        @WebParam(name = "userKey", targetNamespace = "")
-        String userKey,
-        @WebParam(name = "uuid", targetNamespace = "")
-        String uuid);
-
-    /**
-     * 
-     * @param apiKey
-     * @param uuid
-     * @param userKey
-     * @return
-     *     returns java.util.List<com.contactlab.api.ws.domain.DeliveryFeedback>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getDeliveryFeedback", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryFeedback")
-    @ResponseWrapper(localName = "getDeliveryFeedbackResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryFeedbackResponse")
-    public List<DeliveryFeedback> getDeliveryFeedback(
-        @WebParam(name = "apiKey", targetNamespace = "")
-        String apiKey,
-        @WebParam(name = "userKey", targetNamespace = "")
-        String userKey,
-        @WebParam(name = "uuid", targetNamespace = "")
-        String uuid);
-
-    /**
-     * 
-     * @param apiKey
-     * @param userKey
-     * @return
-     *     returns com.contactlab.api.ws.domain.AuthToken
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "borrowToken", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.BorrowToken")
-    @ResponseWrapper(localName = "borrowTokenResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.BorrowTokenResponse")
-    public AuthToken borrowToken(
-        @WebParam(name = "apiKey", targetNamespace = "")
-        String apiKey,
-        @WebParam(name = "userKey", targetNamespace = "")
-        String userKey);
-
-    /**
-     * 
-     * @param token
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "keepaliveToken", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.KeepaliveToken")
-    @ResponseWrapper(localName = "keepaliveTokenResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.KeepaliveTokenResponse")
-    public boolean keepaliveToken(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token);
-
-    /**
-     * 
-     * @param token
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "invalidateToken", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.InvalidateToken")
-    @ResponseWrapper(localName = "invalidateTokenResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.InvalidateTokenResponse")
-    public boolean invalidateToken(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token);
-
-    /**
-     * 
      * @param token
      * @return
      *     returns int
@@ -1651,20 +1588,100 @@ public interface ClabService {
 
     /**
      * 
-     * @param splitTestCampaign
-     * @param token
+     * @param apiKey
+     * @param uuid
+     * @param userKey
      * @return
-     *     returns com.contactlab.api.ws.domain.SplitTestCampaign
+     *     returns java.util.List<java.lang.Long>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "createSplitTest", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSplitTest")
-    @ResponseWrapper(localName = "createSplitTestResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateSplitTestResponse")
-    public SplitTestCampaign createSplitTest(
+    @RequestWrapper(localName = "getDeliveryMailQ", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQ")
+    @ResponseWrapper(localName = "getDeliveryMailQResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryMailQResponse")
+    public List<Long> getDeliveryMailQ(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "uuid", targetNamespace = "")
+        String uuid);
+
+    /**
+     * 
+     * @param apiKey
+     * @param uuid
+     * @param userKey
+     * @return
+     *     returns java.util.List<com.contactlab.api.ws.domain.DeliveryFeedback>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getDeliveryFeedback", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryFeedback")
+    @ResponseWrapper(localName = "getDeliveryFeedbackResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetDeliveryFeedbackResponse")
+    public List<DeliveryFeedback> getDeliveryFeedback(
+        @WebParam(name = "apiKey", targetNamespace = "")
+        String apiKey,
+        @WebParam(name = "userKey", targetNamespace = "")
+        String userKey,
+        @WebParam(name = "uuid", targetNamespace = "")
+        String uuid);
+
+    /**
+     * 
+     * @param subscriberSource
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SubscriberSource
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addSubscriberSource", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriberSource")
+    @ResponseWrapper(localName = "addSubscriberSourceResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.AddSubscriberSourceResponse")
+    public SubscriberSource addSubscriberSource(
         @WebParam(name = "token", targetNamespace = "")
         AuthToken token,
-        @WebParam(name = "splitTestCampaign", targetNamespace = "")
-        SplitTestCampaign splitTestCampaign);
+        @WebParam(name = "subscriberSource", targetNamespace = "")
+        SubscriberSource subscriberSource);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param lookupPrefs
+     * @param attribute
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Subscribers
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribers")
+    @ResponseWrapper(localName = "findSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindSubscribersResponse")
+    public Subscribers findSubscribers(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "attribute", targetNamespace = "")
+        SubscriberAttribute attribute,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param recipient
+     * @param token
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCryptoKey", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCryptoKey")
+    @ResponseWrapper(localName = "getCryptoKeyResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.GetCryptoKeyResponse")
+    public String getCryptoKey(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "recipient", targetNamespace = "")
+        String recipient);
 
     /**
      * 
@@ -1830,23 +1847,6 @@ public interface ClabService {
         int subscriberId,
         @WebParam(name = "sendImmediateOptions", targetNamespace = "")
         SendImmediateOptions sendImmediateOptions);
-
-    /**
-     * 
-     * @param campaignToSendId
-     * @param token
-     * @return
-     *     returns java.lang.Integer
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "sendSplitTestWinner", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestWinner")
-    @ResponseWrapper(localName = "sendSplitTestWinnerResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.SendSplitTestWinnerResponse")
-    public Integer sendSplitTestWinner(
-        @WebParam(name = "token", targetNamespace = "")
-        AuthToken token,
-        @WebParam(name = "campaignToSendId", targetNamespace = "")
-        Integer campaignToSendId);
 
     /**
      * 

@@ -59,7 +59,6 @@ public class SubscriberAttributeFilter {
     protected Object attributeValue;
     @XmlElement(required = true, defaultValue = "EQUALS")
     protected LookupMatchingMode lookupMatchingMode;
-    @XmlElement(defaultValue = "")
     protected ListAttributeValues attributeValues;
 
     /**
