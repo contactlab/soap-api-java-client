@@ -47,6 +47,7 @@ import com.contactlab.api.ws.domain.PageBuilderPages;
 import com.contactlab.api.ws.domain.PageBuilderTemplates;
 import com.contactlab.api.ws.domain.Pagination;
 import com.contactlab.api.ws.domain.SendImmediateOptions;
+import com.contactlab.api.ws.domain.Sorting;
 import com.contactlab.api.ws.domain.SplitTestCampaign;
 import com.contactlab.api.ws.domain.Subscriber;
 import com.contactlab.api.ws.domain.SubscriberAttribute;
@@ -54,6 +55,7 @@ import com.contactlab.api.ws.domain.SubscriberAttributeFilter;
 import com.contactlab.api.ws.domain.SubscriberSource;
 import com.contactlab.api.ws.domain.SubscriberSourceDescription;
 import com.contactlab.api.ws.domain.SubscriberSourceFilter;
+import com.contactlab.api.ws.domain.SubscriberSourceFilterType;
 import com.contactlab.api.ws.domain.SubscriberSourceFilters;
 import com.contactlab.api.ws.domain.SubscriberSources;
 import com.contactlab.api.ws.domain.Subscribers;
@@ -619,6 +621,32 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
+        @WebParam(name = "lookupPrefs", targetNamespace = "")
+        LookupPreferences lookupPrefs);
+
+    /**
+     * 
+     * @param sourceIdentifier
+     * @param sorting
+     * @param lookupPrefs
+     * @param filterType
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.SubscriberSourceFilters
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findFiltersByType", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindFiltersByType")
+    @ResponseWrapper(localName = "findFiltersByTypeResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.FindFiltersByTypeResponse")
+    public SubscriberSourceFilters findFiltersByType(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "sourceIdentifier", targetNamespace = "")
+        int sourceIdentifier,
+        @WebParam(name = "filterType", targetNamespace = "")
+        SubscriberSourceFilterType filterType,
+        @WebParam(name = "sorting", targetNamespace = "")
+        Sorting sorting,
         @WebParam(name = "lookupPrefs", targetNamespace = "")
         LookupPreferences lookupPrefs);
 
