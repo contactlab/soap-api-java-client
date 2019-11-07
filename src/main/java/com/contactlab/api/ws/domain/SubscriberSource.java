@@ -42,6 +42,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="charset" type="{domain.ws.api.contactlab.com}charset" minOccurs="0"/>
  *         &lt;element name="locked" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="readOnly" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="hasExternalKey" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -59,7 +60,8 @@ import javax.xml.bind.annotation.XmlType;
     "fields",
     "charset",
     "locked",
-    "readOnly"
+    "readOnly",
+    "hasExternalKey"
 })
 public class SubscriberSource {
 
@@ -74,6 +76,7 @@ public class SubscriberSource {
     protected Charset charset;
     protected boolean locked;
     protected boolean readOnly;
+    protected boolean hasExternalKey;
 
     /**
      * Gets the value of the identifier property.
@@ -254,6 +257,22 @@ public class SubscriberSource {
      */
     public void setReadOnly(boolean value) {
         this.readOnly = value;
+    }
+
+    /**
+     * Gets the value of the hasExternalKey property.
+     * 
+     */
+    public boolean isHasExternalKey() {
+        return hasExternalKey;
+    }
+
+    /**
+     * Sets the value of the hasExternalKey property.
+     * 
+     */
+    public void setHasExternalKey(boolean value) {
+        this.hasExternalKey = value;
     }
 
 }

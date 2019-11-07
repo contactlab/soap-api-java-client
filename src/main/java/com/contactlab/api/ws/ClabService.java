@@ -34,6 +34,7 @@ import com.contactlab.api.ws.domain.CampaignFeedback;
 import com.contactlab.api.ws.domain.CampaignLookupPreferences;
 import com.contactlab.api.ws.domain.CampaignNote;
 import com.contactlab.api.ws.domain.CampaignNotes;
+import com.contactlab.api.ws.domain.CampaignWithNote;
 import com.contactlab.api.ws.domain.Campaigns;
 import com.contactlab.api.ws.domain.Channel;
 import com.contactlab.api.ws.domain.CommunicationCategory;
@@ -458,6 +459,23 @@ public interface ClabService {
         int campaignIdentifier,
         @WebParam(name = "note", targetNamespace = "")
         CampaignNote note);
+
+    /**
+     * 
+     * @param campaignIdentifier
+     * @param noteId
+     * @param token
+     */
+    @WebMethod
+    @RequestWrapper(localName = "removeCampaignNote", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveCampaignNote")
+    @ResponseWrapper(localName = "removeCampaignNoteResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveCampaignNoteResponse")
+    public void removeCampaignNote(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignIdentifier", targetNamespace = "")
+        int campaignIdentifier,
+        @WebParam(name = "noteId", targetNamespace = "")
+        int noteId);
 
     /**
      * 
@@ -1616,6 +1634,20 @@ public interface ClabService {
 
     /**
      * 
+     * @param selectionId
+     * @param token
+     */
+    @WebMethod
+    @RequestWrapper(localName = "removeSelection", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSelection")
+    @ResponseWrapper(localName = "removeSelectionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSelectionResponse")
+    public void removeSelection(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId);
+
+    /**
+     * 
      * @param apiKey
      * @param uuid
      * @param userKey
@@ -1653,6 +1685,23 @@ public interface ClabService {
         String userKey,
         @WebParam(name = "uuid", targetNamespace = "")
         String uuid);
+
+    /**
+     * 
+     * @param secretKey
+     * @param sleepInMs
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "testConnection", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.TestConnection")
+    @ResponseWrapper(localName = "testConnectionResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.TestConnectionResponse")
+    public boolean testConnection(
+        @WebParam(name = "secretKey", targetNamespace = "")
+        String secretKey,
+        @WebParam(name = "sleepInMs", targetNamespace = "")
+        int sleepInMs);
 
     /**
      * 
@@ -1710,6 +1759,26 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "recipient", targetNamespace = "")
         String recipient);
+
+    /**
+     * 
+     * @param note
+     * @param campaign
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.CampaignWithNote
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createCampaignWithNote", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateCampaignWithNote")
+    @ResponseWrapper(localName = "createCampaignWithNoteResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.CreateCampaignWithNoteResponse")
+    public CampaignWithNote createCampaignWithNote(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaign", targetNamespace = "")
+        Campaign campaign,
+        @WebParam(name = "note", targetNamespace = "")
+        CampaignNote note);
 
     /**
      * 
@@ -2378,6 +2447,26 @@ public interface ClabService {
         AuthToken token,
         @WebParam(name = "code", targetNamespace = "")
         String code);
+
+    /**
+     * 
+     * @param selectionId
+     * @param recipientId
+     * @param token
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "removeSelectionSubscribers", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSelectionSubscribers")
+    @ResponseWrapper(localName = "removeSelectionSubscribersResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.RemoveSelectionSubscribersResponse")
+    public boolean removeSelectionSubscribers(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "selectionId", targetNamespace = "")
+        int selectionId,
+        @WebParam(name = "recipientId", targetNamespace = "")
+        Integer recipientId);
 
     /**
      * 
