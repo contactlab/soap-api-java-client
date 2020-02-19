@@ -23,7 +23,7 @@ limitations under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.contactlab.api</groupId>
     <artifactId>client</artifactId>
-    <version>2.23.0</version>
+    <version>2.24.2-SNAPSHOT</version>
     <name>ContactLab SOAP API Java Client</name>
     <description>The Java Client for ContactLab SOAP API</description>
     <url>http://github.com/contactlab/soap-api-java-client.git</url>
@@ -32,6 +32,34 @@ limitations under the License.
         <name>ContactLab</name>
         <url>http://www.contactlab.com</url>
     </organization>
+
+    <repositories>
+	<repository>
+	    <id>repository.tomatowin.local-nexus</id>
+	    <name>repository.tomatowin.local-nexus</name>
+	    <url>http://repository.tomatowin.local/nexus/content/groups/public/</url>
+	    <releases>
+		<enabled>true</enabled>
+	    </releases>
+	    <snapshots>
+		<enabled>true</enabled>
+	    </snapshots>
+	</repository>
+    </repositories>
+
+    <distributionManagement>
+	<repository>
+	    <id>repository.tomatowin.local-nexus</id>
+	    <name>repository.tomatowin.local-nexus nexus</name>
+	    <url>http://repository.tomatowin.local/nexus/content/repositories/releases</url>
+	</repository>
+	<snapshotRepository>
+	    <id>repository.tomatowin.local-nexus</id>
+	    <name>repository.tomatowin.local-nexus</name>
+	    <url>http://repository.tomatowin.local/nexus/content/repositories/snapshots</url>
+	    <uniqueVersion>false</uniqueVersion>
+	</snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -57,6 +85,65 @@ limitations under the License.
                 <additionalparam>-Xdoclint:none</additionalparam>
             </properties>
         </profile>
+	<profile>
+	    <id>acceptance</id>
+	    <properties>
+		<wsdl.url>http://send-api-soap-01.dev.azure.clab:8080/soap/services?wsdl</wsdl.url>
+	    </properties>
+	    <build>
+		<plugins>
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<version>2.2</version>
+			<executions>
+			    <execution>
+				<id>attach-sources</id>
+				<phase>package</phase>
+				<goals>
+				    <goal>jar</goal>
+				</goals>
+			    </execution>
+			</executions>
+			<configuration>
+			    <classifier>acceptance-sources</classifier>
+			</configuration>
+		    </plugin>
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.10</version>
+			<executions>
+			    <execution>
+				<id>attach-javadocs</id>
+				<phase>package</phase>
+				<goals>
+				    <goal>jar</goal>
+				</goals>
+			    </execution>
+			</executions>
+			<configuration>
+			    <classifier>acceptance-javadoc</classifier>
+			</configuration>
+		    </plugin>
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.4</version>
+			<configuration>
+			    <classifier>acceptance</classifier>
+			    <archive>
+				<manifest>
+				    <addClasspath>true</addClasspath>
+				    <classpathPrefix>lib/</classpathPrefix>
+				    <classpathLayoutType>repository</classpathLayoutType>
+				</manifest>
+			    </archive>
+			</configuration>
+		    </plugin>
+		</plugins>
+	    </build>
+	</profile>
     </profiles>
 
     <build>
@@ -146,7 +233,7 @@ limitations under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.1.2</version>
+                <version>2.2</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -160,7 +247,7 @@ limitations under the License.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.7</version>
+                <version>2.10</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
