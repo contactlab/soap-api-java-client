@@ -38,7 +38,7 @@ import com.contactlab.api.ws.domain.AuthToken;
  *         &lt;element name="token" type="{domain.ws.api.contactlab.com}AuthToken" minOccurs="0"/>
  *         &lt;element name="selectionId" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="isTest" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="recipientIds" type="{http://www.w3.org/2001/XMLSchema}int" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="recipientIds" type="{http://www.w3.org/2001/XMLSchema}long" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -59,8 +59,8 @@ public class AddSelectionSubscribers {
     protected AuthToken token;
     protected int selectionId;
     protected boolean isTest;
-    @XmlElement(type = Integer.class)
-    protected List<Integer> recipientIds;
+    @XmlElement(type = Long.class)
+    protected List<Long> recipientIds;
 
     /**
      * Gets the value of the token property.
@@ -136,13 +136,13 @@ public class AddSelectionSubscribers {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Integer }
+     * {@link Long }
      * 
      * 
      */
-    public List<Integer> getRecipientIds() {
+    public List<Long> getRecipientIds() {
         if (recipientIds == null) {
-            recipientIds = new ArrayList<Integer>();
+            recipientIds = new ArrayList<Long>();
         }
         return this.recipientIds;
     }

@@ -36,7 +36,7 @@ import com.contactlab.api.ws.domain.SendImmediateOptions;
  *         &lt;element name="userKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="campaignAlias" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="sourceId" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="subscriberId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="subscriberId" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="sendImmediateOptions" type="{domain.ws.api.contactlab.com}SendImmediateOptions" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -61,7 +61,7 @@ public class SendImmediateByCampaignAliasToSubscriberId {
     protected String userKey;
     protected String campaignAlias;
     protected int sourceId;
-    protected int subscriberId;
+    protected long subscriberId;
     protected SendImmediateOptions sendImmediateOptions;
 
     /**
@@ -156,7 +156,7 @@ public class SendImmediateByCampaignAliasToSubscriberId {
      * Gets the value of the subscriberId property.
      * 
      */
-    public int getSubscriberId() {
+    public long getSubscriberId() {
         return subscriberId;
     }
 
@@ -164,7 +164,7 @@ public class SendImmediateByCampaignAliasToSubscriberId {
      * Sets the value of the subscriberId property.
      * 
      */
-    public void setSubscriberId(int value) {
+    public void setSubscriberId(long value) {
         this.subscriberId = value;
     }
 

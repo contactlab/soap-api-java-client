@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="userKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="campaignAlias" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="sourceIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -58,7 +58,7 @@ public class SendImmediateMessageSidCAl {
     protected String userKey;
     protected String campaignAlias;
     protected int sourceIdentifier;
-    protected int subscriberIdentifier;
+    protected long subscriberIdentifier;
 
     /**
      * Gets the value of the apiKey property.
@@ -152,7 +152,7 @@ public class SendImmediateMessageSidCAl {
      * Gets the value of the subscriberIdentifier property.
      * 
      */
-    public int getSubscriberIdentifier() {
+    public long getSubscriberIdentifier() {
         return subscriberIdentifier;
     }
 
@@ -160,7 +160,7 @@ public class SendImmediateMessageSidCAl {
      * Sets the value of the subscriberIdentifier property.
      * 
      */
-    public void setSubscriberIdentifier(int value) {
+    public void setSubscriberIdentifier(long value) {
         this.subscriberIdentifier = value;
     }
 

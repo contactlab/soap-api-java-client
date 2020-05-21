@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="identifier" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="identifier" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="attributes" type="{domain.ws.api.contactlab.com}SubscriberAttribute" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -51,7 +51,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Subscriber {
 
-    protected Integer identifier;
+    protected Long identifier;
     @XmlElement(required = true)
     protected List<SubscriberAttribute> attributes;
 
@@ -60,10 +60,10 @@ public class Subscriber {
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link Long }
      *     
      */
-    public Integer getIdentifier() {
+    public Long getIdentifier() {
         return identifier;
     }
 
@@ -72,10 +72,10 @@ public class Subscriber {
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link Long }
      *     
      */
-    public void setIdentifier(Integer value) {
+    public void setIdentifier(Long value) {
         this.identifier = value;
     }
 

@@ -39,7 +39,7 @@ import com.contactlab.api.ws.domain.Campaign;
  *         &lt;element name="userKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="campaign" type="{domain.ws.api.contactlab.com}Campaign" minOccurs="0"/>
  *         &lt;element name="sourceIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="includeDefaultAttachments" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="attachments" type="{domain.ws.api.contactlab.com}Attachment" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
@@ -66,7 +66,7 @@ public class SendImmediateMessageSIdCDataCA {
     protected String userKey;
     protected Campaign campaign;
     protected int sourceIdentifier;
-    protected int subscriberIdentifier;
+    protected long subscriberIdentifier;
     protected boolean includeDefaultAttachments;
     protected List<Attachment> attachments;
 
@@ -162,7 +162,7 @@ public class SendImmediateMessageSIdCDataCA {
      * Gets the value of the subscriberIdentifier property.
      * 
      */
-    public int getSubscriberIdentifier() {
+    public long getSubscriberIdentifier() {
         return subscriberIdentifier;
     }
 
@@ -170,7 +170,7 @@ public class SendImmediateMessageSIdCDataCA {
      * Sets the value of the subscriberIdentifier property.
      * 
      */
-    public void setSubscriberIdentifier(int value) {
+    public void setSubscriberIdentifier(long value) {
         this.subscriberIdentifier = value;
     }
 

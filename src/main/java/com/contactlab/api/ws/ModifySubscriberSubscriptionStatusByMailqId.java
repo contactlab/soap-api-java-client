@@ -34,7 +34,7 @@ import com.contactlab.api.ws.domain.AuthToken;
  *       &lt;sequence>
  *         &lt;element name="token" type="{domain.ws.api.contactlab.com}AuthToken" minOccurs="0"/>
  *         &lt;element name="webFormCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="mailqId" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="isSubscribed" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
@@ -57,7 +57,7 @@ public class ModifySubscriberSubscriptionStatusByMailqId {
 
     protected AuthToken token;
     protected String webFormCode;
-    protected int subscriberIdentifier;
+    protected long subscriberIdentifier;
     protected long mailqId;
     protected boolean isSubscribed;
 
@@ -113,7 +113,7 @@ public class ModifySubscriberSubscriptionStatusByMailqId {
      * Gets the value of the subscriberIdentifier property.
      * 
      */
-    public int getSubscriberIdentifier() {
+    public long getSubscriberIdentifier() {
         return subscriberIdentifier;
     }
 
@@ -121,7 +121,7 @@ public class ModifySubscriberSubscriptionStatusByMailqId {
      * Sets the value of the subscriberIdentifier property.
      * 
      */
-    public void setSubscriberIdentifier(int value) {
+    public void setSubscriberIdentifier(long value) {
         this.subscriberIdentifier = value;
     }
 

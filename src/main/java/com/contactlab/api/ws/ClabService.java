@@ -34,6 +34,7 @@ import com.contactlab.api.ws.domain.CampaignFeedback;
 import com.contactlab.api.ws.domain.CampaignLookupPreferences;
 import com.contactlab.api.ws.domain.CampaignNote;
 import com.contactlab.api.ws.domain.CampaignNotes;
+import com.contactlab.api.ws.domain.CampaignUpdate;
 import com.contactlab.api.ws.domain.CampaignWithNote;
 import com.contactlab.api.ws.domain.Campaigns;
 import com.contactlab.api.ws.domain.Channel;
@@ -74,8 +75,8 @@ import com.contactlab.api.ws.domain.XMLDeliveryInfos;
  */
 @WebService(name = "ClabService", targetNamespace = "http://ws.api.contactlab.com/")
 @XmlSeeAlso({
-    com.contactlab.api.ws.ObjectFactory.class,
-    com.contactlab.api.ws.domain.ObjectFactory.class
+    com.contactlab.api.ws.domain.ObjectFactory.class,
+    com.contactlab.api.ws.ObjectFactory.class
 })
 public interface ClabService {
 
@@ -186,6 +187,23 @@ public interface ClabService {
         byte[] content,
         @WebParam(name = "overwrite", targetNamespace = "")
         boolean overwrite);
+
+    /**
+     * 
+     * @param campaignUpdate
+     * @param token
+     * @return
+     *     returns com.contactlab.api.ws.domain.Campaign
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updateCampaign", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UpdateCampaign")
+    @ResponseWrapper(localName = "updateCampaignResponse", targetNamespace = "http://ws.api.contactlab.com/", className = "com.contactlab.api.ws.UpdateCampaignResponse")
+    public Campaign updateCampaign(
+        @WebParam(name = "token", targetNamespace = "")
+        AuthToken token,
+        @WebParam(name = "campaignUpdate", targetNamespace = "")
+        CampaignUpdate campaignUpdate);
 
     /**
      * 
@@ -436,7 +454,7 @@ public interface ClabService {
         @WebParam(name = "webFormCode", targetNamespace = "")
         String webFormCode,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier,
+        long subscriberIdentifier,
         @WebParam(name = "isSubscribed", targetNamespace = "")
         boolean isSubscribed);
 
@@ -1022,7 +1040,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier);
+        long subscriberIdentifier);
 
     /**
      * 
@@ -1082,7 +1100,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "recipientIdentifier", targetNamespace = "")
-        int recipientIdentifier);
+        long recipientIdentifier);
 
     /**
      * 
@@ -1536,7 +1554,7 @@ public interface ClabService {
         @WebParam(name = "campaignIdentifier", targetNamespace = "")
         int campaignIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier);
+        long subscriberIdentifier);
 
     /**
      * 
@@ -1556,7 +1574,7 @@ public interface ClabService {
         @WebParam(name = "campaignName", targetNamespace = "")
         String campaignName,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier);
+        long subscriberIdentifier);
 
     /**
      * 
@@ -1630,7 +1648,7 @@ public interface ClabService {
         @WebParam(name = "isTest", targetNamespace = "")
         boolean isTest,
         @WebParam(name = "recipientIds", targetNamespace = "")
-        List<Integer> recipientIds);
+        List<Long> recipientIds);
 
     /**
      * 
@@ -1827,7 +1845,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier);
+        long subscriberIdentifier);
 
     /**
      * 
@@ -1884,7 +1902,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier,
+        long subscriberIdentifier,
         @WebParam(name = "includeDefaultAttachments", targetNamespace = "")
         boolean includeDefaultAttachments,
         @WebParam(name = "attachments", targetNamespace = "")
@@ -1941,7 +1959,7 @@ public interface ClabService {
         @WebParam(name = "sourceId", targetNamespace = "")
         int sourceId,
         @WebParam(name = "subscriberId", targetNamespace = "")
-        int subscriberId,
+        long subscriberId,
         @WebParam(name = "sendImmediateOptions", targetNamespace = "")
         SendImmediateOptions sendImmediateOptions);
 
@@ -2064,7 +2082,7 @@ public interface ClabService {
         @WebParam(name = "webFormCode", targetNamespace = "")
         String webFormCode,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier,
+        long subscriberIdentifier,
         @WebParam(name = "mailqId", targetNamespace = "")
         long mailqId,
         @WebParam(name = "isSubscribed", targetNamespace = "")
@@ -2117,7 +2135,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier);
+        long subscriberIdentifier);
 
     /**
      * 
@@ -2166,7 +2184,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier);
+        long subscriberIdentifier);
 
     /**
      * 
@@ -2223,7 +2241,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier,
+        long subscriberIdentifier,
         @WebParam(name = "includeDefaultAttachments", targetNamespace = "")
         boolean includeDefaultAttachments,
         @WebParam(name = "attachments", targetNamespace = "")
@@ -2284,7 +2302,7 @@ public interface ClabService {
         @WebParam(name = "sourceIdentifier", targetNamespace = "")
         int sourceIdentifier,
         @WebParam(name = "subscriberIdentifier", targetNamespace = "")
-        int subscriberIdentifier,
+        long subscriberIdentifier,
         @WebParam(name = "includeDefaultAttachments", targetNamespace = "")
         boolean includeDefaultAttachments,
         @WebParam(name = "attachments", targetNamespace = "")
@@ -2341,7 +2359,7 @@ public interface ClabService {
         @WebParam(name = "sourceId", targetNamespace = "")
         int sourceId,
         @WebParam(name = "subscriberId", targetNamespace = "")
-        int subscriberId,
+        long subscriberId,
         @WebParam(name = "sendImmediateOptions", targetNamespace = "")
         SendImmediateOptions sendImmediateOptions);
 
@@ -2396,7 +2414,7 @@ public interface ClabService {
         @WebParam(name = "sourceId", targetNamespace = "")
         int sourceId,
         @WebParam(name = "subscriberId", targetNamespace = "")
-        int subscriberId,
+        long subscriberId,
         @WebParam(name = "sendImmediateOptions", targetNamespace = "")
         SendImmediateOptions sendImmediateOptions);
 
@@ -2466,7 +2484,7 @@ public interface ClabService {
         @WebParam(name = "selectionId", targetNamespace = "")
         int selectionId,
         @WebParam(name = "recipientId", targetNamespace = "")
-        Integer recipientId);
+        Long recipientId);
 
     /**
      * 

@@ -34,7 +34,7 @@ import com.contactlab.api.ws.domain.AuthToken;
  *       &lt;sequence>
  *         &lt;element name="token" type="{domain.ws.api.contactlab.com}AuthToken" minOccurs="0"/>
  *         &lt;element name="selectionId" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="recipientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="recipientId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -53,7 +53,7 @@ public class RemoveSelectionSubscribers {
 
     protected AuthToken token;
     protected int selectionId;
-    protected Integer recipientId;
+    protected Long recipientId;
 
     /**
      * Gets the value of the token property.
@@ -100,10 +100,10 @@ public class RemoveSelectionSubscribers {
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link Long }
      *     
      */
-    public Integer getRecipientId() {
+    public Long getRecipientId() {
         return recipientId;
     }
 
@@ -112,10 +112,10 @@ public class RemoveSelectionSubscribers {
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link Long }
      *     
      */
-    public void setRecipientId(Integer value) {
+    public void setRecipientId(Long value) {
         this.recipientId = value;
     }
 

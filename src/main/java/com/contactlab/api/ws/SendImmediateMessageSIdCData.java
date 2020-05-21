@@ -36,7 +36,7 @@ import com.contactlab.api.ws.domain.Campaign;
  *         &lt;element name="userKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="campaign" type="{domain.ws.api.contactlab.com}Campaign" minOccurs="0"/>
  *         &lt;element name="sourceIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -59,7 +59,7 @@ public class SendImmediateMessageSIdCData {
     protected String userKey;
     protected Campaign campaign;
     protected int sourceIdentifier;
-    protected int subscriberIdentifier;
+    protected long subscriberIdentifier;
 
     /**
      * Gets the value of the apiKey property.
@@ -153,7 +153,7 @@ public class SendImmediateMessageSIdCData {
      * Gets the value of the subscriberIdentifier property.
      * 
      */
-    public int getSubscriberIdentifier() {
+    public long getSubscriberIdentifier() {
         return subscriberIdentifier;
     }
 
@@ -161,7 +161,7 @@ public class SendImmediateMessageSIdCData {
      * Sets the value of the subscriberIdentifier property.
      * 
      */
-    public void setSubscriberIdentifier(int value) {
+    public void setSubscriberIdentifier(long value) {
         this.subscriberIdentifier = value;
     }
 

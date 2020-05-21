@@ -34,7 +34,7 @@ import com.contactlab.api.ws.domain.AuthToken;
  *       &lt;sequence>
  *         &lt;element name="token" type="{domain.ws.api.contactlab.com}AuthToken" minOccurs="0"/>
  *         &lt;element name="campaignIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="subscriberIdentifier" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -53,7 +53,7 @@ public class TriggerDeliveryById {
 
     protected AuthToken token;
     protected int campaignIdentifier;
-    protected int subscriberIdentifier;
+    protected long subscriberIdentifier;
 
     /**
      * Gets the value of the token property.
@@ -99,7 +99,7 @@ public class TriggerDeliveryById {
      * Gets the value of the subscriberIdentifier property.
      * 
      */
-    public int getSubscriberIdentifier() {
+    public long getSubscriberIdentifier() {
         return subscriberIdentifier;
     }
 
@@ -107,7 +107,7 @@ public class TriggerDeliveryById {
      * Sets the value of the subscriberIdentifier property.
      * 
      */
-    public void setSubscriberIdentifier(int value) {
+    public void setSubscriberIdentifier(long value) {
         this.subscriberIdentifier = value;
     }
 

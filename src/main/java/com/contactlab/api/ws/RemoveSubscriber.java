@@ -34,7 +34,7 @@ import com.contactlab.api.ws.domain.AuthToken;
  *       &lt;sequence>
  *         &lt;element name="token" type="{domain.ws.api.contactlab.com}AuthToken" minOccurs="0"/>
  *         &lt;element name="sourceIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="recipientIdentifier" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="recipientIdentifier" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -53,7 +53,7 @@ public class RemoveSubscriber {
 
     protected AuthToken token;
     protected int sourceIdentifier;
-    protected int recipientIdentifier;
+    protected long recipientIdentifier;
 
     /**
      * Gets the value of the token property.
@@ -99,7 +99,7 @@ public class RemoveSubscriber {
      * Gets the value of the recipientIdentifier property.
      * 
      */
-    public int getRecipientIdentifier() {
+    public long getRecipientIdentifier() {
         return recipientIdentifier;
     }
 
@@ -107,7 +107,7 @@ public class RemoveSubscriber {
      * Sets the value of the recipientIdentifier property.
      * 
      */
-    public void setRecipientIdentifier(int value) {
+    public void setRecipientIdentifier(long value) {
         this.recipientIdentifier = value;
     }
 
