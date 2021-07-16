@@ -23,7 +23,7 @@ limitations under the License.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.contactlab.api</groupId>
     <artifactId>client</artifactId>
-    <version>2.24.4</version>
+    <version>2.24.6</version>
     <name>ContactLab SOAP API Java Client</name>
     <description>The Java Client for ContactLab SOAP API</description>
     <url>http://github.com/contactlab/soap-api-java-client.git</url>
